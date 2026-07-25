@@ -62,7 +62,7 @@
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth;scroll-padding-top:72px}
-    body{margin:0;background:var(--paper);color:var(--ink);font:400 1rem/1.7 var(--sans);overflow-x:hidden;padding-bottom:calc(78px + env(safe-area-inset-bottom))}
+    body{margin:0;background:var(--paper);color:var(--ink);font:400 1rem/1.7 var(--sans);overflow-x:hidden}
     img{display:block;width:100%;height:auto}
     a{color:inherit}
     button,a{-webkit-tap-highlight-color:transparent}
@@ -145,7 +145,7 @@
     .stat strong{display:block;font:600 2rem var(--serif);color:var(--gold-light)}.stat span{font-size:.58rem;letter-spacing:.07em;text-transform:uppercase;color:#acbbc9}
 
     .daily{background:var(--paper)}
-    .daily-grid{display:grid;gap:18px;margin-top:38px}
+    .daily-grid{display:grid;gap:14px;margin-top:32px}
     .daily-card{padding:28px 24px;border:1px solid var(--line);background:#fff;box-shadow:0 12px 34px rgba(5,22,44,.06)}
     .daily-card.featured{background:linear-gradient(145deg,var(--night),var(--night-2));color:#fff;border-color:rgba(214,182,111,.35)}
     .daily-card small{display:block;color:#98783d;font-size:.64rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
@@ -194,7 +194,7 @@
 
     .faq-layout{display:grid;gap:35px}.faq details{border-bottom:1px solid #dfd5c5;padding:20px 0}.faq summary{min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:16px;cursor:pointer;list-style:none;font-weight:700;color:var(--night)}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";font:600 1.5rem var(--serif);color:#987a40;transition:transform .25s}.faq details[open] summary:after{transform:rotate(45deg)}.faq details p{padding:12px 32px 0 0;color:var(--muted);font-size:.87rem}
 
-    footer{background:#031123;color:#aab9c8;padding:55px 0 calc(95px + env(safe-area-inset-bottom))}
+    footer{background:#031123;color:#aab9c8;padding:55px 0 calc(55px + env(safe-area-inset-bottom))}
     .footer-grid{display:grid;gap:30px}.footer-copy{font-size:.78rem;max-width:620px}.footer-copy p{margin-top:17px}.sources{color:#8194a6}.sources a{color:#b9c7d4}
     .mobile-cta{position:fixed;z-index:70;left:0;right:0;bottom:0;padding:10px max(14px,env(safe-area-inset-right)) max(10px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left));background:rgba(4,17,35,.92);backdrop-filter:blur(14px);border-top:1px solid rgba(255,255,255,.12)}.mobile-cta .btn{width:100%;min-height:54px}
     .floating-cta{display:none;position:fixed;z-index:71;right:24px;bottom:24px;align-items:center;gap:10px;min-height:56px;padding:0 20px;border-radius:999px;background:var(--green);color:#fff;text-decoration:none;font-size:.72rem;font-weight:800;letter-spacing:.04em;box-shadow:0 14px 38px rgba(10,64,43,.36);transition:transform .2s var(--ease),background .2s}
@@ -219,7 +219,7 @@
       section{padding:105px 0}.welcome{grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center}.welcome-art{min-height:610px}
       .countdown{padding-bottom:105px}.countdown-box{display:grid;grid-template-columns:.7fr 1.3fr;align-items:center;padding:36px 42px}.count-grid{margin-top:0}
       .rhythm{grid-template-columns:repeat(4,1fr);gap:16px}.stats{grid-template-columns:repeat(4,1fr)}.stat{border-bottom:0}.stat:nth-child(2){border-right:1px solid rgba(214,182,111,.2)}
-      .daily-grid{grid-template-columns:repeat(3,1fr)}.daily-card{padding:34px 30px}.book-layout{grid-template-columns:.9fr 1.1fr;gap:80px}.video-card{min-height:560px}.video-copy{padding:45px}
+      .daily-grid{grid-template-columns:repeat(2,1fr);gap:20px}.daily-card{padding:34px 30px}.book-layout{grid-template-columns:.9fr 1.1fr;gap:80px}.video-card{min-height:560px}.video-copy{padding:45px}
       .saint-track{grid-auto-flow:initial;grid-template-columns:repeat(3,1fr);overflow:visible;margin:52px 0 0;padding:0}.saint{min-height:620px}.swipe{display:none}
       .story-grid{display:grid;grid-template-columns:1fr .86fr;gap:75px;align-items:start}.prayer{position:sticky;top:90px;margin-top:0;padding:42px}
       .faq-layout{grid-template-columns:.7fr 1.3fr;gap:75px}.footer-grid{grid-template-columns:1fr auto;align-items:end}
@@ -245,8 +245,7 @@
         <span class="brand-name"><strong>SPES</strong><small>ESPERANÇA EM ORAÇÃO</small></span>
       </a>
       <nav class="nav-links" aria-label="Navegação principal">
-        <a href="#jornada">40 dias</a><a href="#conteudo-diario">Conteúdo diário</a><a href="#santos">Santos</a><a href="#duvidas">Dúvidas</a>
-        <a class="nav-cta js-whatsapp" href="https://chat.whatsapp.com/HhX3hsFYl6v9ylOySJjX8F">Entrar no grupo</a>
+        <a href="#oracoes">Orações diárias</a><a href="#santos">Santos diários</a>
       </nav>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu">☰</button>
     </div>
@@ -254,8 +253,7 @@
 
   <div class="mobile-menu" id="menu-mobile" hidden>
     <button class="close-menu" type="button" aria-label="Fechar menu">×</button>
-    <a href="#jornada">40 dias</a><a href="#conteudo-diario">Conteúdo diário</a><a href="#santos">Santos</a><a href="#duvidas">Dúvidas</a>
-    <a class="js-whatsapp" href="https://chat.whatsapp.com/HhX3hsFYl6v9ylOySJjX8F">Entrar no grupo</a>
+    <a href="#oracoes">Orações diárias</a><a href="#santos">Santos diários</a>
   </div>
 
   <main id="conteudo">
@@ -270,7 +268,7 @@
         <p class="hero-lead load-in">De 15 de agosto a 29 de setembro, enquanto a cidade ainda dorme, uma comunidade se levanta para rezar. Prepare o coração, reúna suas intenções e não caminhe sozinho.</p>
         <div class="hero-actions load-in">
           <a class="btn btn-primary js-whatsapp" href="https://chat.whatsapp.com/HhX3hsFYl6v9ylOySJjX8F">Quero rezar com vocês <span aria-hidden="true">→</span></a>
-          <a class="btn btn-outline" href="#jornada">Conhecer a jornada</a>
+          <a class="btn btn-outline" href="#oracoes">Ver orações diárias</a>
         </div>
         <div class="hero-trust load-in"><span>Gratuito</span><span>Grupo moderado</span><span>Sem vendas</span></div>
         <div class="soundless load-in">Preparação às 3h50 • Santo Rosário às 4h</div>
@@ -278,84 +276,21 @@
       <span class="ornament">Desça para encontrar esperança</span>
     </section>
 
-    <div class="hope-ribbon">
-      <div class="shell hope-card">
-        <blockquote>“A esperança é para nós como âncora da alma, segura e firme.”</blockquote>
-        <cite>Hebreus 6,19</cite>
-      </div>
-    </div>
-
-    <section>
-      <div class="shell welcome">
-        <figure class="welcome-art reveal">
-          <img src="assets/sao-miguel-hero.webp" srcset="assets/sao-miguel-hero-896.webp 896w, assets/sao-miguel-hero.webp 1792w" sizes="(min-width:820px) 45vw, 100vw" width="1792" height="1024" alt="São Miguel Arcanjo, símbolo de fidelidade e proteção" loading="lazy" decoding="async">
-        </figure>
-        <div class="welcome-copy reveal">
-          <div class="eyebrow eyebrow-ink">SPES significa esperança</div>
-          <h2 class="section-title">Você não precisa atravessar tudo sozinho.</h2>
-          <p>Há dias em que a fé parece pequena. Há noites em que a preocupação fala mais alto. A SPES nasceu para transformar esse instante em encontro: pessoas reais, unidas no mesmo horário e na mesma intenção.</p>
-          <p>Não prometemos atalhos nem respostas automáticas. Oferecemos algo antigo e verdadeiro: constância, Palavra, silêncio, intercessão e uma comunidade caminhando junto.</p>
-          <div class="scripture">“Onde dois ou três estiverem reunidos em meu nome, ali estou eu no meio deles.” <small>— Mt 18,20</small></div>
-          <div class="conversion-strip">
-            <div><strong>Há um lugar reservado para a sua intenção.</strong><p>Entre gratuitamente e receba o primeiro aviso da jornada.</p></div>
-            <a class="btn btn-primary js-whatsapp" href="https://chat.whatsapp.com/HhX3hsFYl6v9ylOySJjX8F">Levar minha intenção →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="countdown" aria-labelledby="count-title">
-      <div class="shell countdown-box reveal">
-        <div><h2 id="count-title">Nossa jornada se aproxima</h2><p id="count-message">Preparando uma comunidade para começar unida.</p></div>
-        <div class="count-grid" aria-live="polite">
-          <div class="count-cell"><b id="days">--</b><small>dias</small></div>
-          <div class="count-cell"><b id="hours">--</b><small>horas</small></div>
-          <div class="count-cell"><b id="minutes">--</b><small>minutos</small></div>
-          <div class="count-cell"><b id="seconds">--</b><small>segundos</small></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="journey" id="jornada">
-      <div class="shell">
-        <div class="reveal"><div class="eyebrow">Como vamos caminhar</div><h2 class="section-title">Um pequeno “sim” antes do amanhecer.</h2><p class="section-intro">De 15 de agosto, Solenidade da Assunção de Nossa Senhora, até 29 de setembro, Festa dos Santos Arcanjos Miguel, Gabriel e Rafael.</p></div>
-        <div class="rhythm">
-          <article class="reveal"><b>01</b><h3>Receba</h3><p>O roteiro diário chega ao grupo com oração, Palavra e intenção, sem excesso de mensagens.</p></article>
-          <article class="reveal"><b>02</b><h3>Prepare-se</h3><p>Às 3h50, faça a oração a São Miguel e disponha o coração para o Rosário.</p></article>
-          <article class="reveal"><b>03</b><h3>Reze conosco</h3><p>Às 4h, acompanhe o Santo Rosário pelo canal oficial do Frei Gilson.</p></article>
-          <article class="reveal"><b>04</b><h3>Permaneça</h3><p>Se perder um dia, retome. Aqui, perseverança importa mais que perfeição.</p></article>
-        </div>
-        <div class="stats reveal">
-          <div class="stat"><strong>40</strong><span>dias de oração</span></div><div class="stat"><strong>3h50</strong><span>preparação diária</span></div>
-          <div class="stat"><strong>4h</strong><span>Santo Rosário</span></div><div class="stat"><strong>500</strong><span>meta de participantes</span></div>
-        </div>
-        <div class="conversion-strip reveal">
-          <div><strong>Comece a preparar o coração hoje.</strong><p>O grupo reúne orientações, lembretes e a oração diária da Quaresma de São Miguel.</p></div>
-          <a class="btn btn-primary js-whatsapp" href="https://chat.whatsapp.com/HhX3hsFYl6v9ylOySJjX8F">Participar dos 40 dias →</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="daily" id="conteudo-diario">
+    <section class="daily" id="oracoes">
       <div class="shell">
         <div class="reveal">
-          <div class="eyebrow eyebrow-ink">Sua companhia ao longo do dia</div>
-          <h2 class="section-title">O essencial para rezar, compreender e permanecer.</h2>
-          <p class="section-intro">A plataforma será atualizada diariamente com conteúdo autoral, fontes identificadas e um caminho simples de oração. Sem ruído, sensacionalismo ou promessas vazias.</p>
+          <div class="eyebrow eyebrow-ink">Orações diárias</div>
+          <h2 class="section-title">Um momento simples para permanecer perto de Deus.</h2>
+          <p class="section-intro">Todos os dias, uma oração, uma passagem da Palavra e uma intenção para conduzir seu coração com serenidade.</p>
         </div>
         <div class="daily-grid">
           <article class="daily-card featured reveal">
-            <small>Todos os dias</small><h3>Santo do dia</h3>
-            <p>Memória litúrgica, história, virtude e uma prática concreta para conhecer melhor os santos da Igreja.</p>
-            <a href="https://www.vaticannews.va/pt/santo-do-dia.html" target="_blank" rel="noopener noreferrer">Consultar fonte oficial →</a>
+            <small>Todos os dias</small><h3>Oração da manhã</h3>
+            <p>Comece o dia com uma oração breve, uma intenção concreta e alguns minutos de silêncio.</p>
           </article>
           <article class="daily-card reveal">
-            <small>De segunda a sábado</small><h3>Palavra e oração</h3>
+            <small>Para levar com você</small><h3>Palavra e oração</h3>
             <p>Leitura bíblica identificada, reflexão original, oração reverente e um propósito possível para o dia.</p>
-          </article>
-          <article class="daily-card reveal">
-            <small>Aos domingos</small><h3>Homilia e reflexão</h3>
-            <p>Evangelho do domingo, chaves para escutar melhor a homilia e uma reflexão para levar a Palavra à semana.</p>
           </article>
         </div>
         <section class="schedule reveal" aria-label="Programação de oração de 2026">
@@ -363,42 +298,15 @@
           <div class="schedule-row"><time datetime="04:00">4h00</time><div><strong>Santo Rosário</strong><span>Acompanhamento pelo canal oficial Frei Gilson / Som do Monte.</span></div></div>
           <div class="schedule-row"><time>Após</time><div><strong>Pregação e celebração</strong><span>Ensinamentos, bênção do Santíssimo e Santa Missa conforme a programação oficial.</span></div></div>
         </section>
-        <div class="conversion-strip reveal">
-          <div><strong>Receba o lembrete antes de cada madrugada.</strong><p>Entre agora no grupo moderado e convide uma pessoa para caminhar com você.</p></div>
-          <a class="btn btn-primary js-whatsapp" href="https://chat.whatsapp.com/HhX3hsFYl6v9ylOySJjX8F">Quero receber o roteiro →</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="book" id="leitura">
-      <div class="shell book-layout">
-        <div class="book-object reveal" aria-hidden="true">
-          <div class="book-cover"><small>Leitura companheira</small><strong>O Caminho da Felicidade</strong><span>Fulton J. Sheen</span></div>
-        </div>
-        <div class="book-copy reveal">
-          <div class="eyebrow eyebrow-ink">Uma página por vez</div>
-          <h2 class="section-title">A alegria que nasce quando o coração encontra direção.</h2>
-          <p class="section-intro">Ao longo dos 40 dias, acompanharemos os temas apresentados nas pregações de 2026 com breves notas autorais inspiradas na obra de Fulton J. Sheen — sempre como convite à leitura, nunca como substituição do livro.</p>
-          <div class="quiet-note">Os textos publicados pela SPES serão sínteses e reflexões originais. Não reproduziremos capítulos, transmissões ou materiais protegidos sem autorização.</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="watch" id="acompanhar">
-      <div class="shell">
-        <div class="reveal"><div class="eyebrow">Transmissões oficiais</div><h2 class="section-title">Reze na fonte. Caminhe em comunidade.</h2><p class="section-intro">A SPES ajuda você a criar constância e encontrar o conteúdo do dia. As transmissões pertencem ao canal oficial Frei Gilson / Som do Monte.</p></div>
-        <article class="video-card reveal">
-          <div class="video-copy"><h3>Rosário da madrugada</h3><p>Abra o canal oficial, ative o lembrete e volte ao grupo para partilhar a caminhada com reverência.</p><a class="btn btn-outline" href="https://www.youtube.com/@FreiGilsonSomdoMonteOFICIAL/streams" target="_blank" rel="noopener noreferrer">Abrir transmissões oficiais →</a></div>
-        </article>
       </div>
     </section>
 
     <section class="saints" id="santos">
       <div class="shell">
         <div class="saints-header reveal">
-          <div class="eyebrow eyebrow-ink eyebrow-center">Companheiros de esperança</div>
-          <h2 class="section-title">Uma fé que ganha rosto, história e ternura.</h2>
-          <p class="section-intro">A beleza sacra não termina na imagem: ela nos lembra que homens e mulheres reais escolheram confiar, servir e permanecer.</p>
+          <div class="eyebrow eyebrow-ink eyebrow-center">Santos diários</div>
+          <h2 class="section-title">Uma inspiração para cada novo dia.</h2>
+          <p class="section-intro">Conheça a história, a virtude e uma prática concreta inspirada nos santos da Igreja.</p>
         </div>
         <section class="saint-track" aria-label="Galeria de santos">
           <article class="saint reveal">
@@ -415,56 +323,9 @@
           </article>
         </section>
         <p class="swipe">Deslize para conhecer →</p>
-        <div class="conversion-strip reveal">
-          <div><strong>Receba inspiração para perseverar.</strong><p>Caminhe com a comunidade e compartilhe esta devoção com quem precisa de esperança.</p></div>
-          <a class="btn btn-primary js-whatsapp" href="https://chat.whatsapp.com/HhX3hsFYl6v9ylOySJjX8F">Caminhar com a SPES →</a>
-        </div>
       </div>
     </section>
 
-    <section class="story" id="historia">
-      <div class="shell story-grid">
-        <div>
-          <div class="reveal"><div class="eyebrow eyebrow-ink">Quem é São Miguel?</div><h2 class="section-title">“Quem como Deus?”</h2><p class="section-intro">Miguel aparece na Escritura como defensor do povo de Deus. Sua força não nasce do orgulho, mas da fidelidade: todo combate espiritual começa por devolver a Deus o primeiro lugar.</p></div>
-          <div class="timeline">
-            <article class="event reveal"><small>Daniel 10 e 12</small><h3>O grande príncipe</h3><p>Miguel aparece como protetor do povo de Deus em tempos de provação.</p></article>
-            <article class="event reveal"><small>Judas 1,9</small><h3>Autoridade com humildade</h3><p>O arcanjo não age em nome próprio: confia o juízo ao Senhor.</p></article>
-            <article class="event reveal"><small>Apocalipse 12</small><h3>Defensor no combate</h3><p>Miguel e seus anjos enfrentam o dragão, imagem da vitória de Deus sobre o mal.</p></article>
-            <article class="event reveal"><small>29 de setembro</small><h3>A festa dos Arcanjos</h3><p>A Igreja celebra Miguel, Gabriel e Rafael, mensageiros e servidores do desígnio divino.</p></article>
-          </div>
-        </div>
-        <aside class="prayer reveal">
-          <span class="cross" aria-hidden="true">✠</span><h3>Oração a São Miguel Arcanjo</h3>
-          <blockquote>São Miguel Arcanjo, defendei-nos no combate. Sede o nosso refúgio contra as maldades e ciladas do demônio. Ordene-lhe Deus, instantemente o pedimos; e vós, Príncipe da Milícia Celeste, pela virtude divina, precipitai ao inferno a Satanás e a todos os espíritos malignos que andam pelo mundo para perder as almas. Amém.</blockquote>
-          <small>Oração tradicional atribuída ao Papa Leão XIII</small>
-        </aside>
-      </div>
-    </section>
-
-    <section class="transformation">
-      <div class="shell reveal">
-        <h2>Talvez você tenha chegado preocupado. Que saia daqui lembrando: <em>a esperança ainda está viva.</em></h2>
-        <p>Leve sua intenção. Entre no grupo. E convide alguém que também precise saber que não está sozinho.</p>
-        <a class="btn btn-primary js-whatsapp" href="https://chat.whatsapp.com/HhX3hsFYl6v9ylOySJjX8F">Quero entrar no grupo de oração →</a>
-      </div>
-    </section>
-
-    <section id="duvidas">
-      <div class="shell faq-layout">
-        <div class="reveal"><div class="eyebrow eyebrow-ink">Perguntas frequentes</div><h2 class="section-title">Antes de começar</h2><p class="section-intro">Tudo o que você precisa saber para caminhar conosco com tranquilidade.</p></div>
-        <div class="faq">
-          <details class="reveal"><summary>Preciso acompanhar toda a transmissão?</summary><p>Participe conforme sua realidade, sem culpa. A preparação começa às 3h50 e o Rosário às 4h; o grupo ajudará você a manter constância.</p></details>
-          <details class="reveal"><summary>A participação é gratuita?</summary><p>Sim. A SPES é uma iniciativa de oração sem fins lucrativos. Não cobramos para entrar e não vendemos produtos no grupo.</p></details>
-          <details class="reveal"><summary>E se eu perder um dia?</summary><p>Retome no dia seguinte, sem culpa. A jornada é uma escola de perseverança, não uma prova de perfeição.</p></details>
-          <details class="reveal"><summary>Como será a convivência no WhatsApp?</summary><p>O grupo é moderado. Não são permitidas correntes, conteúdo político, propaganda, pedidos de dinheiro ou mensagens fora da proposta.</p></details>
-          <details class="reveal"><summary>Isso substitui a Santa Missa?</summary><p>Não. A jornada é uma devoção e não substitui os sacramentos nem a vida paroquial. Aos domingos, incentivamos a Santa Missa.</p></details>
-          <div class="conversion-strip reveal">
-            <div><strong>Pronto para dizer o seu “sim”?</strong><p>Entre agora. É gratuito, moderado e dedicado exclusivamente à oração.</p></div>
-            <a class="btn btn-primary js-whatsapp" href="https://chat.whatsapp.com/HhX3hsFYl6v9ylOySJjX8F">Entrar no grupo agora →</a>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer>
@@ -476,11 +337,6 @@
       <div class="footer-copy">© 2026 SPES<br>Esperança que se Transforma em Oração.</div>
     </div>
   </footer>
-
-  <div class="mobile-cta">
-    <a class="btn btn-primary js-whatsapp" href="https://chat.whatsapp.com/HhX3hsFYl6v9ylOySJjX8F">Entrar no grupo de oração →</a>
-  </div>
-  <a class="floating-cta js-whatsapp" href="https://chat.whatsapp.com/HhX3hsFYl6v9ylOySJjX8F" aria-label="Entrar no grupo de oração da SPES no WhatsApp">Entrar no grupo</a>
 
   <script>
     (() => {
@@ -517,21 +373,6 @@
       } else {
         revealItems.forEach(el => el.classList.add("visible"));
       }
-
-      const target = new Date("2026-08-15T04:00:00-03:00").getTime();
-      const ids = ["days","hours","minutes","seconds"].map(id => document.getElementById(id));
-      const updateCountdown = () => {
-        let delta = target - Date.now();
-        if (delta <= 0) {
-          document.getElementById("count-message").textContent = Date.now() <= new Date("2026-09-29T23:59:59-03:00").getTime() ? "A jornada começou. Ainda há lugar para você." : "A jornada continua em oração, formação e comunidade.";
-          ids.forEach(el => el.textContent = "00"); return;
-        }
-        const d = Math.floor(delta / 864e5); delta %= 864e5;
-        const h = Math.floor(delta / 36e5); delta %= 36e5;
-        const m = Math.floor(delta / 6e4); const s = Math.floor((delta % 6e4) / 1000);
-        [d,h,m,s].forEach((v,i) => ids[i].textContent = String(v).padStart(2,"0"));
-      };
-      updateCountdown(); setInterval(updateCountdown, 1000);
 
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
       document.querySelectorAll(".js-whatsapp").forEach((link, index) => link.addEventListener("click", () => {
