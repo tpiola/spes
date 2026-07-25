@@ -11,11 +11,16 @@ Reunir ao menos 500 pessoas em uma comunidade de oração no WhatsApp, com oraç
 - identidade sacra editorial: azul profundo, ouro envelhecido e marfim;
 - tipografia clássica com leitura contemporânea;
 - narrativa acolhedora, bíblica e sem promessas supersticiosas;
-- nove pontos de entrada contextuais para o grupo oficial, incluindo CTA flutuante;
+- pontos de entrada contextuais para o grupo da SPES, incluindo CTA flutuante;
 - arquitetura mobile-first, acessível e sem dependências de build;
 - imagens sacras próprias otimizadas em WebP;
 - SEO, Open Graph, dados estruturados e eventos de conversão preparados;
 - motion design com alternativa para `prefers-reduced-motion`.
+- trilha editorial para Santo do Dia, Palavra, homilia dominical e leitura de Fulton Sheen;
+- links claros para as transmissões do canal oficial Frei Gilson / Som do Monte;
+- cabeçalhos de segurança, cache de imagens, sitemap, robots, manifesto e página 404.
+
+> A SPES é uma comunidade independente e não representa o Frei Gilson ou a Comunidade Som do Monte.
 
 ## Publicação
 
