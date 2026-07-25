@@ -25,3 +25,17 @@ Reunir ao menos 500 pessoas em uma comunidade de oração no WhatsApp, com oraç
 ## Publicação
 
 Site estático: publique `index.html` na raiz pública do domínio `spes.blog`.
+
+## Qualidade
+
+```bash
+npm ci
+npm run validate:html
+npm run validate:links
+npx playwright install chromium
+npm run test:smoke
+npm run lighthouse
+```
+
+O workflow `Quality` executa essas verificações em cada pull request e push para `main`.
+Em produção, o Vercel Web Analytics registra visualizações e cliques nos CTAs do WhatsApp.
