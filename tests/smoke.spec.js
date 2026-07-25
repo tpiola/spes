@@ -13,6 +13,11 @@ test("renders the complete conversion journey without browser errors", async ({ 
   await page.goto("/");
   await expect(page).toHaveTitle(/SPES/);
   await expect(page.getByRole("heading", { level: 1 })).toContainText("40 dias");
+  await expect(page.getByRole("heading", { name: /A constância mantém essa luz viva/ })).toBeVisible();
+  await expect(page.getByText("São Carlo Acutis", { exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Nunca pediremos dinheiro" })).toBeVisible();
+  await expect(page.locator("#newsletter-form")).toBeVisible();
+  expect(await page.locator("a.js-whatsapp").count()).toBeGreaterThanOrEqual(6);
   await expect(page.locator("a.js-whatsapp").first()).toHaveAttribute(
     "href",
     /^https:\/\/chat\.whatsapp\.com\//
