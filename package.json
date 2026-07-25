@@ -1,0 +1,21 @@
+{
+  "name": "spes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page da comunidade católica SPES.",
+  "scripts": {
+    "serve": "http-server . -p 4173 -c-1",
+    "validate:html": "html-validate index.html 404.html",
+    "validate:links": "node scripts/check-links.js",
+    "test:smoke": "playwright test",
+    "lighthouse": "start-server-and-test serve http://127.0.0.1:4173 \"lhci autorun\"",
+    "test": "npm run validate:html && npm run test:smoke"
+  },
+  "devDependencies": {
+    "@lhci/cli": "0.15.1",
+    "@playwright/test": "1.55.0",
+    "html-validate": "10.4.0",
+    "http-server": "14.1.1",
+    "start-server-and-test": "2.1.2"
+  }
+}
