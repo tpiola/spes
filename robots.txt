@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.spes.blog/sitemap.xml
+Sitemap: https://spes.blog/sitemap.xml

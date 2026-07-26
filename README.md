@@ -15,6 +15,10 @@ Reunir ao menos 500 pessoas em uma comunidade de oração no WhatsApp, com oraç
 - arquitetura mobile-first, acessível e sem dependências de build;
 - imagens sacras próprias otimizadas em WebP;
 - SEO, Open Graph, dados estruturados e eventos de conversão preparados;
+- biblioteca editorial com páginas permanentes para orações, santos e formação;
+- compartilhamento nativo, cards sociais individuais e conteúdos relacionados;
+- newsletter com endpoint serverless, consentimento e integração opcional por `NEWSLETTER_WEBHOOK_URL`;
+- políticas de privacidade/LGPD e transparência editorial;
 - motion design com alternativa para `prefers-reduced-motion`.
 - trilha editorial para Santo do Dia, Palavra, homilia dominical e leitura de Fulton Sheen;
 - links claros para as transmissões do canal oficial Frei Gilson / Som do Monte;

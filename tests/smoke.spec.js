@@ -13,6 +13,7 @@ test("renders the complete conversion journey without browser errors", async ({ 
   await page.goto("/");
   await expect(page).toHaveTitle(/SPES/);
   await expect(page.getByRole("heading", { level: 1 })).toContainText("40 dias");
+  await expect(page.getByRole("link", { name: /Entregue este dia a Deus/ })).toBeVisible();
   await expect(page.getByRole("heading", { name: /A constância mantém essa luz viva/ })).toBeVisible();
   await expect(page.getByText("São Carlo Acutis", { exact: true })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Nunca pediremos dinheiro" })).toBeVisible();
@@ -28,6 +29,16 @@ test("renders the complete conversion journey without browser errors", async ({ 
     await page.evaluate(() => window.innerWidth)
   );
   expect(errors).toEqual([]);
+});
+
+test("editorial archive and shareable article are available", async ({ page }) => {
+  await page.goto("/conteudos/");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("Conteúdos");
+  await expect(page.locator("[data-type]")).toHaveCount(8);
+  await page.goto("/conteudos/oracao-da-manha-entregar-o-dia-a-deus/");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("Oração da manhã");
+  await expect(page.getByRole("button", { name: "Compartilhar" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Entrar no grupo" })).toHaveAttribute("href", /^https:\/\/chat\.whatsapp\.com\//);
 });
 
 test("mobile navigation opens, closes and restores focus", async ({ page }, testInfo) => {
