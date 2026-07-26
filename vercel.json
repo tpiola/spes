@@ -3,6 +3,7 @@
   "version": 2,
   "framework": null,
   "installCommand": "npm ci",
+  "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
