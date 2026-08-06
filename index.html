@@ -52,7 +52,7 @@
       "endDate":"2026-09-29T06:00:00-03:00",
       "eventAttendanceMode":"https://schema.org/OnlineEventAttendanceMode",
       "eventStatus":"https://schema.org/EventScheduled",
-      "location":{"@type":"VirtualLocation","url":"https://chat.whatsapp.com/HhX3hsFYl6v9ylOySJjX8F"},
+      "location":{"@type":"VirtualLocation","url":"https://chat.whatsapp.com/B7UBvpk89Wv121Q0Hdv2gL"},
       "organizer":{"@type":"Organization","name":"SPES","url":"https://spes.blog/"},
       "isAccessibleForFree":true
     }
@@ -97,19 +97,23 @@
 
     .hero{position:relative;min-height:100svh;display:grid;align-items:end;isolation:isolate;background:var(--night);color:#fff;overflow:hidden}
     .hero-media{position:absolute;z-index:-3;inset:0}
-    .hero-media img{height:100%;object-fit:cover;object-position:64% center;transform:scale(1.035);animation:heroBreath 12s ease-in-out infinite alternate}
-    .hero:before{content:"";position:absolute;z-index:-2;inset:0;background:linear-gradient(180deg,rgba(3,15,31,.26),rgba(4,20,40,.23) 26%,rgba(4,20,40,.9) 76%,#06172e),linear-gradient(90deg,rgba(3,15,31,.78),transparent 82%)}
+    .hero-media img{height:100%;object-fit:cover;object-position:68% center;transform:scale(1.025);animation:heroBreath 14s ease-in-out infinite alternate}
+    .hero:before{content:"";position:absolute;z-index:-2;inset:0;background:linear-gradient(180deg,rgba(3,15,31,.16),rgba(4,20,40,.2) 24%,rgba(4,20,40,.92) 78%,#06172e),linear-gradient(90deg,rgba(3,15,31,.9),rgba(3,15,31,.48) 58%,transparent 88%)}
     .hero:after{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(circle at 82% 62%,rgba(255,211,119,.28),transparent 22%),linear-gradient(115deg,transparent 40%,rgba(255,221,150,.1) 53%,transparent 66%);mix-blend-mode:screen;animation:aurora 8s ease-in-out infinite alternate}
     #light-field{position:absolute;z-index:-1;inset:0;width:100%;height:100%;pointer-events:none;opacity:.7}
-    .hero-content{padding:158px 0 82px}
-    .hero h1{max-width:780px;margin:22px 0 20px;font-size:clamp(3.35rem,15vw,6.9rem);letter-spacing:-.045em;text-wrap:balance}
-    .hero h1 span{display:block;color:var(--gold-light);font-style:italic}
-    .hero-lead{max-width:680px;color:#e1e8f0;font-size:clamp(1rem,3.8vw,1.19rem);line-height:1.7}
-    .hero-actions{display:grid;gap:10px;margin-top:28px}
+    .hero-content{padding:152px 0 64px;max-width:760px}
+    .hero h1{max-width:760px;margin:18px 0 18px;font-size:clamp(3rem,13vw,6.3rem);letter-spacing:-.045em;text-wrap:balance}
+    .hero h1 span{display:block;color:var(--gold-light)}
+    .hero-lead{max-width:650px;color:#e7edf3;font-size:clamp(1rem,3.6vw,1.16rem);line-height:1.65}
+    .hero-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:620px;margin-top:24px;border-block:1px solid rgba(240,220,168,.3)}
+    .hero-fact{padding:14px 10px 14px 0}.hero-fact+ .hero-fact{padding-left:16px;border-left:1px solid rgba(240,220,168,.22)}
+    .hero-fact strong{display:block;color:var(--gold-light);font:600 1.2rem/1.1 var(--serif)}.hero-fact span{display:block;margin-top:5px;color:#b8c7d5;font-size:.61rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .hero-actions{display:grid;gap:10px;margin-top:24px}
     .btn{min-height:52px;display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;text-align:center;padding:15px 20px;border:0;font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;transition:transform .2s var(--ease),background .2s,color .2s,box-shadow .2s}
     .btn-primary{background:var(--green);color:#fff;box-shadow:0 15px 40px rgba(23,137,87,.28)}
+    .js-whatsapp:before{content:"";display:inline-block;flex:0 0 19px;width:19px;height:19px;background:url("assets/whatsapp.svg") center/contain no-repeat;vertical-align:-4px;margin-right:7px}
     .btn-outline{border:1px solid rgba(255,255,255,.44);color:#fff}
-    .hero-trust{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:20px;color:#c8d4df;font-size:.7rem}.hero-trust span:before{content:"✓";color:var(--gold);margin-right:6px}
+    .hero-trust{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:16px;color:#c8d4df;font-size:.7rem}.hero-trust span:before{content:"✓";color:var(--gold);margin-right:6px}
     .soundless{display:flex;align-items:center;gap:8px;margin-top:25px;color:#8fa2b5;font-size:.65rem}.soundless:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 7px rgba(214,182,111,.11);animation:pulse 2.3s infinite}
     .ornament{position:absolute;right:18px;bottom:18px;color:rgba(255,255,255,.5);font-size:.55rem;letter-spacing:.19em;text-transform:uppercase;writing-mode:vertical-rl}
 
@@ -223,7 +227,7 @@
     .footer-grid{display:grid;gap:30px}.footer-copy{font-size:.78rem;max-width:620px}.footer-copy p{margin-top:17px}.sources{color:#8194a6}.sources a{color:#b9c7d4}
     .mobile-cta{position:fixed;z-index:70;left:0;right:0;bottom:0;padding:10px max(14px,env(safe-area-inset-right)) max(10px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left));background:rgba(4,17,35,.92);backdrop-filter:blur(14px);border-top:1px solid rgba(255,255,255,.12)}.mobile-cta .btn{width:100%;min-height:54px}
     .floating-cta{display:none;position:fixed;z-index:71;right:24px;bottom:24px;align-items:center;gap:10px;min-height:56px;padding:0 20px;border-radius:999px;background:var(--green);color:#fff;text-decoration:none;font-size:.72rem;font-weight:800;letter-spacing:.04em;box-shadow:0 14px 38px rgba(10,64,43,.36);transition:transform .2s var(--ease),background .2s}
-    .floating-cta:before{content:"◉";font-size:1rem}
+    .floating-cta:before{margin-right:0}
 
     .load-in{opacity:0;transform:translateY(18px);animation:loadIn .75s var(--ease) forwards}.load-in:nth-child(2){animation-delay:.1s}.load-in:nth-child(3){animation-delay:.2s}.load-in:nth-child(4){animation-delay:.3s}
     .reveal{opacity:0;transform:translateY(25px);transition:opacity .7s var(--ease),transform .7s var(--ease)}.reveal.visible{opacity:1;transform:none}
@@ -239,8 +243,8 @@
     }
     @media(min-width:820px){
       body{padding-bottom:0}.menu-button,.mobile-menu,.mobile-cta{display:none}.floating-cta{display:inline-flex}.nav-links{display:flex;align-items:center;gap:25px}.nav-links a{text-decoration:none;font-size:.7rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase}.nav-links .nav-cta{border:1px solid var(--gold);padding:11px 16px}
-      .hero{min-height:820px;align-items:center}.hero-media img{object-position:center}.hero:before{background:linear-gradient(90deg,rgba(3,15,31,.95) 0%,rgba(3,15,31,.7) 48%,rgba(3,15,31,.1) 78%),linear-gradient(180deg,rgba(3,15,31,.2),rgba(3,15,31,.15) 68%,#06172e)}
-      .hero-content{padding:180px 0 100px}.hope-ribbon{margin-top:-42px}.hope-card{padding:30px 38px}.hope-card blockquote{font-size:1.55rem}.conversion-strip{display:grid;grid-template-columns:1fr auto;align-items:center;gap:28px;padding:28px 32px}.conversion-strip .btn{width:auto;min-width:260px;margin-top:0}
+      .hero{min-height:min(820px,100svh);align-items:center}.hero-media img{object-position:center}.hero:before{background:linear-gradient(90deg,rgba(3,15,31,.96) 0%,rgba(3,15,31,.74) 48%,rgba(3,15,31,.08) 80%),linear-gradient(180deg,rgba(3,15,31,.14),rgba(3,15,31,.12) 68%,#06172e)}
+      .hero-content{padding:168px 0 78px}.hope-ribbon{margin-top:-42px}.hope-card{padding:30px 38px}.hope-card blockquote{font-size:1.55rem}.conversion-strip{display:grid;grid-template-columns:1fr auto;align-items:center;gap:28px;padding:28px 32px}.conversion-strip .btn{width:auto;min-width:260px;margin-top:0}
       section{padding:105px 0}.welcome{grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center}.welcome-art{min-height:610px}
       .countdown{padding-bottom:105px}.countdown-box{display:grid;grid-template-columns:.7fr 1.3fr;align-items:center;padding:36px 42px}.count-grid{margin-top:0}
       .rhythm{grid-template-columns:repeat(4,1fr);gap:16px}.stats{grid-template-columns:repeat(4,1fr)}.stat{border-bottom:0}.stat:nth-child(2){border-right:1px solid rgba(214,182,111,.2)}
@@ -272,7 +276,7 @@
       </a>
       <nav class="nav-links" aria-label="Navegação principal">
         <a href="#caminho">Nosso caminho</a><a href="#oracoes">Orações</a><a href="#santos">Santos</a><a href="#sobre">Sobre</a>
-        <a class="nav-cta js-whatsapp" data-placement="nav" href="https://chat.whatsapp.com/HhX3hsFYl6v9ylOySJjX8F">Rezar conosco</a>
+        <a class="nav-cta js-whatsapp" data-placement="nav" href="https://chat.whatsapp.com/B7UBvpk89Wv121Q0Hdv2gL">Rezar conosco</a>
       </nav>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu">☰</button>
     </div>
@@ -281,7 +285,7 @@
   <div class="mobile-menu" id="menu-mobile" hidden>
     <button class="close-menu" type="button" aria-label="Fechar menu">×</button>
     <a href="#caminho">Nosso caminho</a><a href="#oracoes">Orações</a><a href="#santos">Santos</a><a href="#sobre">Sobre</a>
-    <a class="js-whatsapp" data-placement="menu-mobile" href="https://chat.whatsapp.com/HhX3hsFYl6v9ylOySJjX8F">Rezar conosco</a>
+    <a class="js-whatsapp" data-placement="menu-mobile" href="https://chat.whatsapp.com/B7UBvpk89Wv121Q0Hdv2gL">Rezar conosco</a>
   </div>
 
   <main id="conteudo">
@@ -291,15 +295,19 @@
       </picture>
       <canvas id="light-field" aria-hidden="true"></canvas>
       <div class="shell hero-content">
-        <div class="eyebrow load-in">Toda esperança pode se tornar oração</div>
-        <h1 class="load-in">40 dias para começar. <span>Um caminho para permanecer.</span></h1>
-        <p class="hero-lead load-in">Com São Miguel, damos o primeiro passo. Depois, seguimos juntos: oração diária, jejum, penitência e um santo por semana para aprender a viver a fé com constância.</p>
+        <div class="eyebrow load-in">Quaresma de São Miguel · jornada gratuita</div>
+        <h1 class="load-in">Quaresma de São Miguel. <span>40 dias para levantar em oração.</span></h1>
+        <p class="hero-lead load-in">De 15 de agosto a 29 de setembro, vamos caminhar em comunidade com oração diária e um propósito simples: começar cada dia colocando Deus em primeiro lugar.</p>
+        <div class="hero-facts load-in" role="group" aria-label="Informações da Quaresma de São Miguel">
+          <div class="hero-fact"><strong>15 AGO</strong><span>Começamos</span></div>
+          <div class="hero-fact"><strong>3h50</strong><span>Preparação</span></div>
+          <div class="hero-fact"><strong>29 SET</strong><span>São Miguel</span></div>
+        </div>
         <div class="hero-actions load-in">
-          <a class="btn btn-primary js-whatsapp" data-placement="hero" href="https://chat.whatsapp.com/HhX3hsFYl6v9ylOySJjX8F">Quero rezar com vocês <span aria-hidden="true">→</span></a>
+          <a class="btn btn-primary js-whatsapp" data-placement="hero" href="https://chat.whatsapp.com/B7UBvpk89Wv121Q0Hdv2gL">Entrar no grupo da Quaresma</a>
           <a class="btn btn-outline" href="#caminho">Conhecer o caminho</a>
         </div>
-        <div class="hero-trust load-in"><span>Sempre gratuito</span><span>Grupo moderado</span><span>Nunca pedimos dinheiro</span></div>
-        <div class="soundless load-in">Uma intenção por vez • Um dia de cada vez</div>
+        <div class="hero-trust load-in"><span>Gratuito</span><span>Grupo moderado</span><span>Oração em comunidade</span></div>
       </div>
       <span class="ornament">Desça para encontrar esperança</span>
     </section>
@@ -318,7 +326,7 @@
         </div>
         <div class="conversion-strip reveal">
           <div><strong>Talvez este seja o seu primeiro dia. Ele não precisa ser o último.</strong><p>Entre no grupo e receba o próximo passo no tempo certo.</p></div>
-          <a class="btn btn-primary js-whatsapp" data-placement="caminho" href="https://chat.whatsapp.com/HhX3hsFYl6v9ylOySJjX8F">Começar em oração →</a>
+          <a class="btn btn-primary js-whatsapp" data-placement="caminho" href="https://chat.whatsapp.com/B7UBvpk89Wv121Q0Hdv2gL">Começar em oração →</a>
         </div>
       </div>
     </section>
@@ -347,7 +355,7 @@
         </section>
         <div class="conversion-strip reveal">
           <div><strong>Quando a oração encontra horário, ela começa a ganhar raízes.</strong><p>Receba os lembretes e caminhe no seu ritmo, sem culpa e sem cobranças.</p></div>
-          <a class="btn btn-primary js-whatsapp" data-placement="oracoes" href="https://chat.whatsapp.com/HhX3hsFYl6v9ylOySJjX8F">Receber o próximo roteiro →</a>
+          <a class="btn btn-primary js-whatsapp" data-placement="oracoes" href="https://chat.whatsapp.com/B7UBvpk89Wv121Q0Hdv2gL">Receber o próximo roteiro →</a>
         </div>
       </div>
     </section>
@@ -396,7 +404,7 @@
         <p class="swipe">Deslize para conhecer →</p>
         <div class="conversion-strip reveal">
           <div><strong>Uma história de santidade pode iluminar a sua semana.</strong><p>Entre para acompanhar o santo semanal e transformar inspiração em prática.</p></div>
-          <a class="btn btn-primary js-whatsapp" data-placement="santos" href="https://chat.whatsapp.com/HhX3hsFYl6v9ylOySJjX8F">Estudar conosco →</a>
+          <a class="btn btn-primary js-whatsapp" data-placement="santos" href="https://chat.whatsapp.com/B7UBvpk89Wv121Q0Hdv2gL">Estudar conosco →</a>
         </div>
       </div>
     </section>
@@ -415,7 +423,7 @@
         </div>
         <div class="conversion-strip reveal">
           <div><strong>Sem dinheiro. Sem vendas. Somente um compromisso sincero com a oração.</strong><p>Se essa também é a sua busca, há um lugar para você.</p></div>
-          <a class="btn btn-primary js-whatsapp" data-placement="sobre" href="https://chat.whatsapp.com/HhX3hsFYl6v9ylOySJjX8F">Entrar no grupo gratuito →</a>
+          <a class="btn btn-primary js-whatsapp" data-placement="sobre" href="https://chat.whatsapp.com/B7UBvpk89Wv121Q0Hdv2gL">Entrar no grupo gratuito →</a>
         </div>
         <a class="social-link" href="https://www.facebook.com/profile.php?id=100070770821519" target="_blank" rel="noopener noreferrer">Acompanhar a página oficial da SPES no Facebook →</a>
       </div>
@@ -445,6 +453,9 @@
     </section>
 
   </main>
+
+  <div class="mobile-cta"><a class="btn btn-primary js-whatsapp" data-placement="mobile-fixed" href="https://chat.whatsapp.com/B7UBvpk89Wv121Q0Hdv2gL">Entrar no grupo da Quaresma</a></div>
+  <a class="floating-cta js-whatsapp" data-placement="desktop-fixed" href="https://chat.whatsapp.com/B7UBvpk89Wv121Q0Hdv2gL">Entrar no grupo</a>
 
   <footer>
     <div class="shell footer-grid">
