@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">SPES</title>
+  <desc id="desc">Marca do Santuário Digital SPES: cruz e estrela em rosácea</desc>
+  <rect width="96" height="96" rx="48" fill="#041f37"/>
+  <circle cx="48" cy="48" r="34" fill="none" stroke="#d9b66c" stroke-width="1.5"/>
+  <circle cx="48" cy="48" r="27" fill="none" stroke="#d9b66c" stroke-width="0.8" opacity=".55"/>
+  <path d="M48 22v52M35 38h26" stroke="#f2d99f" stroke-width="3" stroke-linecap="round"/>
+  <path d="M48 14l2.7 6.3L57 23l-6.3 2.7L48 32l-2.7-6.3L39 23l6.3-2.7L48 14Z" fill="#d9b66c"/>
+</svg>
