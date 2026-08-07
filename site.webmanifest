@@ -1,11 +1,13 @@
 {
-  "name": "SPES — Esperança que se Transforma em Oração",
+  "name": "SPES — Santuário Digital Católico",
   "short_name": "SPES",
-  "description": "Comunidade católica de oração e formação.",
+  "description": "Santuário digital católico de oração, Santos do Dia, sacramentos, Bíblia, Catecismo e história da Igreja.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FAF6ED",
-  "theme_color": "#06172E",
+  "background_color": "#F8FBFD",
+  "theme_color": "#041F37",
   "lang": "pt-BR",
-  "icons": []
+  "icons": [
+    {"src":"/assets/spes-mark.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}
+  ]
 }
