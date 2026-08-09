@@ -1,11 +1,11 @@
 const MONTHS=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
-const FALLBACKS={'08-06':'São Hormisda, papa','08-07':'SS. Sisto II, papa, e Companheiros, mártires','08-08':'S. Domingos de Gusmão, presbítero, fundador da Ordem dos Pregadores','08-09':'S. Teresa Benedita da Cruz (Edith Stein), virgem e mártir carmelita, Padroeira da Europa'};
+const FALLBACKS={'08-06':'São Hormisda, papa','08-07':'SS. Sisto II, papa, e Companheiros, mártires','08-08':'S. Domingos de Gusmão, presbítero, fundador da Ordem dos Pregadores','08-09':'Santa Teresa Benedita da Cruz (Edith Stein)'};
 const READINGS={'08-08':'https://www.vaticannews.va/pt/santo-do-dia/08/08/s--domingos-de-gusmao--presbitero--fundador-da-ordem-dos-pregado.html','08-09':'https://www.vaticannews.va/pt/santo-do-dia/08/09/s--teresa-benedita-da-cruz--edith-stein---virgem-e-martir-carmel.html'};
 function clean(value=''){return value.replace(/<[^>]*>/g,' ').replace(/&nbsp;|&#160;/g,' ').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim()}
 export default async function handler(_req,res){
   const parts=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Sao_Paulo',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
   const get=t=>parts.find(p=>p.type===t)?.value;const month=get('month'),day=get('day'),key=`${month}-${day}`;const calendarUrl=`https://www.vaticannews.va/pt/santo-do-dia/${month}/${day}.html`;const sourceUrl=READINGS[key]||calendarUrl;
   let name=FALLBACKS[key]||'';
-  try{const response=await fetch(calendarUrl,{headers:{'user-agent':'SPES/1.0 (+https://spes.blog)'}});if(response.ok){const html=await response.text();const headings=[...html.matchAll(/<h[2-4][^>]*>([\s\S]*?)<\/h[2-4]>/gi)].map(m=>clean(m[1])).filter(v=>v.length>2&&v.length<120&&!/Santo do dia/i.test(v));const candidate=headings.find(v=>/^(?:SS?|BB?)\.\s|^(?:São|Santa|Santo|Santos|Santas)\b/i.test(v));if(candidate)name=candidate}}catch(_){}
+  try{const response=await fetch(calendarUrl,{headers:{'user-agent':'SPES/1.0 (+https://spes.blog)'}});if(response.ok){const html=await response.text();const headings=[...html.matchAll(/<h[2-4][^>]*>([\s\S]*?)<\/h[2-4]>/gi)].map(m=>clean(m[1])).filter(v=>v.length>2&&v.length<120&&!/Santo do dia/i.test(v));const candidate=headings.find(v=>/^(?:SS?|BB?)\.\s|^(?:São|Santa|Santo|Santos|Santas)\b/i.test(v));if(candidate&&!FALLBACKS[key])name=candidate}}catch(_){}
   res.setHeader('Cache-Control','s-maxage=21600, stale-while-revalidate=86400');res.status(200).json({name,dateLabel:`${Number(day)} de ${MONTHS[Number(month)-1]}`,sourceUrl,source:'Vatican News'});
 }
