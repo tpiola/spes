@@ -1,6 +1,6 @@
 # SPES — Esperança que se Transforma em Oração
 
-Landing page da jornada gratuita **40 Dias com São Miguel Arcanjo**, de 15 de agosto a 29 de setembro de 2026.
+Santuário digital católico de oração, formação, memória e comunhão. A primeira entrada acolhe a jornada gratuita **40 Dias com São Miguel Arcanjo**, de 15 de agosto a 29 de setembro de 2026, sem reduzir a SPES a uma landing page.
 
 ## Objetivo
 
@@ -13,7 +13,8 @@ Reunir ao menos 500 pessoas em uma comunidade de oração no WhatsApp, com oraç
 - narrativa acolhedora, bíblica e sem promessas supersticiosas;
 - pontos de entrada contextuais para o grupo da SPES, incluindo CTA flutuante;
 - arquitetura mobile-first, acessível e sem dependências de build;
-- imagens sacras próprias otimizadas em WebP;
+- imagens sacras próprias otimizadas e servidas pelo próprio domínio;
+- contemplações visuais abertas dentro da SPES, sem redirecionamento para ferramentas de criação;
 - SEO, Open Graph, dados estruturados e eventos de conversão preparados;
 - motion design com alternativa para `prefers-reduced-motion`.
 - trilha editorial para Santo do Dia, Palavra, homilia dominical e leitura de Fulton Sheen;
