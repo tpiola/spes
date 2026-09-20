@@ -37,8 +37,13 @@ estiverem em texto da Santa Sé ou do Vatican News.
 | 5 jul 2018 | Papa Francisco autoriza o decreto das virtudes heroicas → **Venerável** | idem |
 | 2013 | **1º milagre reconhecido**: Arquidiocese de Campo Grande (Brasil) | idem |
 | 10 out 2020 | **Beatificação**, Basílica Superior de São Francisco, Assis | idem |
-| 2022 | **2º milagre**: ocorrido em Florença | idem |
+| 8 jul 2022 | **2º milagre**: a mãe de uma jovem da Costa Rica reza no túmulo de Carlo, em Assis | Vatican News (EN), 23/05/2024 |
+| 23 mai 2024 | Papa Francisco aprova o decreto do 2º milagre, abrindo a canonização | idem |
 | 7 set 2025 | **Canonização** pelo Papa Leão XIV, Praça de São Pedro, junto com Pier Giorgio Frassati | Vatican.va (homilia) + Vatican News |
+
+> ⚠️ Correção de acurácia: a versão em português do Vatican News diz que o 2º milagre ocorreu "em Florença".
+> A versão em inglês da mesma casa, mais detalhada, diz que o milagre é ligado a uma **mulher da Costa Rica**
+> cuja mãe rezou no túmulo em Assis. Adotamos a versão detalhada e removemos "Florença".
 
 ## Frases (com fonte — só usar estas)
 
@@ -126,3 +131,9 @@ estiverem em texto da Santa Sé ou do Vatican News.
 - Vatican News — beatificação e o corpo (2020):
   https://www.vaticannews.va/pt/vaticano/news/2020-10/beatificacao-carlos-acutis-conversao-frade-brasileiro-assis.html
 - Site oficial do próprio Carlo (exposição dos milagres eucarísticos): https://www.miracolieucaristici.org
+
+
+## Detalhes confirmados nesta rodada de acurácia
+- Memória litúrgica: **12 de outubro** ✓
+- Oração no túmulo de Assis: **8 de julho de 2022**; decreto do 2º milagre: **23 de maio de 2024**
+- Exposição: "idealizada e realizada por Carlo Acutis e Nicola Gori" (a própria mostra) ✓

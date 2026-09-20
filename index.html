@@ -93,8 +93,8 @@
       animation:carloGlow 5.4s ease-in-out infinite alternate}
     @keyframes carloBreath{from{transform:scale(1)}to{transform:scale(1.045)}}
     @keyframes carloGlow{from{opacity:.55}to{opacity:1}}
-    .carlo-stage-caption{position:relative;margin:26px auto 0;max-width:640px;text-align:center;
-      font:600 clamp(19px,2.3vw,27px)/1.3 var(--display);color:#f6ecd4;letter-spacing:.01em}
+    .carlo-stage-caption{position:relative;margin:30px auto 0;max-width:560px;text-align:left;
+      font:600 clamp(19px,2.3vw,27px)/1.34 var(--display);color:#f6ecd4;letter-spacing:.01em}
     .carlo-sparks{position:absolute;inset:0;overflow:hidden;pointer-events:none}
     .carlo-sparks span{position:absolute;bottom:-14px;width:3px;height:3px;border-radius:50%;
       background:radial-gradient(circle,#fff6dd,#d9b66c);opacity:0;
@@ -139,6 +139,29 @@
       .carlo-sparks{display:none}
       .carlo-quote-card:hover{transform:none}
     }
+
+    /* ── OBRA DE ARTE: vitral, capitular e moldura de retábulo ── */
+    .carlo-vitral{position:absolute;inset:-30px;border-radius:50%;pointer-events:none;
+      background:
+        repeating-conic-gradient(from 0deg at 50% 50%, rgba(242,217,159,.55) 0deg 1.1deg, transparent 1.1deg 15deg);
+      mask:radial-gradient(circle, transparent 58%, #000 60%, #000 74%, transparent 76%);
+      -webkit-mask:radial-gradient(circle, transparent 58%, #000 60%, #000 74%, transparent 76%);
+      animation:carloRays 220s linear infinite;will-change:transform;opacity:.85}
+    .carlo-capitular{float:left;margin:2px 10px 0 0;font:600 3.05em/.78 var(--display);color:var(--gold2);
+      text-shadow:0 0 22px rgba(242,217,159,.5)}
+    .carlo-stage:before{content:"";position:absolute;inset:9px;border-radius:15px;pointer-events:none;
+      border:1px solid rgba(217,182,108,.42);box-shadow:inset 0 0 0 1px rgba(217,182,108,.16)}
+    .carlo-stage:after{content:"";position:absolute;inset:0;border-radius:22px;pointer-events:none;
+      background:
+        linear-gradient(135deg, rgba(242,217,159,.5) 0 26px, transparent 26px) top left/52px 52px no-repeat,
+        linear-gradient(225deg, rgba(242,217,159,.5) 0 26px, transparent 26px) top right/52px 52px no-repeat,
+        linear-gradient(45deg, rgba(242,217,159,.5) 0 26px, transparent 26px) bottom left/52px 52px no-repeat,
+        linear-gradient(315deg, rgba(242,217,159,.5) 0 26px, transparent 26px) bottom right/52px 52px no-repeat;
+      opacity:.75}
+    .carlo-label-orn{display:inline-flex;align-items:center;gap:10px}
+    .carlo-label-orn:before,.carlo-label-orn:after{content:"";width:22px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));}
+    .carlo-label-orn:after{background:linear-gradient(90deg,var(--gold),transparent)}
+    @media (prefers-reduced-motion:reduce){ .carlo-vitral{animation:none!important} }
 </style>
 </head>
 <body>
@@ -211,19 +234,20 @@
       <div class="carlo-stage">
         <div class="carlo-rays" aria-hidden="true"></div>
         <div class="carlo-ostensorio" role="img" aria-label="Ostensório com a Hóstia, símbolo da Eucaristia">
+          <span class="carlo-vitral" aria-hidden="true"></span>
           <span class="carlo-anel" aria-hidden="true"></span>
           <span class="carlo-haste" aria-hidden="true"></span>
           <span class="carlo-hostia" aria-hidden="true"></span>
           <span class="carlo-luz" aria-hidden="true"></span>
         </div>
-        <p class="carlo-stage-caption">Um adolescente de quinze anos que atravessou o nosso tempo e nos ensinou a olhar para cima.</p>
+        <p class="carlo-stage-caption"><span class="carlo-capitular">U</span>m adolescente de quinze anos que atravessou o nosso tempo e nos ensinou a olhar para cima.</p>
         <div class="carlo-sparks" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
       </div>
 
       <!-- frases dele, cada uma com a fonte -->
       <div class="carlo-quotes">
         <article class="carlo-quote-card">
-          <span class="label">PALAVRAS DELE</span>
+          <span class="label carlo-label-orn">PALAVRAS DELE</span>
           <blockquote>"A Eucaristia é a minha autoestrada para o céu."</blockquote>
           <cite>Vatican News</cite>
         </article>
@@ -262,7 +286,8 @@
         <article class="era"><time>12 DE OUTUBRO DE 2006</time><h3>Entrega a vida, aos 15 anos</h3><p>Uma leucemia agressiva. Ofereceu o sofrimento ao Santo Padre, pelo bem da Igreja. Morreu em Monza, no Hospital San Gerardo.</p></article>
         <article class="era"><time>5 DE JULHO DE 2018</time><h3>Venerável</h3><p>O Papa Francisco reconhece que Carlo viveu as virtudes cristãs em grau heroico.</p></article>
         <article class="era"><time>10 DE OUTUBRO DE 2020</time><h3>Beatificação, em Assis</h3><p>Na Basílica Superior de São Francisco. O primeiro milagre reconhecido foi na Arquidiocese de Campo Grande, no Brasil.</p></article>
-        <article class="era"><time>7 DE SETEMBRO DE 2025</time><h3>Canonização</h3><p>O Papa Leão XIV o proclama santo na Praça de São Pedro, junto com Pier Giorgio Frassati. Depois de um segundo milagre, ocorrido em Florença em 2022.</p></article>
+        <article class="era"><time>23 DE MAIO DE 2024</time><h3>O segundo milagre</h3><p>O Papa Francisco aprova o decreto: a cura de uma jovem da Costa Rica, alcançada depois que a mãe dela rezou no túmulo de Carlo, em Assis, a 8 de julho de 2022.</p></article>
+        <article class="era"><time>7 DE SETEMBRO DE 2025</time><h3>Canonização</h3><p>O Papa Leão XIV o proclama santo na Praça de São Pedro, junto com Pier Giorgio Frassati. Depois do segundo milagre reconhecido em 23 de maio de 2024: a cura de uma jovem da Costa Rica, cuja mãe rezou no túmulo dele em Assis.</p></article>
       </div>
 
       <!-- Jesus, Maria e a esperança -->
@@ -289,7 +314,7 @@
           <a href="https://www.vaticannews.va/pt/vaticano/news/2020-10/beatificacao-carlos-acutis-conversao-frade-brasileiro-assis.html" target="_blank" rel="noopener">Quem o conheceu conta ↗</a>
         </article>
         <article class="content-card feature-dark wide">
-          <span class="label">COMO PEDIR A INTERCESSÃO DELE</span>
+          <span class="label carlo-label-orn">COMO PEDIR A INTERCESSÃO DELE</span>
           <h3>Um santo adolescente, para um tempo apressado.</h3>
           <p>Carlo não deixou promessa de milagre, e a Igreja não nos pede isso. O caminho é o que ele viveu:
           a Missa, a adoração, o Rosário, a caridade. Se quiser rezar com ele, comece por perto de Jesus —
@@ -300,7 +325,7 @@
 
       <div class="source-panel">
         <div>
-          <span class="label">FONTES OFICIAIS</span>
+          <span class="label carlo-label-orn">FONTES OFICIAIS</span>
           <p>Biografia lida na canonização e homilia do Papa Leão XIV (Santa Sé e Vatican News, setembro de 2025);
           depoimentos e reportagens do Vatican News (2018 e 2020). As frases atribuídas a ele vêm dessas fontes.</p>
         </div>
