@@ -21,7 +21,3 @@ aparecem também no rodapé do santuário.
   da família e da diocese.
 - `assets/carlo-salvator.webp` — Da Vinci Studies of Embryos Luc Viatour.jpg | Public domain | Leonardo da Vinci | https://commons.wikimedia.org/wiki/File:Da_Vinci_Studies_of_Embryos_Luc_Viatour.jpg
 - `assets/carlo-assis.webp` — 2010-08-11 Assisi Santa Maria degli Angeli panorama.jpg | CC BY-SA 3.0 | Blackcat | https://commons.wikimedia.org/wiki/File:2010-08-11_Assisi_Santa_Maria_degli_Angeli_panorama.jpg
-- `assets/carlo-estatua.webp` — St. Carlo Acutis.jpg | CC BY-SA 4.0 | Joncrisvv | https://commons.wikimedia.org/wiki/File:St._Carlo_Acutis.jpg
-- `assets/carlo-andor.webp` — Carlo Acutis Baliwag Fiestas 11.jpg | CC BY-SA 4.0 | RamaGaspar | https://commons.wikimedia.org/wiki/File:Carlo_Acutis_Baliwag_Fiestas_11.jpg
-- `assets/carlo-relicario-pericardio.webp` — St Carlo Acutis Pericardium Relic 2025-12-07.jpg | CC BY-SA 4.0 | LMP 2001 | https://commons.wikimedia.org/wiki/File:St_Carlo_Acutis_Pericardium_Relic_2025-12-07.jpg
-- `assets/carlo-procissao.webp` — Carlo Acutis Baliwag Fiestas 04.jpg | CC BY-SA 4.0 | RamaGaspar | https://commons.wikimedia.org/wiki/File:Carlo_Acutis_Baliwag_Fiestas_04.jpg
