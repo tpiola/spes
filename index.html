@@ -8,8 +8,7 @@
   <meta name="theme-color" content="#041f37"><meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://spes.blog/"><link rel="manifest" href="/site.webmanifest"><link rel="icon" href="/assets/spes-mark.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/spes-icon-192.png">
   <link rel="preload" href="assets/sao-miguel-hero-896.webp" as="image" type="image/webp">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin-var.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/lato-latin-400.woff2" as="font" type="font/woff2" crossorigin>
   <meta property="og:type" content="website"><meta property="og:locale" content="pt_BR"><meta property="og:site_name" content="SPES">
   <meta property="og:title" content="SPES — Santuário Digital Católico"><meta property="og:description" content="Entre para a Quaresma de São Miguel e permaneça para rezar, estudar a fé e caminhar com a Igreja."><meta property="og:url" content="https://spes.blog/"><meta property="og:image" content="https://spes.blog/assets/spes-facebook-cover.webp"><meta property="og:image:width" content="1800"><meta property="og:image:height" content="684"><meta property="og:image:alt" content="SPES — Esperança que se transforma em oração"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="SPES — Santuário Digital Católico"><meta name="twitter:description" content="Oração, formação e esperança em comunhão com a fé católica."><meta name="twitter:image" content="https://spes.blog/assets/spes-facebook-cover.webp">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"SPES — Santuário Digital Católico","alternateName":"SPES","url":"https://spes.blog/","inLanguage":"pt-BR","description":"Santuário digital católico de oração, formação e história da Igreja.","publisher":{"@type":"Organization","name":"SPES — Esperança em comunidade","url":"https://spes.blog/","logo":{"@type":"ImageObject","url":"https://spes.blog/assets/spes-mark.svg"}},"about":[{"@type":"Thing","name":"Igreja Católica"},{"@type":"Thing","name":"Catecismo da Igreja Católica"},{"@type":"Thing","name":"Santos"},{"@type":"Thing","name":"Sacramentos"}]}</script>
@@ -113,6 +112,286 @@
     .feature-dark .pilar-figura{border-color:rgba(242,217,159,.45)}
     @media (max-width:719px){ .era-figura img{height:124px} .pilar-figura img{height:112px} }
     @media (prefers-reduced-motion:reduce){ .carlo-obra img{animation:none!important} }
+    /* ═══════════════════════════════════════════════════════════════════════════
+       SPES · VESTES DE SÃO CARLO ACUTIS — camada vermelha (tokens + re-tema)
+       Cada cor abaixo foi MEDIDA em pixels das imagens do acervo (PIL, medianas
+       de recorte), não escolhida no olho. Procedência token por token:
+         --red      #9e2c31 ← camisa vermelha do retrato exposto no Rio de Janeiro
+                              (assets/carlo-reliquia-rio.webp, mediana dos pixels
+                               de matiz 335–20°, saturação ≥45: #9e2c31)
+         --red-deep #7b202b ← camisa vermelha da estátua devocional
+                              (assets/carlo-estatua.webp, mesma filtragem)
+         --velvet   #5d0f1f ← veludo carmesim do relicário do pericárdio
+                              (assets/carlo-relicario-pericardio.webp, #601426
+                               e #21060f nas sombras)
+         --blue-deep #202c4a ← azul-marinho da gola/manga da camisa e do fundo
+                              do retrato (percentil escuro dos azuis das mesmas
+                              imagens: #202c4a · #455571)
+         --gold-ink #8a672a ← dourado litúrgico já existente, mantido no valor
+                              corrigido para AA (5,08:1 sobre papel)
+         --ivory    #fcf7f1 ← marfim do relevo em pedra do túmulo
+                              (assets/carlo-tumulo.webp: #f6e0c4 clareado a papel)
+       Os tons claros (--red-lit, --rose, --red-tint) são os mesmos vermelhos
+       acima clareados para uso sobre fundo profundo / como fundo de papel.
+       Nada de terceiros: as fontes são servidas do próprio domínio (OFL 1.1).
+       ═══════════════════════════════════════════════════════════════════════════ */
+
+    /* ── TIPOGRAFIA PRÓPRIA (SIL Open Font License 1.1) ── */
+    @font-face{font-family:"Cormorant Garamond";src:url("assets/fonts/cormorant-garamond-latin-var.woff2")format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
+    @font-face{font-family:"Cormorant Garamond";src:url("assets/fonts/cormorant-garamond-latin-italic.woff2")format("woff2");font-weight:400;font-style:italic;font-display:swap}
+    @font-face{font-family:Lato;src:url("assets/fonts/lato-latin-300.woff2")format("woff2");font-weight:300;font-style:normal;font-display:swap}
+    @font-face{font-family:Lato;src:url("assets/fonts/lato-latin-400.woff2")format("woff2");font-weight:400;font-style:normal;font-display:swap}
+    @font-face{font-family:Lato;src:url("assets/fonts/lato-latin-700.woff2")format("woff2");font-weight:700;font-style:normal;font-display:swap}
+    @font-face{font-family:Lato;src:url("assets/fonts/lato-latin-900.woff2")format("woff2");font-weight:900;font-style:normal;font-display:swap}
+
+    /* ── TOKENS ── */
+    :root{
+      --red:#9e2c31;
+      --red-deep:#7b202b;
+      --red-lit:#e28a93;
+      --red-tint:#fbedee;
+      --red-line:#f0d2d5;
+      --rose:#f0c7cb;
+      --velvet:#5d0f1f;
+      --velvet2:#3a0a14;
+      --blue-deep:#202c4a;
+      --blue-tint:#e8ecf4;
+      --gold-ink:#8a672a;
+      --ivory:#fcf7f1;
+      --paper:#fdfaf6;
+      /* neutros reaquecidos: antes eram azuis (#102c43 / #041f37 / #566d80) */
+      --ink:#2f2024;
+      --navy:#241318;
+      --blue:#202c4a;
+      --muted:#6a5b5e;
+      --line:#ebdcdc;
+      --sky:#f7ecec
+    }
+    /* esconder é sempre por atributo — nunca apagar elementos que o JS procura */
+    [hidden]{display:none!important}
+
+    /* ── DOCUMENTO ── */
+    body{background:#fdfaf6;background-image:linear-gradient(180deg,#fff 0,#fdf1f2 46%,#fff 100%);color:var(--ink)}
+    ::selection{background:var(--red);color:#fff}
+    :focus-visible{outline:3px solid var(--red);outline-offset:2px;box-shadow:0 0 0 6px rgba(253,250,246,.92)}
+
+    /* ── FAIXA SUPERIOR E CABEÇALHO ── */
+    .topline{background:linear-gradient(90deg,#2a0710,#8c1a24 50%,#2a0710);color:#f7dde0}
+    .header{background:rgba(253,250,246,.93);border-bottom:1px solid var(--red-line);box-shadow:0 10px 34px rgba(93,15,31,.06)}
+    .brand{color:var(--red)}
+    .brand-mark{filter:drop-shadow(0 0 10px rgba(158,44,49,.26))}
+    .nav button.active{color:var(--red)}
+    .nav-cta,.primary{background:var(--red)!important;box-shadow:0 12px 28px rgba(158,44,49,.24)}
+    .nav-cta:hover,.primary:hover{box-shadow:0 18px 36px rgba(158,44,49,.3)}
+    .menu{border-color:var(--red-line);color:var(--navy)}
+    @media(max-width:720px){.nav.open{border-bottom:1px solid var(--red-line)}}
+
+    /* ── HERÓI: do azul-noite ao vermelho litúrgico ── */
+    .hero{background:var(--navy)}
+    .hero:before{background:linear-gradient(90deg,rgba(42,7,16,.95) 0%,rgba(93,15,31,.68) 48%,rgba(93,15,31,.16) 82%),linear-gradient(0deg,rgba(58,10,20,.6),transparent 58%)}
+    .hero:after{background:linear-gradient(180deg,transparent,var(--gold-lit,var(--gold)),transparent);opacity:.5}
+    .kicker{color:var(--rose)}
+    .hero h1 em{color:var(--gold2)}
+    .hero-lead{color:#f1e2e4}
+    .hero-mantra{border-left:1px solid var(--gold);color:#f7ecec}
+    .hero-mantra small{color:#e6c4c9}
+    .light-line{background:linear-gradient(90deg,transparent,var(--red-lit),transparent)}
+    .hero .primary{background:var(--red)!important;color:#fff!important}
+    .ghost{border-color:rgba(255,255,255,.42);background:rgba(255,255,255,.08)}
+
+    /* ── NAVEGAÇÃO LATERAL ── */
+    .rail-label{color:#7a6469}
+    .rail button.active{color:var(--navy);border-color:var(--red);background:linear-gradient(90deg,var(--red-tint),transparent)}
+    .rail button .icon{color:var(--red)}
+    .rail-prayer{border-top:1px solid var(--red-line)}
+    .rail-prayer b{color:var(--navy)}
+    @media(max-width:1080px){
+      .rail{background:rgba(253,250,246,.95)}
+      .rail button.active{border-color:var(--red);background:linear-gradient(0deg,var(--red-tint),transparent)}
+    }
+
+    /* ── TÍTULOS DE SEÇÃO: filete vermelho, como em missal impresso ── */
+    .view-head{padding-bottom:16px;border-bottom:1px solid var(--red-line)}
+    .view-head span,.label{color:var(--red)}
+    .view-head h2{color:var(--navy)}
+    .source-badge{color:#6b5a5f}
+    .source-badge:before{background:var(--red);box-shadow:0 0 0 5px rgba(158,44,49,.1)}
+
+    /* ── SANTO DO DIA, MOMENTOS E PILARES ── */
+    .saint-card{background:linear-gradient(90deg,rgba(42,7,16,.97),rgba(93,15,31,.7),rgba(93,15,31,.2)),url("assets/beato-joao-paulo-i.webp") center 18%/cover}
+    .saint-card:after{border:1px solid rgba(242,217,159,.3)}
+    .saint-card p{color:#efdfe1}
+    .saint-card a{border-bottom:1px solid rgba(242,217,159,.6)}
+    .saint-credit{color:#dcc6c9}
+    .moment{border:1px solid var(--red-line);background:rgba(255,255,255,.9)}
+    .moment small{color:var(--red)}
+    .moment b{color:var(--navy)}
+    .moment span{color:var(--blue-deep)}
+    .moment.dark{background:linear-gradient(145deg,var(--velvet),var(--red-deep))}
+    .moment.dark span{color:#ecc9cd}
+    .faith-pillar{border:1px solid var(--red-line)}
+    .faith-pillar:before{background:radial-gradient(circle,rgba(158,44,49,.12),transparent 65%)}
+    .faith-pillar h3{color:var(--navy)}
+
+    /* ── CARTÕES, LINHA DO TEMPO, PAPAS, CATECISMO ── */
+    .content-card{border:1px solid var(--red-line)}
+    .content-card:hover{border-color:#e0b3b7;box-shadow:0 20px 42px rgba(93,15,31,.12)}
+    .content-card h3{color:var(--navy)}
+    .content-card a,.text-link{color:var(--red-deep)}
+    .feature-dark{background:linear-gradient(145deg,#33101c,#5d0f1f);border-color:#4a1420}
+    .feature-dark p{color:#f0dfe1}
+    .feature-dark a{color:var(--gold2)}
+    .timeline{background:var(--red-line);border:1px solid var(--red-line)}
+    .era:nth-child(2n){background:#fdf7f8}
+    .era time{color:var(--red)}
+    .era a{color:var(--red-deep)}
+    .papal-hero{background-image:linear-gradient(110deg,rgba(42,7,16,.96),rgba(140,26,36,.9)),url("assets/sketch-papas.webp");background-position:center,88% 44%;background-size:auto,46% auto;background-repeat:no-repeat;background-color:#3a0a14}
+    .papal-number{border-right:1px solid rgba(255,255,255,.16)}
+    .papal-copy p{color:#f0dcdf}
+    .papal-copy a{color:var(--gold2)}
+    .pope-strip{border:1px solid var(--red-line)}
+    .pope{border-right:1px solid var(--red-line)}
+    .catechism-part{border-top:2px solid var(--red)}
+    .catechism-part b{color:var(--red-deep)}
+    .catechism-part a{color:var(--red-deep)}
+    .study{border:1px solid var(--red-line)}
+    .study p b{color:var(--red-deep)}
+    .study a{color:var(--red-deep)}
+    .sacrament-group{border:1px solid var(--red-line)}
+    .sacrament-group-head{border-bottom:1px solid var(--red-line)}
+    .sacrament-list{background:var(--red-line)}
+    .sacrament small{color:var(--gold-ink)}
+
+    /* ── MARIA, CONTEMPLAÇÃO E ACERVO ── */
+    .mary-layout{border:1px solid var(--red-line)}
+    .mary-image{background-image:linear-gradient(0deg,rgba(93,15,31,.16),rgba(93,15,31,.03)),url("assets/sketch-maria.webp");background-color:#f7ecec}
+    .mary-copy blockquote{border-left:2px solid var(--red)}
+    .media-main{background-color:var(--navy)}
+    .media-main:after{background:linear-gradient(0deg,rgba(42,7,16,.96),rgba(93,15,31,.1) 72%)}
+    .media-art>img{border:1px solid #e0c9a0}
+    .media-open{color:var(--red-deep)}
+    .media-tile{border:1px solid var(--red-line)}
+    .media-tile a{color:var(--red-deep)}
+    .media-dialog{border-color:rgba(217,182,108,.55);background:#2a0710}
+    .media-dialog::backdrop{background:rgba(20,4,8,.88)}
+    .media-dialog img{background:#1a0509}
+    .media-dialog-close{background:#3a0a14d9;border-color:rgba(255,255,255,.5)}
+    .media-dialog-close:hover{border-color:var(--gold);color:var(--gold2)}
+    .artifact{background:#2a0710}
+    .artifact:after{background:linear-gradient(180deg,transparent 30%,#2a0710f0 86%)}
+    .artifact a{color:var(--gold2)}
+    .archive-note{border:1px solid var(--red-line)}
+    .archive-note a{color:var(--red-deep)}
+
+    /* ── IGREJAS: painel próprio, sem iframe de terceiros (o iframe do Google
+       Maps injetava as fontes do Google na página) ── */
+    .finder{background:linear-gradient(145deg,#fff,var(--red-tint));border:1px solid var(--red-line)}
+    .locate{background:var(--red)}
+    .finder form>div{border:1px solid var(--red-line)}
+    .finder form button{background:var(--red-deep)}
+    .status{color:var(--red-deep)!important}
+    .map{background:#fff;border:1px solid var(--red-line)}
+    .map-head a{color:var(--red-deep)}
+    .spes-mapa-tela{
+      position:relative;min-height:390px;display:grid;place-items:center;padding:26px;text-align:center;
+      background-image:
+        radial-gradient(circle at 50% 46%,rgba(158,44,49,.09),transparent 62%),
+        repeating-linear-gradient(0deg,#fdf7f8 0 38px,var(--red-line) 38px 39px),
+        repeating-linear-gradient(90deg,#fdf7f8 0 38px,var(--red-line) 38px 39px);
+      background-color:#fdf7f8;
+      border-top:1px solid var(--red-line)
+    }
+    .spes-mapa-tela:before,.spes-mapa-tela:after{content:"";position:absolute;background:var(--red-lit);opacity:.55}
+    .spes-mapa-tela:before{left:50%;top:0;width:1px;height:100%}
+    .spes-mapa-tela:after{top:46%;left:0;height:1px;width:100%}
+    .spes-mapa-pin{position:relative;z-index:1;display:grid;justify-items:center;gap:6px}
+    .spes-mapa-pin span{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--red);color:#fff;font-size:20px;box-shadow:0 0 0 8px rgba(158,44,49,.14),0 10px 24px rgba(93,15,31,.3)}
+    .spes-mapa-pin b{font:600 21px/1.2 var(--display);color:var(--navy)}
+    .spes-mapa-pin small{font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:#6b5a5f}
+    .spes-mapa-pin a{display:inline-block;margin-top:6px;min-height:44px;padding:12px 18px;background:var(--red);color:#fff;font-size:.875rem;font-weight:900;text-decoration:none}
+    .spes-mapa-pin a:hover{background:var(--red-deep)}
+    .spes-mapa-fonte{margin:0;padding:11px 12px 2px;color:var(--muted);font-size:.8125rem;line-height:1.5}
+    .carlo-credito{display:block;margin-top:7px;font-size:.75rem;line-height:1.45;color:inherit;opacity:.82;letter-spacing:.01em}
+    /* alvos de toque: piso de 24px (WCAG 2.5.8) e 44px nos CTAs de leitura */
+    .footer-links a{padding:5px 0}
+    .saint-card a,.content-card a,.text-link,.era a,.study a,.catechism-part a,.media-tile a,.source-panel a,.archive-note a{min-height:24px;display:inline-block;padding:3px 0}
+    .brand{min-height:44px}
+
+    /* ── RODAPÉ E FLUTUANTE ── */
+    footer{background:linear-gradient(145deg,#2a0710,#5d0f1f);color:#efdcdf}
+    .footer-top p{color:#dcc4c8}
+    .footer-links a{color:#e8ccd0}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.18);color:#d3b6ba}
+    .floating{background:var(--red);box-shadow:0 16px 38px rgba(93,15,31,.32)}
+    .floating:hover{background:var(--red-deep)}
+
+    /* ── FILETES DE OURO NO RETÁBULO E NAS FIGURAS (moldura de altar) ── */
+    .carlo-retabulo{background:linear-gradient(180deg,#3a0a14,#2a0710);border:1px solid rgba(217,182,108,.5);box-shadow:0 30px 80px rgba(42,7,16,.4),inset 0 0 0 1px rgba(217,182,108,.2)}
+    .carlo-obra{border:1px solid rgba(217,182,108,.55);background:#1a0509}
+    .carlo-capitular{color:var(--rose)}
+    .carlo-retabulo figcaption{color:#f7ecec}
+    .carlo-retabulo figcaption small{color:rgba(242,217,159,.75)}
+    .carlo-quote-card{border:1px solid var(--red-line);border-left:3px solid var(--red)}
+    .carlo-quote-card blockquote{color:var(--navy)}
+    .carlo-timeline{border-top:1px solid var(--red-line)}
+    .carlo-timeline .era{border-left:2px solid rgba(158,44,49,.35)}
+    .carlo-timeline .era:last-child{border-left-color:var(--red);background:linear-gradient(180deg,var(--red-tint),transparent)}
+    .carlo-label-orn:before{background:linear-gradient(90deg,transparent,var(--red))}
+    .carlo-label-orn:after{background:linear-gradient(90deg,var(--red),transparent)}
+    .era-figura{border:1px solid rgba(217,182,108,.45);background:#1a0509}
+    .pilar-figura{border:1px solid rgba(217,182,108,.4);background:#1a0509}
+    .pilar-figura figcaption{color:#e9dcc0;font-size:.75rem;line-height:1.45;padding:6px 10px 10px}
+    .source-panel{border:1px solid var(--red-line);background:var(--red-tint)}
+    .source-panel a{color:var(--red-deep)}
+    .top-gap{margin-top:12px}
+
+    /* ═══ BLOCOS NOVOS DO SANTUÁRIO DO CARLO ═══
+       Prefixo próprio (carlo-*/spes-*) e NENHUMA reutilização de .view-head,
+       .hero-grid, .lead ou .btn — foi assim que o layout do santuário quebrou
+       na branch carlo-santuario-completo (o CSS antigo vencia). */
+    .carlo-head{position:relative;isolation:isolate;margin:0 0 20px;padding:0 0 14px;border-bottom:1px solid var(--red-line);display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:18px;scroll-margin-top:96px}
+    .carlo-head>div{max-width:640px}
+    .carlo-head .carlo-sobre{display:block;font-size:.75rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:var(--red)}
+    .carlo-head h2{margin:.3rem 0 0;color:var(--navy);font:600 clamp(26px,3vw,38px)/1.04 var(--display);letter-spacing:-.02em}
+    .carlo-head p{max-width:46ch;margin:0;color:var(--muted);font-size:.9375rem;line-height:1.6}
+    .carlo-head small{display:inline-flex;align-items:center;gap:7px;margin-top:.55rem;color:#6b5a5f;font-size:.75rem}
+    .carlo-head small:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 0 5px rgba(158,44,49,.1)}
+
+    .carlo-dossie{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:14px;margin-bottom:32px}
+    .carlo-passo{position:relative;padding:22px 22px 24px;background:#fff;border:1px solid var(--red-line);border-top:3px solid var(--red);box-shadow:0 12px 32px rgba(93,15,31,.07)}
+    .carlo-passo h3{margin:.45rem 0 .5rem;font:600 22px/1.12 var(--display);color:var(--navy)}
+    .carlo-passo p{margin:0;color:var(--muted);font-size:.9375rem;line-height:1.65}
+    .carlo-passo p b{color:var(--red-deep)}
+    .carlo-passo blockquote{margin:.6rem 0 0;padding-left:14px;border-left:2px solid var(--red);font:600 17px/1.4 var(--display);color:var(--navy)}
+
+    .carlo-milagres{display:grid;grid-template-columns:repeat(auto-fit,minmax(282px,1fr));gap:14px;margin-bottom:32px}
+    .carlo-milagre{position:relative;display:flex;flex-direction:column;padding:22px;background:#fff;border:1px solid var(--red-line);border-left:3px solid var(--red);box-shadow:0 12px 32px rgba(93,15,31,.07)}
+    .carlo-milagre h3{margin:.45rem 0 .5rem;font:600 23px/1.1 var(--display);color:var(--navy)}
+    .carlo-milagre p{margin:0 0 12px;color:var(--muted);font-size:.9375rem;line-height:1.65}
+    .carlo-milagre p b{color:var(--red-deep)}
+    .carlo-milagre cite{display:block;margin-top:auto;padding-top:9px;border-top:1px solid var(--red-line);color:#6b5a5f;font-size:.8125rem;font-style:normal}
+    .carlo-milagre .carlo-figura{margin:0 0 14px;border:1px solid rgba(217,182,108,.5);background:#1a0509;overflow:hidden}
+    .carlo-milagre .carlo-figura img{display:block;width:100%;height:216px;object-fit:cover;object-position:center 30%}
+
+    .carlo-galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:32px}
+    .carlo-galeria figure{margin:0;padding:10px;background:#fff;border:1px solid var(--red-line);box-shadow:0 12px 32px rgba(93,15,31,.07)}
+    .carlo-galeria img{display:block;width:100%;height:286px;object-fit:cover;object-position:center 30%;border:1px solid rgba(217,182,108,.45);background:#1a0509}
+    .carlo-galeria figure.carlo-alto img{object-position:center 16%}
+    .carlo-galeria figcaption{margin:10px 4px 4px;font-size:.875rem;line-height:1.5;color:var(--navy)}
+    .carlo-galeria figcaption small{display:block;margin-top:6px;font-size:.75rem;line-height:1.45;color:#6b5a5f}
+
+    .carlo-nota{margin:0 0 32px;padding:18px 20px;border:1px solid var(--red-line);background:var(--red-tint);color:var(--muted);font-size:.9375rem;line-height:1.68}
+    .carlo-nota b{color:var(--red-deep)}
+    .carlo-nota a{color:var(--red-deep);font-weight:700}
+    @media(max-width:720px){
+      .carlo-dossie,.carlo-milagres,.carlo-galeria{gap:12px}
+      .carlo-galeria img{height:220px}
+      .carlo-milagre .carlo-figura img{height:186px}
+      .spes-mapa-tela{min-height:300px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .spes-mapa-tela:before,.spes-mapa-tela:after{opacity:.35}
+    }
 </style>
 </head>
 <body>
@@ -184,7 +463,7 @@
       <!-- retábulo: obras de Da Vinci e Michelangelo em domínio público -->
       <figure class="carlo-retabulo">
         <div class="carlo-obra">
-          <img src="assets/carlo-ultima-ceia.webp" alt="A Última Ceia, de Leonardo da Vinci (1495–1498): Cristo institui a Eucaristia" width="1000" height="520" fetchpriority="high" decoding="async">
+          <img src="assets/carlo-ultima-ceia.webp" alt="A Última Ceia, de Leonardo da Vinci (1495–1498): Cristo institui a Eucaristia" width="1000" height="520" loading="lazy" decoding="async">
         </div>
         <figcaption>
           <span class="carlo-capitular">N</span>a Última Ceia, Cristo institui a Eucaristia — e é dela que Carlo Acutis fez a estrada da sua vida.
@@ -226,16 +505,85 @@
         </article>
       </div>
 
+
+      <div class="carlo-head" id="carlo-vida">
+        <div>
+          <span class="carlo-sobre">A vida · 1991 — 2006</span>
+          <h2>Quinze anos, e uma estrada inteira.</h2>
+          <small>Biografia lida na canonização e reportagens do Vatican News</small>
+        </div>
+        <p>Ele não fundou nada, não escreveu livros, não pregou em palco. Fez o que tinha à mão — um computador,
+        uma mesada, uma Missa por dia — e atravessou o mundo.</p>
+      </div>
+      <div class="carlo-dossie">
+        <article class="carlo-passo"><span class="label carlo-label-orn">A doença</span><h3>Outubro de 2006</h3>
+          <p>Foi diagnosticado com uma forma agressiva de <b>leucemia</b>. Em poucos dias, a saúde piorou.</p></article>
+        <article class="carlo-passo"><span class="label carlo-label-orn">A oferta</span><h3>Ele ofereceu o próprio sofrimento</h3>
+          <p>Ofereceu-o «ao Santo Padre, pelo bem da Igreja», como registra a biografia lida na canonização.</p></article>
+        <article class="carlo-passo"><span class="label carlo-label-orn">Os últimos dias</span><h3>Hospital San Gerardo, Monza</h3>
+          <p>Recebeu a Unção dos Enfermos. Morreu a <b>12 de outubro de 2006</b>, com 15 anos e 5 meses.</p></article>
+        <article class="carlo-passo"><span class="label carlo-label-orn">O sepultamento</span><h3>Ternengo (Biella), depois Assis</h3>
+          <p>Sepultado primeiro no túmulo da família, em Ternengo; mais tarde transferido para o cemitério de Assis
+          e, depois, para o <b>Santuário do Despojamento</b>, onde é venerado por fiéis do mundo inteiro.</p></article>
+        <article class="carlo-passo"><span class="label carlo-label-orn">O que aconteceu com o corpo</span><h3>Conservado, mas não incorrupto</h3>
+          <p>O reitor do santuário esclarece ao <b>Vatican News</b> (09/10/2020): o corpo estava bem conservado,
+          com todos os órgãos, mas <b>não</b> incorrupto. A imagem vista em fotos e vídeos não corresponde a como
+          foi encontrado — há uma <b>máscara de silicone</b> sobre rosto e mãos.</p>
+          <blockquote>«O que faz uma pessoa ser declarada santa pela Igreja não é o fato de ter o corpo
+          incorrupto, intacto, mas o modo como ela viveu as virtudes cardeais e teologais e, depois, os milagres.»</blockquote></article>
+        <article class="carlo-passo"><span class="label carlo-label-orn">A caminho do altar</span><h3>Venerável, beato, santo</h3>
+          <p>Venerável em <b>5 de julho de 2018</b>. Beato em <b>10 de outubro de 2020</b>, na Basílica Superior de
+          São Francisco, em Assis. Santo em <b>7 de setembro de 2025</b> — 19 anos depois de morrer.</p></article>
+      </div>
+
+      <div class="carlo-head" id="carlo-milagres">
+        <div>
+          <span class="carlo-sobre">Os milagres reconhecidos</span>
+          <h2>Dois, e ambos passaram pelo crivo da Igreja.</h2>
+          <small>Reconhecidos pela Santa Sé · Vatican News</small>
+        </div>
+        <p>A Igreja não canoniza por comoção: para beatificar e para canonizar exige um milagre examinado por
+        comissões médicas e teológicas. Estes dois foram reconhecidos.</p>
+      </div>
+      <div class="carlo-milagres">
+        <article class="carlo-milagre">
+          <span class="label carlo-label-orn">1º milagre · a beatificação</span>
+          <figure class="carlo-figura"><img src="assets/carlo-reliquia-rio.webp" alt="Relíquia de São Carlo Acutis exposta no Rio de Janeiro, entre flores" loading="lazy" decoding="async" width="1000" height="1018"></figure>
+          <h3>O menino do Brasil</h3>
+          <p>Ocorrido na <b>Arquidiocese de Campo Grande</b>, em 2013. A cura foi pedida por intercessão de Carlo e
+          reconhecida pela Santa Sé — o que abriu o caminho da beatificação, celebrada em Assis a
+          <b>10 de outubro de 2020</b>.</p>
+          <cite>Vatican News, biografia lida na canonização</cite>
+        </article>
+        <article class="carlo-milagre">
+          <span class="label carlo-label-orn">2º milagre · a canonização</span>
+          <figure class="carlo-figura"><img src="assets/carlo-relicario-pericardio.webp" alt="Relicário do pericárdio de São Carlo Acutis, sobre veludo vermelho" loading="lazy" decoding="async" width="1000" height="1333"></figure>
+          <h3>A jovem da Costa Rica</h3>
+          <p>Ligado a uma <b>jovem da Costa Rica</b>. A mãe dela rezou no <b>túmulo de Carlo, em Assis,
+          a 8 de julho de 2022</b>. O decreto reconhecendo o milagre é de <b>23 de maio de 2024</b> — e abriu a
+          canonização.</p>
+          <cite>Vatican News (edição em inglês, 23/05/2024)</cite>
+        </article>
+        <article class="carlo-milagre">
+          <span class="label carlo-label-orn">A obra dele · milagres eucarísticos</span>
+          <h3>A exposição que ele criou</h3>
+          <p>Carlo catalogou, com <b>Nicola Gori</b>, a exposição internacional sobre os milagres eucarísticos
+          reconhecidos pela Igreja em vários países — o site <b>miracolieucaristici.org</b> é dessa mostra.
+          Não publicamos um total: as fontes divergem, e a própria exposição lista por país.</p>
+          <cite>miracolieucaristici.org — idealizada e realizada por Carlo Acutis e Nicola Gori</cite>
+        </article>
+      </div>
+
       <!-- linha do tempo -->
       <div class="carlo-timeline">
-        <article class="era"><time>3 DE MAIO DE 1991</time><figure class="era-figura"><img src="assets/carlo-anunciacao.webp" alt="A Anunciação, de Leonardo da Vinci, c. 1472" loading="lazy" decoding="async" width="1000" height="650"><figcaption>O começo de uma vocação que se abre a Deus, como o de todo batizado.</figcaption></figure><h3>Nasce em Londres</h3><p>Filho de italianos, batizado duas semanas depois. Ainda em 1991 a família volta para Milão.</p></article>
-        <article class="era"><time>1998</time><figure class="era-figura"><img src="assets/carlo-ultima-ceia.webp" alt="A Última Ceia, de Leonardo da Vinci, 1495–1498" loading="lazy" decoding="async" width="1000" height="650"><figcaption>Ele teve acesso à Eucaristia aos sete anos e nunca mais deixou a Missa diária.</figcaption></figure><h3>Primeira Comunhão, aos 7 anos</h3><p>No Mosteiro das Eremitas Ambrosianas, em Bernaga di Perego. Desde então, nunca mais deixou a Missa diária.</p></article>
-        <article class="era"><time>VERÃO DE 2006</time><figure class="era-figura"><img src="assets/carlo-assis.webp" alt="Panorama de Assis, na Itália, com a Basílica de Santa Maria dos Anjos" loading="lazy" decoding="async" width="1000" height="650"><figcaption>Nas férias em Assis adotou a espiritualidade franciscana: alegria, contemplação e proximidade com os pobres.</figcaption></figure><h3>O computador a serviço do Evangelho</h3><p>Catequista na paróquia Santa Maria Segreta, criou o site do projeto de voluntariado da escola, a página da Pontifícia Academia Cultorum Martyrum e um layout para a oração do Rosário.</p></article>
-        <article class="era"><time>12 DE OUTUBRO DE 2006</time><figure class="era-figura"><img src="assets/carlo-pieta.webp" alt="A Pietà, de Michelangelo, 1498–1499, Basílica de São Pedro" loading="lazy" decoding="async" width="1000" height="650"><figcaption>Ele ofereceu o próprio sofrimento pelo bem da Igreja, unido à entrega de Cristo.</figcaption></figure><h3>Entrega a vida, aos 15 anos</h3><p>Uma leucemia agressiva. Ofereceu o sofrimento ao Santo Padre, pelo bem da Igreja. Morreu em Monza, no Hospital San Gerardo.</p></article>
-        <article class="era"><time>5 DE JULHO DE 2018</time><figure class="era-figura"><img src="assets/carlo-criacao-adao.webp" alt="A Criação de Adão, de Michelangelo, Capela Sistina" loading="lazy" decoding="async" width="1000" height="650"><figcaption>A Igreja reconhece que ele viveu as virtudes cristãs em grau heroico.</figcaption></figure><h3>Venerável</h3><p>O Papa Francisco reconhece que Carlo viveu as virtudes cristãs em grau heroico.</p></article>
-        <article class="era"><time>10 DE OUTUBRO DE 2020</time><figure class="era-figura"><img src="assets/carlo-tumulo.webp" alt="Túmulo de São Carlo Acutis, no Santuário do Despojamento, em Assis" loading="lazy" decoding="async" width="1000" height="650"><figcaption>Beatificado na Basílica Superior de São Francisco, em Assis, onde o corpo é venerado.</figcaption></figure><h3>Beatificação, em Assis</h3><p>Na Basílica Superior de São Francisco. O primeiro milagre reconhecido foi na Arquidiocese de Campo Grande, no Brasil.</p></article>
-        <article class="era"><time>23 DE MAIO DE 2024</time><figure class="era-figura"><img src="assets/carlo-reliquia-coracao.webp" alt="Relicário com o coração de São Carlo Acutis" loading="lazy" decoding="async" width="1000" height="650"><figcaption>O segundo milagre abre o caminho da canonização.</figcaption></figure><h3>O segundo milagre</h3><p>O Papa Francisco aprova o decreto: a cura de uma jovem da Costa Rica, alcançada depois que a mãe dela rezou no túmulo de Carlo, em Assis, a 8 de julho de 2022.</p></article>
-        <article class="era"><time>7 DE SETEMBRO DE 2025</time><figure class="era-figura"><img src="assets/carlo-salvator.webp" alt="Salvator Mundi, de Leonardo da Vinci, c. 1500" loading="lazy" decoding="async" width="1000" height="650"><figcaption>Proclamado santo no Domingo XXIII do Tempo Comum, na Praça de São Pedro.</figcaption></figure><h3>Canonização</h3><p>O Papa Leão XIV o proclama santo na Praça de São Pedro, junto com Pier Giorgio Frassati. Depois do segundo milagre reconhecido em 23 de maio de 2024: a cura de uma jovem da Costa Rica, cuja mãe rezou no túmulo dele em Assis.</p></article>
+        <article class="era"><time>3 DE MAIO DE 1991</time><figure class="era-figura"><img src="assets/carlo-anunciacao.webp" alt="A Anunciação, de Leonardo da Vinci, c. 1472" loading="lazy" decoding="async" width="1000" height="650"><figcaption>O começo de uma vocação que se abre a Deus, como o de todo batizado.<small class="carlo-credito">Leonardo da Vinci · domínio público · Wikimedia Commons</small></figcaption></figure><h3>Nasce em Londres</h3><p>Filho de italianos, batizado duas semanas depois. Ainda em 1991 a família volta para Milão.</p></article>
+        <article class="era"><time>1998</time><figure class="era-figura"><img src="assets/carlo-ultima-ceia.webp" alt="A Última Ceia, de Leonardo da Vinci, 1495–1498" loading="lazy" decoding="async" width="1000" height="520"><figcaption>Ele teve acesso à Eucaristia aos sete anos e nunca mais deixou a Missa diária.<small class="carlo-credito">Leonardo da Vinci · domínio público · Wikimedia Commons</small></figcaption></figure><h3>Primeira Comunhão, aos 7 anos</h3><p>No Mosteiro das Eremitas Ambrosianas, em Bernaga di Perego. Desde então, nunca mais deixou a Missa diária.</p></article>
+        <article class="era"><time>VERÃO DE 2006</time><figure class="era-figura"><img src="assets/carlo-assis.webp" alt="Panorama de Assis, na Itália, com a Basílica de Santa Maria dos Anjos" loading="lazy" decoding="async" width="1000" height="749"><figcaption>Nas férias em Assis adotou a espiritualidade franciscana: alegria, contemplação e proximidade com os pobres.<small class="carlo-credito">Blackcat · CC BY-SA 3.0 · Wikimedia Commons</small></figcaption></figure><h3>O computador a serviço do Evangelho</h3><p>Catequista na paróquia Santa Maria Segreta, criou o site do projeto de voluntariado da escola, a página da Pontifícia Academia Cultorum Martyrum e um layout para a oração do Rosário.</p></article>
+        <article class="era"><time>12 DE OUTUBRO DE 2006</time><figure class="era-figura"><img src="assets/carlo-pieta.webp" alt="A Pietà, de Michelangelo, 1498–1499, Basílica de São Pedro" loading="lazy" decoding="async" width="1000" height="922"><figcaption>Ele ofereceu o próprio sofrimento pelo bem da Igreja, unido à entrega de Cristo.<small class="carlo-credito">Jebulon · CC0 · Wikimedia Commons</small></figcaption></figure><h3>Entrega a vida, aos 15 anos</h3><p>Uma leucemia agressiva. Ofereceu o sofrimento ao Santo Padre, pelo bem da Igreja. Morreu em Monza, no Hospital San Gerardo.</p></article>
+        <article class="era"><time>5 DE JULHO DE 2018</time><figure class="era-figura"><img src="assets/carlo-criacao-adao.webp" alt="A Criação de Adão, de Michelangelo, Capela Sistina" loading="lazy" decoding="async" width="1000" height="453"><figcaption>A Igreja reconhece que ele viveu as virtudes cristãs em grau heroico.<small class="carlo-credito">Michelangelo · domínio público · Wikimedia Commons</small></figcaption></figure><h3>Venerável</h3><p>O Papa Francisco reconhece que Carlo viveu as virtudes cristãs em grau heroico.</p></article>
+        <article class="era"><time>10 DE OUTUBRO DE 2020</time><figure class="era-figura"><img src="assets/carlo-tumulo.webp" alt="Relevo em pedra do túmulo de São Carlo Acutis, em Assis, com o monograma IHS em sol radiante" loading="lazy" decoding="async" width="695" height="535"><figcaption>Beatificado na Basílica Superior de São Francisco, em Assis, onde o corpo é venerado.<small class="carlo-credito">Esthappanos Bar Geevarghese · CC BY-SA 4.0 · Wikimedia Commons</small></figcaption></figure><h3>Beatificação, em Assis</h3><p>Na Basílica Superior de São Francisco. O primeiro milagre reconhecido foi na Arquidiocese de Campo Grande, no Brasil.</p></article>
+        <article class="era"><time>23 DE MAIO DE 2024</time><figure class="era-figura"><img src="assets/carlo-reliquia-coracao.webp" alt="Relicário com o coração de São Carlo Acutis" loading="lazy" decoding="async" width="900" height="1372"><figcaption>O segundo milagre abre o caminho da canonização.<small class="carlo-credito">Dobroš · CC BY-SA 4.0 · Wikimedia Commons</small></figcaption></figure><h3>O segundo milagre</h3><p>O Papa Francisco aprova o decreto: a cura de uma jovem da Costa Rica, alcançada depois que a mãe dela rezou no túmulo de Carlo, em Assis, a 8 de julho de 2022.</p></article>
+        <article class="era"><time>7 DE SETEMBRO DE 2025</time><figure class="era-figura"><img src="assets/carlo-salvator.webp" alt="Estudos anatômicos de Leonardo da Vinci sobre o feto no ventre materno, c. 1510" loading="lazy" decoding="async" width="820" height="1204"><figcaption>Estudos anatômicos de Leonardo da Vinci sobre a vida no ventre materno, c. 1510. A canonização foi proclamada no Domingo XXIII do Tempo Comum, na Praça de São Pedro.<small class="carlo-credito">Leonardo da Vinci · domínio público · Wikimedia Commons</small></figcaption></figure><h3>Canonização</h3><p>O Papa Leão XIV o proclama santo na Praça de São Pedro, junto com Pier Giorgio Frassati. Depois do segundo milagre reconhecido em 23 de maio de 2024: a cura de uma jovem da Costa Rica, cuja mãe rezou no túmulo dele em Assis.</p></article>
       </div>
 
       <!-- Jesus, Maria e a esperança -->
@@ -254,7 +602,7 @@
           todos os dias — o encontro mais galante do dia, dizia, com a única mulher da sua vida.</p>
           <a href="#santuario" data-view="maria">Maria no mistério de Cristo ↗</a>
         </article>
-        <article class="content-card"><figure class="pilar-figura"><img src="assets/carlo-reliquia-rio.webp" alt="Exposição da relíquia de São Carlo Acutis no Rio de Janeiro" loading="lazy" decoding="async" width="1000" height="1018"></figure>
+        <article class="content-card"><figure class="pilar-figura"><img src="assets/carlo-reliquia-rio.webp" alt="Exposição da relíquia de São Carlo Acutis no Rio de Janeiro, com flores e o retrato dele ao fundo" loading="lazy" decoding="async" width="1000" height="1018"><figcaption class="carlo-credito">Sir Velpertex di Crantx · CC0 · Wikimedia Commons</figcaption></figure>
           <span class="label">ESPERANÇA</span>
           <h3>A caridade vinha depois</h3>
           <p>Dava parte da mesada aos pobres da vizinhança e organizava feiras na paróquia para as missões.
@@ -271,6 +619,43 @@
         </article>
       </div>
 
+      <div class="carlo-head" id="carlo-imagens">
+        <div>
+          <span class="carlo-sobre">Imagens e relíquias</span>
+          <h2>Como a Igreja o mostra hoje.</h2>
+          <small>Fotografias com licença livre · Wikimedia Commons</small>
+        </div>
+        <p>Não existem, em acervo livre, fotografias dele em vida: essas imagens pertencem à família e à diocese.
+        O que existe — e é o que se vê aqui — são as imagens devocionais, as relíquias e o túmulo.
+        Nenhuma escultura nesta página é tratada como fotografia.</p>
+      </div>
+      <div class="carlo-galeria">
+        <figure class="carlo-alto">
+          <img src="assets/carlo-estatua.webp" alt="Estátua devocional de São Carlo Acutis, de camisa vermelha, com o rosário, o missal e a bola de futebol aos pés" loading="lazy" decoding="async" width="576" height="1280">
+          <figcaption>A estátua devocional, de camisa vermelha — a cor que ficou ligada à devoção a ele.
+          <small>Joncrisvv · CC BY-SA 4.0 · Wikimedia Commons</small></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/carlo-relicario-pericardio.webp" alt="Relicário do pericárdio de São Carlo Acutis sobre veludo carmesim, em redoma de vidro" loading="lazy" decoding="async" width="1000" height="1333">
+          <figcaption>O relicário do pericárdio, sobre veludo carmesim.
+          <small>LMP 2001 · CC BY-SA 4.0 · Wikimedia Commons</small></figcaption>
+        </figure>
+        <figure class="carlo-alto">
+          <img src="assets/carlo-reliquia-coracao.webp" alt="Relicário dourado com o coração de São Carlo Acutis, sob a inscrição Eucaristia, a minha autoestrada para o céu" loading="lazy" decoding="async" width="900" height="1372">
+          <figcaption>O relicário do coração, sob a frase dele.
+          <small>Dobroš · CC BY-SA 4.0 · Wikimedia Commons</small></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/carlo-tumulo.webp" alt="Relevo em pedra do túmulo de São Carlo Acutis, com o monograma IHS em sol radiante" loading="lazy" decoding="async" width="695" height="535">
+          <figcaption>O túmulo, no Santuário do Despojamento, em Assis — um relevo em pedra com o <i>IHS</i>.
+          <small>Esthappanos Bar Geevarghese · CC BY-SA 4.0 · Wikimedia Commons</small></figcaption>
+        </figure>
+      </div>
+      <p class="carlo-nota"><b>Sobre as imagens desta página:</b> as obras de Leonardo da Vinci e Michelangelo são
+      de domínio público; as fotografias vieram do Wikimedia Commons sob CC0 ou CC BY-SA 4.0, com o autor creditado
+      em cada figura. Nenhuma fotografia de Carlo Acutis em vida foi usada — esses direitos são da família e da diocese.</p>
+
+
       <div class="source-panel">
         <div>
           <span class="label carlo-label-orn">FONTES OFICIAIS</span>
@@ -282,13 +667,13 @@
       </div>
     </section>
 
-    <section class="view" id="view-midia"><div class="view-head"><div><span>CONTEMPLAR</span><h2>Imagem, silêncio e esperança.</h2><small class="source-badge">Acervo visual SPES + mídia da Santa Sé</small></div><p>Uma biblioteca para desacelerar: arte sacra, meditações e vídeos curtos sem transformar oração em espetáculo.</p></div><div class="media-stage"><article class="media-main"><img src="assets/santuario-luz.webp" alt="Interior de um santuário iluminado pelo amanhecer" width="1600" height="900" decoding="async"><div class="media-main-copy"><span class="label">DEVOCIONAL SPES</span><h3>Quando a luz atravessa o silêncio.</h3><p>Uma contemplação visual sobre esperança, recolhimento e a presença de Deus.</p><button class="media-open gold-link" type="button" data-media="assets/santuario-luz.webp" data-title="Quando a luz atravessa o silêncio">Contemplar em tela ampla</button></div></article><div class="media-side"><article class="media-tile media-art"><img src="assets/cristo-centro.webp" alt="Representação devocional de Jesus Cristo em luz serena" width="900" height="1117" decoding="async"><div><b>Cristo, centro.</b><p>Uma composição devocional de linguagem clássica, marcada pela luz da Ressurreição.</p><button class="media-open" type="button" data-media="assets/cristo-centro.webp" data-title="Cristo, centro">Contemplar no santuário</button></div></article><article class="media-tile media-art"><img src="assets/maria-aponta-cristo.webp" alt="Representação devocional de Maria em manto azul, voltada para a luz de Cristo" width="900" height="1117" decoding="async"><div><b>Maria aponta para Cristo.</b><p>Uma composição mariana em azul ultramarino e ouro discreto, orientada para seu Filho.</p><button class="media-open" type="button" data-media="assets/maria-aponta-cristo.webp" data-title="Maria aponta para Cristo">Contemplar no santuário</button></div></article><article class="media-tile"><b>Vídeos com o Papa.</b><p>Para conteúdo pontifício, a SPES direciona à fonte oficial, sem editar falas fora de contexto.</p><a href="https://www.vatican.va/content/leo-xiv/pt.html" target="_blank" rel="noopener">Vaticano ↗</a></article></div></div></section>
+    <section class="view" id="view-midia"><div class="view-head"><div><span>CONTEMPLAR</span><h2>Imagem, silêncio e esperança.</h2><small class="source-badge">Acervo visual SPES + mídia da Santa Sé</small></div><p>Uma biblioteca para desacelerar: arte sacra, meditações e vídeos curtos sem transformar oração em espetáculo.</p></div><div class="media-stage"><article class="media-main"><img src="assets/santuario-luz.webp" alt="Interior de um santuário iluminado pelo amanhecer" width="1600" height="900" loading="lazy" decoding="async"><div class="media-main-copy"><span class="label">DEVOCIONAL SPES</span><h3>Quando a luz atravessa o silêncio.</h3><p>Uma contemplação visual sobre esperança, recolhimento e a presença de Deus.</p><button class="media-open gold-link" type="button" data-media="assets/santuario-luz.webp" data-title="Quando a luz atravessa o silêncio">Contemplar em tela ampla</button></div></article><div class="media-side"><article class="media-tile media-art"><img src="assets/cristo-centro.webp" alt="Representação devocional de Jesus Cristo em luz serena" width="760" height="943" loading="lazy" decoding="async"><div><b>Cristo, centro.</b><p>Uma composição devocional de linguagem clássica, marcada pela luz da Ressurreição.</p><button class="media-open" type="button" data-media="assets/cristo-centro.webp" data-title="Cristo, centro">Contemplar no santuário</button></div></article><article class="media-tile media-art"><img src="assets/maria-aponta-cristo.webp" alt="Representação devocional de Maria em manto azul, voltada para a luz de Cristo" width="760" height="943" loading="lazy" decoding="async"><div><b>Maria aponta para Cristo.</b><p>Uma composição mariana em azul ultramarino e ouro discreto, orientada para seu Filho.</p><button class="media-open" type="button" data-media="assets/maria-aponta-cristo.webp" data-title="Maria aponta para Cristo">Contemplar no santuário</button></div></article><article class="media-tile"><b>Vídeos com o Papa.</b><p>Para conteúdo pontifício, a SPES direciona à fonte oficial, sem editar falas fora de contexto.</p><a href="https://www.vatican.va/content/leo-xiv/pt.html" target="_blank" rel="noopener">Vaticano ↗</a></article></div></div></section>
 
-        <section class="view" id="view-igrejas"><div class="view-head"><div><span>FÉ TAMBÉM É PRESENÇA</span><h2>Encontre uma igreja perto de você.</h2></div><p>Permita sua localização ou busque por CEP, bairro ou cidade.</p></div><div class="church-layout"><div class="finder"><span class="label">BUSCAR IGREJA CATÓLICA</span><h3>Do digital para o altar.</h3><p>O santuário digital nunca pretende substituir a vida sacramental e a comunidade local.</p><button type="button" class="locate" id="locate">Usar minha localização</button><form id="finder"><label for="church-location">CEP, bairro ou cidade</label><div><input id="church-location" type="text" autocomplete="postal-code" placeholder="Ex.: 01310-100"><button type="submit">Buscar</button></div></form><p class="status" id="location-status" aria-live="polite">Informe um local ou permita o acesso à localização.</p></div><div class="map"><div class="map-head"><b>Igrejas próximas</b><a id="open-map" href="https://www.google.com/maps/search/?api=1&query=igreja%20cat%C3%B3lica%20Brasil" target="_blank" rel="noopener">Abrir no Google Maps ↗</a></div><iframe id="map" src="https://www.google.com/maps?q=igreja%20cat%C3%B3lica%20perto%20de%20Brasil&output=embed" title="Mapa com igrejas católicas próximas" loading="lazy" allowfullscreen></iframe></div></div></section>
+        <section class="view" id="view-igrejas"><div class="view-head"><div><span>FÉ TAMBÉM É PRESENÇA</span><h2>Encontre uma igreja perto de você.</h2></div><p>Permita sua localização ou busque por CEP, bairro ou cidade.</p></div><div class="church-layout"><div class="finder"><span class="label">BUSCAR IGREJA CATÓLICA</span><h3>Do digital para o altar.</h3><p>O santuário digital nunca pretende substituir a vida sacramental e a comunidade local.</p><button type="button" class="locate" id="locate">Usar minha localização</button><form id="finder"><label for="church-location">CEP, bairro ou cidade</label><div><input id="church-location" type="text" autocomplete="postal-code" placeholder="Ex.: 01310-100"><button type="submit">Buscar</button></div></form><p class="status" id="location-status" aria-live="polite">Informe um local ou permita o acesso à localização.</p></div><div class="map"><div class="map-head"><b>Onde procurar</b><a id="open-map" href="https://www.google.com/maps/search/?api=1&query=igreja%20cat%C3%B3lica%20Brasil" target="_blank" rel="noopener">Abrir no Google Maps ↗</a></div><div class="spes-mapa-tela" id="map"><div class="spes-mapa-pin"><span aria-hidden="true">✚</span><b id="mapa-local">Igrejas católicas</b><small>O mapa abre no Google Maps, em outra aba</small><a id="mapa-link" href="https://www.google.com/maps/search/?api=1&query=igreja%20cat%C3%B3lica%20Brasil" target="_blank" rel="noopener">Ver igrejas por perto ↗</a></div></div><p class="spes-mapa-fonte">A SPES não incorpora mapa de terceiros na própria página: o santuário avisa que sairá do site e abre a busca oficial do Google Maps em outra aba.</p></div></div></section>
       </div>
     </section>
   </main>
-  <dialog class="media-dialog" id="media-dialog" aria-labelledby="media-dialog-title"><div class="media-dialog-shell"><button class="media-dialog-close" type="button" aria-label="Fechar imagem">×</button><img id="media-dialog-image" src="assets/santuario-luz.webp" alt=""><h2 id="media-dialog-title">Contemplação SPES</h2></div></dialog>
+  <dialog class="media-dialog" id="media-dialog" aria-labelledby="media-dialog-title"><div class="media-dialog-shell"><button class="media-dialog-close" type="button" aria-label="Fechar imagem">×</button><img id="media-dialog-image" src="assets/santuario-luz.webp" alt="" loading="lazy" decoding="async"><h2 id="media-dialog-title">Contemplação SPES</h2></div></dialog>
   <footer><div class="footer-top"><div><a class="brand footer-brand" href="#santuario" data-view="santuario"><img class="brand-mark" src="/assets/spes-mark.svg" alt=""><span><b>SPES</b><small>Santuário Digital</small></span></a><p>Oração, formação, memória e comunhão católica com fontes visíveis e respeito à tradição.</p></div><div class="footer-links"><b>FONTES PRIMÁRIAS</b><a href="https://www.vatican.va/content/vatican/pt.html" target="_blank" rel="noopener">Santa Sé</a><a href="https://www.vaticannews.va/pt.html" target="_blank" rel="noopener">Vatican News</a><a href="https://www.vatican.va/archive/cathechism_po/index_new/prima-pagina-cic_po.html" target="_blank" rel="noopener">Catecismo da Igreja Católica</a></div><div><div class="footer-note">Fé que se torna oração.<br>Oração que se torna vida.</div></div></div><div class="footer-bottom"><span>© 2026 SPES — Esperança em comunidade.</span><span>Projeto independente; não representa oficialmente a Santa Sé ou a Igreja Católica.</span></div>  <a class="floating" href="https://chat.whatsapp.com/B7UBvpk89Wv121Q0Hdv2gL" target="_blank" rel="noopener" aria-label="Entrar no grupo da Quaresma de São Miguel no WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3C8.84 3 3 8.7 3 15.72c0 2.24.6 4.43 1.74 6.35L3 28.4l6.56-1.68a13.18 13.18 0 0 0 6.45 1.67h.01C23.2 28.39 29 22.68 29 15.67 29 8.67 23.2 3 16.02 3Zm7.56 18.08c-.32.88-1.9 1.69-2.63 1.78-.67.09-1.52.13-2.45-.15-.57-.17-1.3-.42-2.23-.82-3.92-1.65-6.48-5.5-6.68-5.76-.2-.26-1.6-2.09-1.6-3.98 0-1.9 1.02-2.83 1.38-3.22.36-.39.8-.49 1.06-.49h.76c.24.01.57-.09.89.66.32.75 1.1 2.6 1.2 2.79.1.2.16.43.03.69-.13.26-.2.42-.4.65-.2.23-.42.51-.6.68-.2.2-.41.41-.18.8.23.39 1.01 1.62 2.17 2.63 1.49 1.3 2.74 1.7 3.13 1.9.39.19.62.16.85-.1.23-.26.99-1.13 1.25-1.52.26-.39.52-.32.88-.19.36.13 2.29 1.05 2.68 1.24.39.2.65.3.75.46.1.16.1.94-.23 1.82Z"/></svg><b>Quaresma de São Miguel</b></a>
 </footer>
 
@@ -296,11 +681,11 @@
     const WHATSAPP='https://chat.whatsapp.com/B7UBvpk89Wv121Q0Hdv2gL';
     const heroVideo=document.getElementById('hero-video');if(heroVideo&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){heroVideo.muted=true;heroVideo.defaultMuted=true;heroVideo.play().catch(()=>{})}
     const views=['santuario','santos','carlo','historia','papas','catecismo','sacramentos','biblia','acervo','maria','midia','igrejas'];const nav=document.getElementById('nav'),menu=document.getElementById('menu');
-    function selectView(name,scroll=true){if(!views.includes(name))return;document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id==='view-'+name));document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===name));history.replaceState(null,'','#'+name);nav.classList.remove('open');menu.setAttribute('aria-expanded','false');if(scroll)document.getElementById('santuario').scrollIntoView({behavior:'smooth',block:'start'})}
-    document.querySelectorAll('[data-view]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();selectView(el.dataset.view)}));document.querySelectorAll('[data-join]').forEach(el=>el.addEventListener('click',()=>window.open(WHATSAPP,'_blank','noopener')));menu.addEventListener('click',()=>{nav.classList.toggle('open');menu.setAttribute('aria-expanded',nav.classList.contains('open'))});const initial=location.hash.slice(1);if(views.includes(initial))selectView(initial,false);
-    const map=document.getElementById('map'),openMap=document.getElementById('open-map'),status=document.getElementById('location-status');function showChurches(place){map.src='https://www.google.com/maps?q='+encodeURIComponent('igreja católica perto de '+place)+'&output=embed';openMap.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent('igreja católica perto de '+place)}document.getElementById('finder').addEventListener('submit',e=>{e.preventDefault();const value=document.getElementById('church-location').value.trim();if(!value){status.textContent='Digite um CEP, bairro ou cidade.';return}showChurches(value);status.textContent='Mostrando igrejas próximas de '+value+'.'});document.getElementById('locate').addEventListener('click',()=>{const btn=document.getElementById('locate');if(!navigator.geolocation){status.textContent='Use o campo de busca: seu navegador não oferece geolocalização.';return}btn.disabled=true;btn.textContent='Buscando…';navigator.geolocation.getCurrentPosition(({coords})=>{showChurches(coords.latitude+','+coords.longitude);status.textContent='Localização identificada.';btn.disabled=false;btn.textContent='Usar minha localização'},()=>{status.textContent='Não foi possível acessar sua localização. Busque por CEP ou cidade.';btn.disabled=false;btn.textContent='Usar minha localização'},{enableHighAccuracy:true,timeout:10000,maximumAge:300000})});
-    async function refreshSaint(){try{const response=await fetch('/api/santo-do-dia',{headers:{accept:'application/json'}});if(!response.ok)return;const data=await response.json();if(data.dateLabel){document.querySelector('#daily-saint .label').textContent='SANTO DO DIA • '+data.dateLabel.toUpperCase()}if(data.name){document.getElementById('saint-name').textContent=data.name;document.getElementById('saint-expanded-name').textContent=data.name+' • '+data.dateLabel}if(data.sourceUrl){document.getElementById('saint-link').href=data.sourceUrl;document.getElementById('saint-expanded-link').href=data.sourceUrl}}catch(_){}}
-    const mediaDialog=document.getElementById('media-dialog'),mediaDialogImage=document.getElementById('media-dialog-image'),mediaDialogTitle=document.getElementById('media-dialog-title');document.querySelectorAll('.media-open').forEach(button=>button.addEventListener('click',()=>{mediaDialogImage.src=button.dataset.media;mediaDialogImage.alt=button.dataset.title;mediaDialogTitle.textContent=button.dataset.title;mediaDialog.showModal()}));document.querySelector('.media-dialog-close').addEventListener('click',()=>mediaDialog.close());mediaDialog.addEventListener('click',event=>{if(event.target===mediaDialog)mediaDialog.close()});
+    function selectView(name,scroll=true){if(!views.includes(name))return;document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id==='view-'+name));document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===name));history.replaceState(null,'','#'+name);if(nav){nav.classList.remove('open')}if(menu){menu.setAttribute('aria-expanded','false')}const ancora=document.getElementById('santuario');if(scroll&&ancora){ancora.scrollIntoView({behavior:'smooth',block:'start'})}}
+    document.querySelectorAll('[data-view]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();selectView(el.dataset.view)}));document.querySelectorAll('[data-join]').forEach(el=>el.addEventListener('click',()=>window.open(WHATSAPP,'_blank','noopener')));if(menu&&nav){menu.addEventListener('click',()=>{nav.classList.toggle('open');menu.setAttribute('aria-expanded',nav.classList.contains('open'))})}const initial=location.hash.slice(1);if(views.includes(initial))selectView(initial,false);
+    const openMap=document.getElementById('open-map'),status=document.getElementById('location-status'),mapaLocal=document.getElementById('mapa-local'),mapaLink=document.getElementById('mapa-link');function showChurches(place){const url='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent('igreja católica perto de '+place);if(mapaLocal){mapaLocal.textContent='Igrejas perto de '+place}if(openMap){openMap.href=url}if(mapaLink){mapaLink.href=url}}const finder=document.getElementById('finder');if(finder){finder.addEventListener('submit',e=>{e.preventDefault();const campo=document.getElementById('church-location');const valor=campo?campo.value.trim():'';if(!valor){if(status){status.textContent='Digite um CEP, bairro ou cidade.'}return}showChurches(valor);if(status){status.textContent='Pronto para '+valor+': o Google Maps abre em outra aba.'}})}const locate=document.getElementById('locate');if(locate){locate.addEventListener('click',()=>{if(!navigator.geolocation){if(status){status.textContent='Use o campo de busca: seu navegador não oferece geolocalização.'}return}locate.disabled=true;locate.textContent='Buscando…';navigator.geolocation.getCurrentPosition(({coords})=>{showChurches(coords.latitude+','+coords.longitude);if(status){status.textContent='Localização identificada: o Google Maps abre em outra aba.'}locate.disabled=false;locate.textContent='Usar minha localização'},()=>{if(status){status.textContent='Não foi possível acessar sua localização. Busque por CEP ou cidade.'}locate.disabled=false;locate.textContent='Usar minha localização'},{enableHighAccuracy:true,timeout:10000,maximumAge:300000})})}
+    async function refreshSaint(){try{const response=await fetch('/api/santo-do-dia',{headers:{accept:'application/json'}});if(!response.ok)return;const data=await response.json();if(data.dateLabel){const rotulo=document.querySelector('#daily-saint .label');if(rotulo){rotulo.textContent='SANTO DO DIA • '+data.dateLabel.toUpperCase()}}const nome=document.getElementById('saint-name'),nomeLongo=document.getElementById('saint-expanded-name'),linkCurto=document.getElementById('saint-link'),linkLongo=document.getElementById('saint-expanded-link');if(data.name&&nome){nome.textContent=data.name}if(data.name&&nomeLongo){nomeLongo.textContent=(data.name+' • '+(data.dateLabel||'')).replace(/ • $/,'')}if(data.sourceUrl&&linkCurto){linkCurto.href=data.sourceUrl}if(data.sourceUrl&&linkLongo){linkLongo.href=data.sourceUrl}}catch(_){}}
+    const mediaDialog=document.getElementById('media-dialog'),mediaDialogImage=document.getElementById('media-dialog-image'),mediaDialogTitle=document.getElementById('media-dialog-title'),mediaDialogClose=document.querySelector('.media-dialog-close');document.querySelectorAll('.media-open').forEach(button=>button.addEventListener('click',()=>{if(!mediaDialog){return}if(mediaDialogImage){mediaDialogImage.src=button.dataset.media;mediaDialogImage.alt=button.dataset.title}if(mediaDialogTitle){mediaDialogTitle.textContent=button.dataset.title}mediaDialog.showModal()}));if(mediaDialogClose&&mediaDialog){mediaDialogClose.addEventListener('click',()=>{mediaDialog.close()})}if(mediaDialog){mediaDialog.addEventListener('click',event=>{if(event.target===mediaDialog){mediaDialog.close()}})}
     refreshSaint();
   </script>
 </body>
