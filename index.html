@@ -384,6 +384,8 @@
     .carlo-nota b{color:var(--red-deep)}
     .carlo-nota a{color:var(--red-deep);font-weight:700}
     @media(max-width:720px){
+      .hero-video{display:none}
+
       .carlo-dossie,.carlo-milagres,.carlo-galeria{gap:12px}
       .carlo-galeria img{height:220px}
       .carlo-milagre .carlo-figura img{height:186px}
@@ -403,7 +405,7 @@
     <button type="button" class="menu" id="menu" aria-label="Abrir menu" aria-expanded="false">Menu</button>
   </header>
   <main>
-    <section class="hero" aria-label="Convite à Quaresma de São Miguel no Santuário Digital SPES"><div class="hero-media"><video class="hero-video" id="hero-video" muted loop playsinline preload="metadata" poster="assets/sao-miguel-hero-896.webp" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback><source src="assets/spes-sao-miguel-hero.mp4" type="video/mp4"></video></div><div class="hero-copy"><p class="kicker">QUARESMA DE SÃO MIGUEL — INÍCIO EM 15 DE AGOSTO</p><h1>Quarenta dias.<br><em>Uma decisão de permanecer.</em></h1><p class="hero-lead">Entre em uma caminhada de oração com São Miguel Arcanjo e permaneça na SPES para encontrar silêncio, formação e vida sacramental. O digital como porta; Cristo como centro.</p><div class="hero-actions"><a class="primary" href="https://chat.whatsapp.com/B7UBvpk89Wv121Q0Hdv2gL" target="_blank" rel="noopener">Entrar no grupo da Quaresma</a><button type="button" class="ghost" data-view="santuario">Conhecer o santuário</button></div></div><div class="hero-mantra">“A esperança não decepciona.”<small>ROMANOS 5,5</small></div><div class="light-line"></div></section>
+    <section class="hero" aria-label="Convite à Quaresma de São Miguel no Santuário Digital SPES"><div class="hero-media"><video class="hero-video" id="hero-video" muted loop playsinline preload="none" poster="assets/sao-miguel-hero-896.webp" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback><source src="assets/spes-sao-miguel-hero.mp4" type="video/mp4"></video></div><div class="hero-copy"><p class="kicker">QUARESMA DE SÃO MIGUEL — INÍCIO EM 15 DE AGOSTO</p><h1>Quarenta dias.<br><em>Uma decisão de permanecer.</em></h1><p class="hero-lead">Entre em uma caminhada de oração com São Miguel Arcanjo e permaneça na SPES para encontrar silêncio, formação e vida sacramental. O digital como porta; Cristo como centro.</p><div class="hero-actions"><a class="primary" href="https://chat.whatsapp.com/B7UBvpk89Wv121Q0Hdv2gL" target="_blank" rel="noopener">Entrar no grupo da Quaresma</a><button type="button" class="ghost" data-view="santuario">Conhecer o santuário</button></div></div><div class="hero-mantra">“A esperança não decepciona.”<small>ROMANOS 5,5</small></div><div class="light-line"></div></section>
     <section class="app" id="santuario">
       <aside class="rail" aria-label="Ambientes do santuário"><p class="rail-label">AMBIENTES</p>
         <button type="button" class="active" data-view="santuario"><span><b>Santuário</b><small>Seu momento com Deus</small></span></button>
@@ -679,7 +681,7 @@
 
   <script>
     const WHATSAPP='https://chat.whatsapp.com/B7UBvpk89Wv121Q0Hdv2gL';
-    const heroVideo=document.getElementById('hero-video');if(heroVideo&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){heroVideo.muted=true;heroVideo.defaultMuted=true;heroVideo.play().catch(()=>{})}
+    const heroVideo=document.getElementById('hero-video');const podeVideo=window.matchMedia('(min-width:721px) and (hover:hover) and (prefers-reduced-motion: no-preference)').matches&&!(navigator.connection&&navigator.connection.saveData===true);if(heroVideo&&podeVideo){heroVideo.muted=true;heroVideo.defaultMuted=true;heroVideo.preload='metadata';heroVideo.play().catch(()=>{})}
     const views=['santuario','santos','carlo','historia','papas','catecismo','sacramentos','biblia','acervo','maria','midia','igrejas'];const nav=document.getElementById('nav'),menu=document.getElementById('menu');
     function selectView(name,scroll=true){if(!views.includes(name))return;document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id==='view-'+name));document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===name));history.replaceState(null,'','#'+name);if(nav){nav.classList.remove('open')}if(menu){menu.setAttribute('aria-expanded','false')}const ancora=document.getElementById('santuario');if(scroll&&ancora){ancora.scrollIntoView({behavior:'smooth',block:'start'})}}
     document.querySelectorAll('[data-view]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();selectView(el.dataset.view)}));document.querySelectorAll('[data-join]').forEach(el=>el.addEventListener('click',()=>window.open(WHATSAPP,'_blank','noopener')));if(menu&&nav){menu.addEventListener('click',()=>{nav.classList.toggle('open');menu.setAttribute('aria-expanded',nav.classList.contains('open'))})}const initial=location.hash.slice(1);if(views.includes(initial))selectView(initial,false);
