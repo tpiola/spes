@@ -6,7 +6,10 @@ aparecem também na própria página, em `small.carlo-credito` sob cada figura.
 
 ## Regra do santuário (decidida pelo dono)
 
-**A SPES exibe apenas imagens de São Carlo Acutis.** Toda imagem de outro assunto saiu
+**A SPES exibe apenas imagens de São Carlo Acutis.** A fotografia dele em vida foi **autorizada
+pelo dono** (20/09/2026): é o retrato devocional exposto na veneração da relíquia no Rio de Janeiro —
+arquivo CC0 do Wikimedia Commons. Ressalva: o CC0 cobre a fotografia da exposição; o retrato
+reproduzido dentro dela é material devocional da família e da diocese. Toda imagem de outro assunto saiu
 do site — a arte de São Miguel (herói e vídeo), a fotografia do santo do dia, as
 reproduções históricas, as composições devocionais de Cristo e de Maria, a imagem de
 Nossa Senhora, o panorama de Assis, as obras de Da Vinci e Michelangelo e as 12 texturas
@@ -32,6 +35,12 @@ ficar de pé sozinho (cartões de texto, painel de Palavra, contemplação em te
   figura humana.
 - `assets/carlo-reliquia-rio.webp` — Exposição de relíquia de Carlo Acutis no Rio de Janeiro.jpg |
   CC0 | Sir Velpertex di Crantx | https://commons.wikimedia.org/wiki/File:Exposi%C3%A7%C3%A3o_de_rel%C3%ADquia_de_Carlo_Acutis_no_Rio_de_Janeiro.jpg
+- `assets/carlo-retrato.webp` — recorte de **Exposição de relíquia de Carlo Acutis no Rio de Janeiro.jpg** |
+  CC0 | Sir Velpertex di Crantx | https://commons.wikimedia.org/wiki/File:Exposi%C3%A7%C3%A3o_de_rel%C3%ADquia_de_Carlo_Acutis_no_Rio_de_Janeiro.jpg
+  Retrato devocional dele em vida (camisa vermelha, mochila), no enquadramento do herói no desktop:
+  retrato emoldurado, relicário e flores.
+- `assets/carlo-retrato-mobile.webp` — mesmo arquivo CC0, recorte próprio para o herói do celular
+  (rosto na faixa de cima, flores embaixo).
 - `assets/carlo-social.webp` — **carta social própria do santuário**, 1200x630, montada
   com a estátua de `carlo-estatua.webp` sobre o veludo e a tipografia do site
   (Cormorant Garamond e Lato, OFL 1.1). É o `og:image` e o `twitter:image`.

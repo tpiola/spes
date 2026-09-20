@@ -7,7 +7,7 @@
   <meta name="description" content="SPES é um santuário digital católico para oração, Quaresma de São Miguel, Santos do Dia, sete sacramentos, Bíblia, Catecismo e história da Igreja, com fontes da Santa Sé.">
   <meta name="theme-color" content="#041f37"><meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://spes.blog/"><link rel="manifest" href="/site.webmanifest"><link rel="icon" href="/assets/spes-mark.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/spes-icon-192.png">
-  <link rel="preload" href="assets/carlo-estatua.webp" as="image" type="image/webp">
+  <link rel="preload" href="assets/carlo-retrato.webp" as="image" type="image/webp" media="(min-width:721px)"><link rel="preload" href="assets/carlo-retrato-mobile.webp" as="image" type="image/webp" media="(max-width:720px)">
   <link rel="preload" href="assets/fonts/cormorant-garamond-latin-var.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/lato-latin-400.woff2" as="font" type="font/woff2" crossorigin>
   <meta property="og:type" content="website"><meta property="og:locale" content="pt_BR"><meta property="og:site_name" content="SPES">
   <meta property="og:title" content="SPES — Santuário Digital Católico"><meta property="og:description" content="Entre para a Quaresma de São Miguel e permaneça para rezar, estudar a fé e caminhar com a Igreja."><meta property="og:url" content="https://spes.blog/"><meta property="og:image" content="https://spes.blog/assets/carlo-social.webp"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="SPES — Esperança que se transforma em oração"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="SPES — Santuário Digital Católico"><meta name="twitter:description" content="Oração, formação e esperança em comunhão com a fé católica."><meta name="twitter:image" content="https://spes.blog/assets/carlo-social.webp">
@@ -401,20 +401,23 @@
        obras de Da Vinci e Michelangelo e as 12 texturas de lápis. Onde havia
        imagem de outro assunto, o bloco foi reconstruído para ficar de pé
        sozinho — nenhuma cavidade vazia, nenhum texto órfão. */
-    .hero-media{background-image:linear-gradient(90deg,rgba(42,7,16,.97) 0%,rgba(93,15,31,.9) 40%,rgba(93,15,31,.66) 72%,rgba(74,12,24,.5) 100%),url("assets/carlo-estatua.webp");background-position:center,right 7% bottom;background-size:auto,auto 97%;background-repeat:no-repeat,no-repeat;background-color:#2a0710;animation:none}
+    .hero-media{background-image:linear-gradient(90deg,rgba(42,7,16,.97) 0%,rgba(93,15,31,.9) 40%,rgba(93,15,31,.66) 72%,rgba(74,12,24,.5) 100%),url("assets/carlo-retrato.webp");background-position:center,right 0 bottom;background-size:auto,auto 100%;background-repeat:no-repeat,no-repeat;background-color:#2a0710;animation:none}
     .hero-media:after{display:none}
     .hero{min-height:600px}
     .hero-mantra{left:clamp(22px,8vw,126px);right:auto;bottom:26px;text-shadow:0 2px 14px rgba(42,7,16,.8)}
+    .hero-credito{position:absolute;right:clamp(16px,3vw,46px);bottom:20px;z-index:1;margin:0;max-width:30ch;text-align:right;font-size:.75rem;line-height:1.45;color:#e9c9ce;text-shadow:0 2px 12px rgba(42,7,16,.85)}
+    @media(max-width:720px){.hero-credito{display:none}}
     /* cronologia: as entradas têm alturas diferentes (só 2 têm imagem) — sem
        esticar os cards, some o vazio branco embaixo das entradas curtas */
     .carlo-timeline{align-items:start}
     .era-figura img{height:132px}
+    /* CELULAR: a fotografia dele em cima (inteira, sem recorte apertado) e o texto
+       embaixo, sobre o véu — assim o rosto não fica atrás do título. */
     @media(max-width:720px){
-      .hero-media{background-position:center,right -30% bottom 12%;background-size:auto,auto 74%}
-      .hero{height:auto;min-height:560px}
-      /* no celular o texto ocupa 88% da largura e passa por cima da estátua:
-         o véu do herói fica mais fechado para a leitura não depender da foto */
-      .hero:before{background:linear-gradient(90deg,rgba(42,7,16,.97) 0%,rgba(64,9,20,.93) 58%,rgba(58,10,20,.82) 100%),linear-gradient(0deg,rgba(42,7,16,.72),transparent 62%)}
+      .hero{height:auto;min-height:0;align-items:end;padding:216px 0 30px}
+      .hero-media{inset:0;background-image:none,url(assets/carlo-retrato-mobile.webp);background-position:center top,center top;background-size:auto,cover}
+      .hero-copy{margin:0 auto;padding-bottom:6px}
+      .hero:before{background:linear-gradient(0deg,rgba(42,7,16,.975) 0%,rgba(56,9,19,.955) 54%,rgba(54,9,18,.9) 72%,rgba(42,7,16,.45) 85%,rgba(42,7,16,.08) 100%)}
       .hero-lead{text-shadow:0 1px 10px rgba(30,4,10,.55)}
       .era-figura img{height:118px}
     }
@@ -453,7 +456,7 @@
     <button type="button" class="menu" id="menu" aria-label="Abrir menu" aria-expanded="false">Menu</button>
   </header>
   <main>
-    <section class="hero" aria-label="São Carlo Acutis, o primeiro santo da geração millennial"><div class="hero-media"></div><div class="hero-copy"><p class="kicker">SÃO CARLO ACUTIS · 1991 — 2006 · CANONIZADO EM 7 DE SETEMBRO DE 2025</p><h1>“A Eucaristia é a minha<br><em>autoestrada para o céu.”</em></h1><p class="hero-lead">O primeiro santo da geração millennial. Morreu aos 15 anos e deixou uma estrada simples: a Missa, o Rosário e a caridade. Conheça a vida, os milagres reconhecidos e as relíquias — com a fonte em cada frase.</p><div class="hero-actions"><button type="button" class="primary" data-view="carlo">Conhecer a vida dele</button><a class="ghost" href="https://chat.whatsapp.com/B7UBvpk89Wv121Q0Hdv2gL" target="_blank" rel="noopener">Entrar no grupo de oração</a></div></div><div class="hero-mantra">“A esperança não decepciona.”<small>ROMANOS 5,5</small></div><div class="light-line"></div></section>
+    <section class="hero" aria-label="São Carlo Acutis, o primeiro santo da geração millennial"><div class="hero-media"></div><div class="hero-copy"><p class="kicker">SÃO CARLO ACUTIS · 1991 — 2006 · CANONIZADO EM 7 DE SETEMBRO DE 2025</p><h1>“A Eucaristia é a minha<br><em>autoestrada para o céu.”</em></h1><p class="hero-lead">O primeiro santo da geração millennial. Morreu aos 15 anos e deixou uma estrada simples: a Missa, o Rosário e a caridade. Conheça a vida, os milagres reconhecidos e as relíquias — com a fonte em cada frase.</p><div class="hero-actions"><button type="button" class="primary" data-view="carlo">Conhecer a vida dele</button><a class="ghost" href="https://chat.whatsapp.com/B7UBvpk89Wv121Q0Hdv2gL" target="_blank" rel="noopener">Entrar no grupo de oração</a></div></div><div class="hero-mantra">“A esperança não decepciona.”<small>ROMANOS 5,5</small></div><p class="hero-credito">Retrato devocional exposto na veneração da relíquia, no Rio de Janeiro · foto: Sir Velpertex di Crantx · CC0</p><div class="light-line"></div></section>
     <section class="app" id="santuario">
       <aside class="rail" aria-label="Ambientes do santuário"><p class="rail-label">AMBIENTES</p>
         <button type="button" class="active" data-view="santuario"><span><b>Santuário</b><small>Seu momento com Deus</small></span></button>
@@ -516,7 +519,7 @@
           <img src="assets/carlo-estatua.webp" alt="Estátua devocional de São Carlo Acutis: camisa vermelha, o rosário na mão, o missal no braço e a bola de futebol aos pés" width="576" height="1280" loading="lazy" decoding="async">
         </div>
         <figcaption>
-          <span class="carlo-capitular">N</span>ão existe, em acervo livre, fotografia dele em vida — esses direitos são da família e da diocese. Por isso a Igreja o mostra em estátua: a camisa vermelha, o rosário, o missal, a bola de futebol aos pés e o monograma eucarístico no peito.
+          <span class="carlo-capitular">A</span> fotografia dele abre esta página — o retrato devocional da camisa vermelha, exposto na veneração da relíquia, no Rio de Janeiro. Aqui, a imagem que a Igreja difunde em estátua: a camisa vermelha, o rosário na mão, o missal no braço e a bola de futebol aos pés, com o monograma eucarístico no peito.
           <small>Estátua devocional de São Carlo Acutis · Joncrisvv · CC BY-SA 4.0 · Wikimedia Commons</small>
         </figcaption>
       </figure>
@@ -675,9 +678,10 @@
           <h2>Como a Igreja o mostra hoje.</h2>
           <small>Fotografias com licença livre · Wikimedia Commons</small>
         </div>
-        <p>Não existem, em acervo livre, fotografias dele em vida: essas imagens pertencem à família e à diocese.
-        O que existe — e é o que se vê aqui — são as imagens devocionais, as relíquias e o túmulo.
-        Nenhuma escultura nesta página é tratada como fotografia.</p>
+        <p>As fotografias dele em vida não circulam em banco de imagens: a que abre esta página é o retrato
+        devocional exposto na veneração da relíquia, no Rio de Janeiro. Além dela, o que existe — e é o
+        que se vê aqui — são as imagens devocionais, as relíquias e o túmulo. Nenhuma escultura nesta
+        página é tratada como fotografia.</p>
       </div>
       <div class="carlo-galeria">
         <figure class="carlo-alto">
@@ -701,16 +705,19 @@
           <small>Esthappanos Bar Geevarghese · CC BY-SA 4.0 · Wikimedia Commons</small></figcaption>
         </figure>
       </div>
-      <p class="carlo-nota"><b>Sobre as imagens desta página:</b> as obras de Leonardo da Vinci e Michelangelo são
-      de domínio público; as fotografias vieram do Wikimedia Commons sob CC0 ou CC BY-SA 4.0, com o autor creditado
-      em cada figura. Nenhuma fotografia de Carlo Acutis em vida foi usada — esses direitos são da família e da diocese.</p>
+      <p class="carlo-nota"><b>Sobre as imagens desta página:</b> todas são de São Carlo Acutis. O retrato em vida é a
+      reprodução devocional exposta na veneração da relíquia no Rio de Janeiro (foto CC0, Sir Velpertex di Crantx);
+      a estátua, os relicários e o túmulo vêm do Wikimedia Commons sob CC BY-SA 4.0, com o autor creditado em cada figura.</p>
 
 
       <div class="source-panel">
         <div>
           <span class="label carlo-label-orn">FONTES OFICIAIS</span>
           <p>Biografia lida na canonização e homilia do Papa Leão XIV (Santa Sé e Vatican News, setembro de 2025);
-          depoimentos e reportagens do Vatican News (2018 e 2020). As frases atribuídas a ele vêm dessas fontes. As pinturas são de Leonardo da Vinci e Michelangelo, em domínio público; as fotografias do túmulo, das relíquias e de Assis vêm do Wikimedia Commons sob CC0 ou CC BY-SA, com crédito ao autor.</p>
+          depoimentos e reportagens do Vatican News (2018 e 2020). As frases atribuídas a ele vêm dessas fontes.
+          A fotografia dele é o retrato devocional exposto na veneração da relíquia no Rio de Janeiro — foto de
+          Sir Velpertex di Crantx, CC0, no Wikimedia Commons; a estátua, os relicários e o túmulo vêm do mesmo
+          acervo sob CC BY-SA 4.0, com o autor creditado em cada figura.</p>
         </div>
         <a href="https://www.vatican.va/content/leo-xiv/pt/homilies/2025/documents/20250907-omelia-frassati-acutis.html" target="_blank" rel="noopener">Homilia da canonização ↗</a>
         <a href="https://www.vaticannews.va/pt/papa/news/2025-09/papa-leao-xiv-missa-canonizacao-biografia-acutis.html" target="_blank" rel="noopener">Biografia ↗</a>

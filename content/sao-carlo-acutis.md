@@ -117,8 +117,15 @@ estiverem em texto da Santa Sé ou do Vatican News.
   teologais e, depois, os milagres."
 - ❌ Não prometer milagre, cura, prosperidade ou qualquer graça (a própria SPES declara:
   "sem promessas supersticiosas").
-- ❌ Não usar foto dele: as imagens têm direitos autorais da família/diocese.
-  Solução adotada: arte sacra de domínio público e arte própria (luz, ostensório, símbolos).
+- ⚠️ **Fotografia dele: autorizada pelo dono em 20/09/2026.** A única com licença declarável é o
+  retrato devocional exposto na veneração da relíquia no Rio de Janeiro (arquivo **CC0** do Wikimedia
+  Commons, Sir Velpertex di Crantx) — que é, aliás, de onde o token `--red` #9e2c31 foi medido.
+  Está no herói: `assets/carlo-retrato.webp` (desktop) e `assets/carlo-retrato-mobile.webp`.
+  **Ressalva registrada:** o CC0 cobre a fotografia da exposição; o retrato reproduzido dentro dela é
+  material devocional da família e da diocese. O uso foi autorizado pelo dono e o crédito aparece na
+  página e em `content/creditos-imagens.md`.
+  O que **continua** proibido: apresentar escultura como fotografia, prometer graça/milagre e inventar
+  frase sem fonte.
 
 ## Fontes oficiais para linkar
 
