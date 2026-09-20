@@ -59,63 +59,12 @@
     @media(max-width:720px){.artifact{min-height:28rem}.artifact figcaption{left:1rem;right:1rem;bottom:1rem}.sacrament-group{padding:1rem}.topline{font-size:.6875rem}.brand small{font-size:.6875rem}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.hero-video{display:none}}
 
-    /* ═══ SANTUÁRIO DE SÃO CARLO ACUTIS — arte própria em CSS, sem imagem de terceiros ═══ */
-    .carlo-stage{position:relative;overflow:hidden;margin:0 0 26px;padding:44px 26px 38px;border-radius:22px;
-      background:
-        radial-gradient(ellipse 70% 60% at 50% 12%, rgba(242,217,159,.22), transparent 70%),
-        radial-gradient(ellipse 90% 70% at 50% 100%, rgba(20,116,184,.20), transparent 72%),
-        linear-gradient(178deg,#062b48 0%,#041f37 55%,#03182b 100%);
-      box-shadow:0 30px 80px rgba(4,31,55,.34);border:1px solid rgba(217,182,108,.28)}
-    .carlo-rays{position:absolute;inset:-46% -26%;pointer-events:none;opacity:.85;
-      background:repeating-conic-gradient(from 0deg at 50% 47%,
-        rgba(242,217,159,.13) 0deg .9deg,
-        rgba(242,217,159,.05) 1.4deg 2.6deg,
-        transparent 3.1deg 9deg);
-      mask:radial-gradient(ellipse 62% 58% at 50% 47%, #000 22%, rgba(0,0,0,.55) 52%, transparent 78%);
-      -webkit-mask:radial-gradient(ellipse 62% 58% at 50% 47%, #000 22%, rgba(0,0,0,.55) 52%, transparent 78%);
-      animation:carloRays 150s linear infinite;will-change:transform}
-    @keyframes carloRays{to{transform:rotate(360deg)}}
-    .carlo-anel{position:absolute;inset:8px;border-radius:50%;border:1px solid rgba(217,182,108,.55);
-      box-shadow:0 0 26px rgba(242,217,159,.22)}
-    .carlo-anel:before{content:"";position:absolute;inset:-9px;border-radius:50%;border:2px solid rgba(217,182,108,.85);
-      box-shadow:0 0 40px rgba(242,217,159,.34), inset 0 0 30px rgba(242,217,159,.2)}
-    .carlo-haste{position:absolute;top:calc(100% - 6px);left:50%;width:16px;height:34px;transform:translateX(-50%);
-      background:linear-gradient(180deg,#d9b66c,#8a6a2f 60%,transparent);border-radius:0 0 4px 4px;opacity:.9}
-    .carlo-ostensorio{position:relative;width:150px;height:150px;margin:0 auto;display:grid;place-items:center}
+    /* ═══ SANTUÁRIO DE SÃO CARLO ACUTIS — arte própria em CSS, sem imagem de terceiros ═══ */}
     .carlo-halo{position:absolute;inset:16px;border-radius:50%;border:2px solid rgba(217,182,108,.92);
-      box-shadow:0 0 34px rgba(242,217,159,.42), inset 0 0 22px rgba(242,217,159,.28)}
-    .carlo-hostia{width:74px;height:74px;border-radius:50%;
-      background:radial-gradient(circle at 38% 32%, #fffdf6 0%, #f6ecd4 46%, #e6d3aa 100%);
-      box-shadow:0 0 30px rgba(255,250,235,.5), inset 0 -6px 14px rgba(180,150,90,.22);
-      animation:carloBreath 6.5s ease-in-out infinite alternate}
-    .carlo-luz{position:absolute;inset:-40px;border-radius:50%;pointer-events:none;
-      background:radial-gradient(circle, rgba(255,248,228,.30) 0%, rgba(242,217,159,.12) 34%, transparent 66%);
-      animation:carloGlow 5.4s ease-in-out infinite alternate}
-    @keyframes carloBreath{from{transform:scale(1)}to{transform:scale(1.045)}}
-    @keyframes carloGlow{from{opacity:.55}to{opacity:1}}
-    .carlo-stage-caption{position:relative;margin:30px auto 0;max-width:560px;text-align:left;
-      font:600 clamp(19px,2.3vw,27px)/1.34 var(--display);color:#f6ecd4;letter-spacing:.01em}
-    .carlo-sparks{position:absolute;inset:0;overflow:hidden;pointer-events:none}
-    .carlo-sparks span{position:absolute;bottom:-14px;width:3px;height:3px;border-radius:50%;
-      background:radial-gradient(circle,#fff6dd,#d9b66c);opacity:0;
-      box-shadow:0 0 8px rgba(242,217,159,.85);animation:carloRise linear infinite;will-change:transform,opacity}
-    @keyframes carloRise{
-      0%{transform:translate3d(0,0,0);opacity:0}
+      box-shadow:0 0 34px rgba(242,217,159,.42), inset 0 0 22px rgba(242,217,159,.28)}to{transform:scale(1.045)}}to{opacity:1}}
       12%{opacity:var(--s-op,.75)}
       80%{opacity:var(--s-op,.75)}
       100%{transform:translate3d(var(--s-dx,12px),-330px,0);opacity:0}}
-    .carlo-sparks span:nth-child(1){left:8%;--s-op:.7;--s-dx:16px;animation-duration:19s;animation-delay:-2s}
-    .carlo-sparks span:nth-child(2){left:17%;--s-op:.45;--s-dx:-14px;animation-duration:26s;animation-delay:-11s}
-    .carlo-sparks span:nth-child(3){left:27%;--s-op:.8;--s-dx:20px;animation-duration:16s;animation-delay:-6s}
-    .carlo-sparks span:nth-child(4){left:36%;--s-op:.5;--s-dx:-18px;animation-duration:29s;animation-delay:-19s}
-    .carlo-sparks span:nth-child(5){left:45%;--s-op:.72;--s-dx:14px;animation-duration:21s;animation-delay:-8s}
-    .carlo-sparks span:nth-child(6){left:54%;--s-op:.42;--s-dx:-12px;animation-duration:24s;animation-delay:-15s}
-    .carlo-sparks span:nth-child(7){left:63%;--s-op:.76;--s-dx:18px;animation-duration:18s;animation-delay:-4s}
-    .carlo-sparks span:nth-child(8){left:71%;--s-op:.5;--s-dx:-16px;animation-duration:27s;animation-delay:-13s}
-    .carlo-sparks span:nth-child(9){left:79%;--s-op:.66;--s-dx:15px;animation-duration:22s;animation-delay:-9s}
-    .carlo-sparks span:nth-child(10){left:87%;--s-op:.44;--s-dx:-20px;animation-duration:25s;animation-delay:-21s}
-    .carlo-sparks span:nth-child(11){left:93%;--s-op:.7;--s-dx:13px;animation-duration:17s;animation-delay:-3s}
-    .carlo-sparks span:nth-child(12){left:2%;--s-op:.52;--s-dx:-15px;animation-duration:23s;animation-delay:-17s}
     /* frases: cada uma com a fonte */
     .carlo-quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:16px;margin-bottom:26px}
     .carlo-quote-card{padding:22px;background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);
@@ -131,37 +80,39 @@
     .carlo-timeline .era:last-child{border-left-color:var(--gold);background:linear-gradient(180deg,rgba(242,217,159,.14),transparent)}
     .carlo-pilares .content-card{min-height:auto}
     @media (max-width:719px){
-      .carlo-stage{padding:40px 18px 32px}
-      .carlo-stage-caption{font-size:18px}
     }
     @media (prefers-reduced-motion:reduce){
-      .carlo-rays,.carlo-coroa,.carlo-luz,.carlo-hostia,.carlo-sparks span{animation:none!important}
-      .carlo-sparks{display:none}
-      .carlo-quote-card:hover{transform:none}
     }
 
     /* ── OBRA DE ARTE: vitral, capitular e moldura de retábulo ── */
-    .carlo-vitral{position:absolute;inset:-30px;border-radius:50%;pointer-events:none;
-      background:
-        repeating-conic-gradient(from 0deg at 50% 50%, rgba(242,217,159,.55) 0deg 1.1deg, transparent 1.1deg 15deg);
-      mask:radial-gradient(circle, transparent 58%, #000 60%, #000 74%, transparent 76%);
-      -webkit-mask:radial-gradient(circle, transparent 58%, #000 60%, #000 74%, transparent 76%);
-      animation:carloRays 220s linear infinite;will-change:transform;opacity:.85}
     .carlo-capitular{float:left;margin:2px 10px 0 0;font:600 3.05em/.78 var(--display);color:var(--gold2);
       text-shadow:0 0 22px rgba(242,217,159,.5)}
-    .carlo-stage:before{content:"";position:absolute;inset:9px;border-radius:15px;pointer-events:none;
-      border:1px solid rgba(217,182,108,.42);box-shadow:inset 0 0 0 1px rgba(217,182,108,.16)}
-    .carlo-stage:after{content:"";position:absolute;inset:0;border-radius:22px;pointer-events:none;
-      background:
-        linear-gradient(135deg, rgba(242,217,159,.5) 0 26px, transparent 26px) top left/52px 52px no-repeat,
-        linear-gradient(225deg, rgba(242,217,159,.5) 0 26px, transparent 26px) top right/52px 52px no-repeat,
-        linear-gradient(45deg, rgba(242,217,159,.5) 0 26px, transparent 26px) bottom left/52px 52px no-repeat,
-        linear-gradient(315deg, rgba(242,217,159,.5) 0 26px, transparent 26px) bottom right/52px 52px no-repeat;
-      opacity:.75}
     .carlo-label-orn{display:inline-flex;align-items:center;gap:10px}
     .carlo-label-orn:before,.carlo-label-orn:after{content:"";width:22px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));}
     .carlo-label-orn:after{background:linear-gradient(90deg,var(--gold),transparent)}
-    @media (prefers-reduced-motion:reduce){ .carlo-vitral{animation:none!important} }
+    @media (prefers-reduced-motion:reduce){ }
+
+    /* ── RETÁBULO: obras de Da Vinci e Michelangelo, em moldura dourada ── */
+    .carlo-retabulo{margin:0 0 28px;padding:14px;border-radius:4px;
+      background:linear-gradient(180deg,#0d2c46,#061e33);border:1px solid rgba(217,182,108,.5);
+      box-shadow:0 30px 80px rgba(4,31,55,.35), inset 0 0 0 1px rgba(217,182,108,.2)}
+    .carlo-obra{position:relative;overflow:hidden;border-radius:2px;border:1px solid rgba(217,182,108,.55);background:#02121f}
+    .carlo-obra img{display:block;width:100%;height:auto;animation:obraRespiro 34s ease-in-out infinite alternate}
+    @keyframes obraRespiro{from{transform:scale(1.005) translate3d(0,0,0)}to{transform:scale(1.055) translate3d(-1.4%,-1%,0)}}
+    .carlo-retabulo figcaption{position:relative;margin:16px 6px 4px;font:600 clamp(17px,1.9vw,23px)/1.42 var(--display);color:#f6ecd4}
+    .carlo-retabulo figcaption small{display:block;margin-top:10px;font:400 12.5px/1.5 var(--body);
+      letter-spacing:.06em;text-transform:uppercase;color:rgba(242,217,159,.72)}
+    .carlo-capitular{float:left;margin:2px 10px 0 0;font:600 3.05em/.78 var(--display);color:var(--gold2)}
+    /* cronologia com imagem, no espírito dos painéis de altar */
+    .era-figura{margin:0 0 12px;border:1px solid rgba(217,182,108,.45);background:#02121f;overflow:hidden;border-radius:2px}
+    .era-figura img{display:block;width:100%;height:150px;object-fit:cover;object-position:center 38%;filter:saturate(.92) contrast(1.02)}
+    .era-figura figcaption{margin:9px 10px 11px;font-size:13px;line-height:1.55;color:#e9dcc0}
+    .carlo-timeline .era{padding:16px 16px 18px}
+    .pilar-figura{margin:-6px -6px 14px;border:1px solid rgba(217,182,108,.4);overflow:hidden;border-radius:2px;background:#02121f}
+    .pilar-figura img{display:block;width:100%;height:132px;object-fit:cover;object-position:center 42%}
+    .feature-dark .pilar-figura{border-color:rgba(242,217,159,.45)}
+    @media (max-width:719px){ .era-figura img{height:124px} .pilar-figura img{height:112px} }
+    @media (prefers-reduced-motion:reduce){ .carlo-obra img{animation:none!important} }
 </style>
 </head>
 <body>
@@ -230,19 +181,16 @@
         com uma frase simples: não desperdiçar a vida.</p>
       </div>
 
-      <!-- arte sacra própria: luz, ostensório e faíscas — sem imagem de terceiros -->
-      <div class="carlo-stage">
-        <div class="carlo-rays" aria-hidden="true"></div>
-        <div class="carlo-ostensorio" role="img" aria-label="Ostensório com a Hóstia, símbolo da Eucaristia">
-          <span class="carlo-vitral" aria-hidden="true"></span>
-          <span class="carlo-anel" aria-hidden="true"></span>
-          <span class="carlo-haste" aria-hidden="true"></span>
-          <span class="carlo-hostia" aria-hidden="true"></span>
-          <span class="carlo-luz" aria-hidden="true"></span>
+      <!-- retábulo: obras de Da Vinci e Michelangelo em domínio público -->
+      <figure class="carlo-retabulo">
+        <div class="carlo-obra">
+          <img src="assets/carlo-ultima-ceia.webp" alt="A Última Ceia, de Leonardo da Vinci (1495–1498): Cristo institui a Eucaristia" width="1000" height="520" fetchpriority="high" decoding="async">
         </div>
-        <p class="carlo-stage-caption"><span class="carlo-capitular">U</span>m adolescente de quinze anos que atravessou o nosso tempo e nos ensinou a olhar para cima.</p>
-        <div class="carlo-sparks" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-      </div>
+        <figcaption>
+          <span class="carlo-capitular">N</span>a Última Ceia, Cristo institui a Eucaristia — e é dela que Carlo Acutis fez a estrada da sua vida.
+          <small>A Última Ceia · Leonardo da Vinci, 1495–1498 · domínio público</small>
+        </figcaption>
+      </figure>
 
       <!-- frases dele, cada uma com a fonte -->
       <div class="carlo-quotes">
@@ -280,14 +228,14 @@
 
       <!-- linha do tempo -->
       <div class="carlo-timeline">
-        <article class="era"><time>3 DE MAIO DE 1991</time><h3>Nasce em Londres</h3><p>Filho de italianos, batizado duas semanas depois. Ainda em 1991 a família volta para Milão.</p></article>
-        <article class="era"><time>1998</time><h3>Primeira Comunhão, aos 7 anos</h3><p>No Mosteiro das Eremitas Ambrosianas, em Bernaga di Perego. Desde então, nunca mais deixou a Missa diária.</p></article>
-        <article class="era"><time>VERÃO DE 2006</time><h3>O computador a serviço do Evangelho</h3><p>Catequista na paróquia Santa Maria Segreta, criou o site do projeto de voluntariado da escola, a página da Pontifícia Academia Cultorum Martyrum e um layout para a oração do Rosário.</p></article>
-        <article class="era"><time>12 DE OUTUBRO DE 2006</time><h3>Entrega a vida, aos 15 anos</h3><p>Uma leucemia agressiva. Ofereceu o sofrimento ao Santo Padre, pelo bem da Igreja. Morreu em Monza, no Hospital San Gerardo.</p></article>
-        <article class="era"><time>5 DE JULHO DE 2018</time><h3>Venerável</h3><p>O Papa Francisco reconhece que Carlo viveu as virtudes cristãs em grau heroico.</p></article>
-        <article class="era"><time>10 DE OUTUBRO DE 2020</time><h3>Beatificação, em Assis</h3><p>Na Basílica Superior de São Francisco. O primeiro milagre reconhecido foi na Arquidiocese de Campo Grande, no Brasil.</p></article>
-        <article class="era"><time>23 DE MAIO DE 2024</time><h3>O segundo milagre</h3><p>O Papa Francisco aprova o decreto: a cura de uma jovem da Costa Rica, alcançada depois que a mãe dela rezou no túmulo de Carlo, em Assis, a 8 de julho de 2022.</p></article>
-        <article class="era"><time>7 DE SETEMBRO DE 2025</time><h3>Canonização</h3><p>O Papa Leão XIV o proclama santo na Praça de São Pedro, junto com Pier Giorgio Frassati. Depois do segundo milagre reconhecido em 23 de maio de 2024: a cura de uma jovem da Costa Rica, cuja mãe rezou no túmulo dele em Assis.</p></article>
+        <article class="era"><time>3 DE MAIO DE 1991</time><figure class="era-figura"><img src="assets/carlo-anunciacao.webp" alt="A Anunciação, de Leonardo da Vinci, c. 1472" loading="lazy" decoding="async" width="1000" height="650"><figcaption>O começo de uma vocação que se abre a Deus, como o de todo batizado.</figcaption></figure><h3>Nasce em Londres</h3><p>Filho de italianos, batizado duas semanas depois. Ainda em 1991 a família volta para Milão.</p></article>
+        <article class="era"><time>1998</time><figure class="era-figura"><img src="assets/carlo-ultima-ceia.webp" alt="A Última Ceia, de Leonardo da Vinci, 1495–1498" loading="lazy" decoding="async" width="1000" height="650"><figcaption>Ele teve acesso à Eucaristia aos sete anos e nunca mais deixou a Missa diária.</figcaption></figure><h3>Primeira Comunhão, aos 7 anos</h3><p>No Mosteiro das Eremitas Ambrosianas, em Bernaga di Perego. Desde então, nunca mais deixou a Missa diária.</p></article>
+        <article class="era"><time>VERÃO DE 2006</time><figure class="era-figura"><img src="assets/carlo-assis.webp" alt="Panorama de Assis, na Itália, com a Basílica de Santa Maria dos Anjos" loading="lazy" decoding="async" width="1000" height="650"><figcaption>Nas férias em Assis adotou a espiritualidade franciscana: alegria, contemplação e proximidade com os pobres.</figcaption></figure><h3>O computador a serviço do Evangelho</h3><p>Catequista na paróquia Santa Maria Segreta, criou o site do projeto de voluntariado da escola, a página da Pontifícia Academia Cultorum Martyrum e um layout para a oração do Rosário.</p></article>
+        <article class="era"><time>12 DE OUTUBRO DE 2006</time><figure class="era-figura"><img src="assets/carlo-pieta.webp" alt="A Pietà, de Michelangelo, 1498–1499, Basílica de São Pedro" loading="lazy" decoding="async" width="1000" height="650"><figcaption>Ele ofereceu o próprio sofrimento pelo bem da Igreja, unido à entrega de Cristo.</figcaption></figure><h3>Entrega a vida, aos 15 anos</h3><p>Uma leucemia agressiva. Ofereceu o sofrimento ao Santo Padre, pelo bem da Igreja. Morreu em Monza, no Hospital San Gerardo.</p></article>
+        <article class="era"><time>5 DE JULHO DE 2018</time><figure class="era-figura"><img src="assets/carlo-criacao-adao.webp" alt="A Criação de Adão, de Michelangelo, Capela Sistina" loading="lazy" decoding="async" width="1000" height="650"><figcaption>A Igreja reconhece que ele viveu as virtudes cristãs em grau heroico.</figcaption></figure><h3>Venerável</h3><p>O Papa Francisco reconhece que Carlo viveu as virtudes cristãs em grau heroico.</p></article>
+        <article class="era"><time>10 DE OUTUBRO DE 2020</time><figure class="era-figura"><img src="assets/carlo-tumulo.webp" alt="Túmulo de São Carlo Acutis, no Santuário do Despojamento, em Assis" loading="lazy" decoding="async" width="1000" height="650"><figcaption>Beatificado na Basílica Superior de São Francisco, em Assis, onde o corpo é venerado.</figcaption></figure><h3>Beatificação, em Assis</h3><p>Na Basílica Superior de São Francisco. O primeiro milagre reconhecido foi na Arquidiocese de Campo Grande, no Brasil.</p></article>
+        <article class="era"><time>23 DE MAIO DE 2024</time><figure class="era-figura"><img src="assets/carlo-reliquia-coracao.webp" alt="Relicário com o coração de São Carlo Acutis" loading="lazy" decoding="async" width="1000" height="650"><figcaption>O segundo milagre abre o caminho da canonização.</figcaption></figure><h3>O segundo milagre</h3><p>O Papa Francisco aprova o decreto: a cura de uma jovem da Costa Rica, alcançada depois que a mãe dela rezou no túmulo de Carlo, em Assis, a 8 de julho de 2022.</p></article>
+        <article class="era"><time>7 DE SETEMBRO DE 2025</time><figure class="era-figura"><img src="assets/carlo-salvator.webp" alt="Salvator Mundi, de Leonardo da Vinci, c. 1500" loading="lazy" decoding="async" width="1000" height="650"><figcaption>Proclamado santo no Domingo XXIII do Tempo Comum, na Praça de São Pedro.</figcaption></figure><h3>Canonização</h3><p>O Papa Leão XIV o proclama santo na Praça de São Pedro, junto com Pier Giorgio Frassati. Depois do segundo milagre reconhecido em 23 de maio de 2024: a cura de uma jovem da Costa Rica, cuja mãe rezou no túmulo dele em Assis.</p></article>
       </div>
 
       <!-- Jesus, Maria e a esperança -->
@@ -299,14 +247,14 @@
           e adoração antes ou depois da celebração. Nos dias cheios, fazia uma comunhão espiritual.</p>
           <a href="#santuario" data-view="sacramentos">Ver os sacramentos ↗</a>
         </article>
-        <article class="content-card">
+        <article class="content-card"><figure class="pilar-figura"><img src="assets/carlo-anunciacao.webp" alt="A Anunciação, de Leonardo da Vinci, c. 1472" loading="lazy" decoding="async" width="1000" height="231"></figure>
           <span class="label">NOSSA SENHORA</span>
           <h3>O Rosário diário</h3>
           <p>O amor pela Eucaristia e pela Virgem Maria foram os alicerces da vida dele. Rezava o Santo Rosário
           todos os dias — o encontro mais galante do dia, dizia, com a única mulher da sua vida.</p>
           <a href="#santuario" data-view="maria">Maria no mistério de Cristo ↗</a>
         </article>
-        <article class="content-card">
+        <article class="content-card"><figure class="pilar-figura"><img src="assets/carlo-reliquia-rio.webp" alt="Exposição da relíquia de São Carlo Acutis no Rio de Janeiro" loading="lazy" decoding="async" width="1000" height="1018"></figure>
           <span class="label">ESPERANÇA</span>
           <h3>A caridade vinha depois</h3>
           <p>Dava parte da mesada aos pobres da vizinhança e organizava feiras na paróquia para as missões.
@@ -327,7 +275,7 @@
         <div>
           <span class="label carlo-label-orn">FONTES OFICIAIS</span>
           <p>Biografia lida na canonização e homilia do Papa Leão XIV (Santa Sé e Vatican News, setembro de 2025);
-          depoimentos e reportagens do Vatican News (2018 e 2020). As frases atribuídas a ele vêm dessas fontes.</p>
+          depoimentos e reportagens do Vatican News (2018 e 2020). As frases atribuídas a ele vêm dessas fontes. As pinturas são de Leonardo da Vinci e Michelangelo, em domínio público; as fotografias do túmulo, das relíquias e de Assis vêm do Wikimedia Commons sob CC0 ou CC BY-SA, com crédito ao autor.</p>
         </div>
         <a href="https://www.vatican.va/content/leo-xiv/pt/homilies/2025/documents/20250907-omelia-frassati-acutis.html" target="_blank" rel="noopener">Homilia da canonização ↗</a>
         <a href="https://www.vaticannews.va/pt/papa/news/2025-09/papa-leao-xiv-missa-canonizacao-biografia-acutis.html" target="_blank" rel="noopener">Biografia ↗</a>
