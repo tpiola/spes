@@ -33,7 +33,7 @@ test("renders the digital sanctuary without browser errors", async ({ page }) =>
   await page.goto("/");
   await expect(page).toHaveTitle(/Carlo Acutis/);
   await expect(page.getByRole("heading", { level: 1 })).toContainText("autoestrada para o céu");
-  await expect(page.getByRole("heading", { name: "Cinco portas para chegar até ele." })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Cinco portas para chegar até São Carlo Acutis." })).toBeVisible();
   expect(await page.locator('a[href*="chat.whatsapp.com"]').count()).toBeGreaterThanOrEqual(3);
   // o emblema do santuário é a Madonna della Seggiola, de Rafael: o favicon mudou junto
   await expect(page.locator('link[rel="icon"][href*="favicon-32"]')).toHaveCount(1);

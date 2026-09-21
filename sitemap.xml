@@ -1,9 +1,250 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://spes.blog/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-012-1200.webp</image:loc>
+      <image:title>Menino de suéter vermelho sobre camisa branca em pé na sala, ao lado de uma cômoda com flores</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-014-1200.webp</image:loc>
+      <image:title>Menino de jaqueta verde de braços cruzados, apoiado na janela de pedra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-017-1200.webp</image:loc>
+      <image:title>Jovem de camisa polo vermelha com mochila bege, diante de um vasto panorama de morros e vales</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-018-1200.webp</image:loc>
+      <image:title>Adolescente de camiseta escura e bermuda clara num terraço, segurando os óculos escuros</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-021-1200.webp</image:loc>
+      <image:title>Bebê sorrindo, de camisa xadrez, com babador azul-claro de renda e gatinho bordado</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-023-1200.webp</image:loc>
+      <image:title>Adolescente de casaco escuro apoiado num guarda-corpo de madeira, com uma cidade na encosta ao fundo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-030-1200.webp</image:loc>
+      <image:title>Menino de camiseta branca com a frase 'start acceleration finish' sorrindo no vão da porta</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-037-1200.webp</image:loc>
+      <image:title>Menino de túnica branca comprida com as mãos juntas segurando um crucifixo e um terço, em pé num calçamento de pedras</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-001-1200.webp</image:loc>
+      <image:title>Menino de casaco escuro parado numa estrada de terra entre pinheiros, com colinas verdes ao fundo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-002-1200.webp</image:loc>
+      <image:title>Menino de jaqueta escura com os braços abertos num bosque coberto de neve</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-003-1200.webp</image:loc>
+      <image:title>Menino agachado ao lado de um boneco de neve de chapéu preto e cachecol xadrez</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-004-1200.webp</image:loc>
+      <image:title>Criança de suéter azul-claro com gola de renda em pé numa sala de móveis antigos</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-005-1200.webp</image:loc>
+      <image:title>Menino sorrindo à mesa posta, com um quadro de paisagem na parede atrás dele</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-006-1200.webp</image:loc>
+      <image:title>Menino de moletom azul-marinho escrito 'Champion', com as mãos atrás da cabeça, diante de uma enorme cachoeira</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-007-1200.webp</image:loc>
+      <image:title>Menino de blazer e gravata ao lado de um homem adulto de terno claro, num gramado</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-008-1200.webp</image:loc>
+      <image:title>Menino de capuz e gorro escuros atrás de um parapeito de pedra, com uma grande extensão de água ao fundo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-009-1200.webp</image:loc>
+      <image:title>Criança de casaco escuro e gorro vermelho caminhando num jardim com sebes altas e leões de pedra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-011-1200.webp</image:loc>
+      <image:title>Menino de jaqueta escura e calça clara em frente a um casarão de pedra, com neve no chão</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-013-1200.webp</image:loc>
+      <image:title>Menino de suéter vermelho segurando com as duas mãos um cachorrinho preto e branco, junto à árvore de Natal e ao presépio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-015-1200.webp</image:loc>
+      <image:title>Esquiador descendo uma encosta de neve entre dois postes de slalom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-016-1200.webp</image:loc>
+      <image:title>Menino de jaqueta amarelo-claro olhando para as mãos, com um gramado ao fundo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-020-1200.webp</image:loc>
+      <image:title>Criança com fantasia de Homem-Aranha segurando um filhote de cachorro preto e branco no colo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-022-1200.webp</image:loc>
+      <image:title>Adolescente de jaqueta escura sorrindo com uma máquina fotográfica nas mãos, ao lado de esculturas de mármore branco</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-024-1200.webp</image:loc>
+      <image:title>Adolescente de jaqueta escura e cachecol em pé numa praça de pedra, diante de um enorme edifício religioso de fachada esculpida</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-025-1200.webp</image:loc>
+      <image:title>Jovem de suéter azul-marinho sentado de perfil numa mesa de restaurante, com um copo com limão na mão</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-028-1200.webp</image:loc>
+      <image:title>Adolescente de jaqueta escura com máquina fotográfica no peito, em pé numa pracinha de calçamento de pedras</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-029-1200.webp</image:loc>
+      <image:title>Adolescente de suéter azul-marinho em pé diante de uma grande fortaleza de pedra no alto de um morro</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-032-1200.webp</image:loc>
+      <image:title>Menino de jaqueta verde com mochila amarela andando depressa numa grande praça cheia de pombos</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-033-1200.webp</image:loc>
+      <image:title>Adolescente de jaqueta escura e bermuda clara em pé num caminho de terra entre capim alto</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-034-1200.webp</image:loc>
+      <image:title>Criança pequena de gorro vermelho na escadaria entre colunas de um edifício</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-035-1200.webp</image:loc>
+      <image:title>Menino de suéter vermelho sentado ao volante de um carro pequeno branco de capota preta</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-038-1200.webp</image:loc>
+      <image:title>Menino de jaqueta azul-clara com cachecol vermelho correndo pelo gramado, em frente a uma casa de varanda</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-039-1200.webp</image:loc>
+      <image:title>Menino de camiseta vinho ao lado de uma placa de bronze com inscrição em italiano</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-040-1200.webp</image:loc>
+      <image:title>Três meninos sentados ao sol numa calçada junto a um muro</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-041-1200.webp</image:loc>
+      <image:title>Menino agachado entre pedras numa encosta, junto a um pequeno curso de água</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-042-1200.webp</image:loc>
+      <image:title>Foto de time de futebol: meninos posando no campo, a maioria com camisa azul-clara e shorts brancos, um deles com a bola</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-043-1200.webp</image:loc>
+      <image:title>Adolescente de jaqueta azul-escura sorrindo e tocando um monumento de pedra branca com figuras esculpidas</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-044-1200.webp</image:loc>
+      <image:title>Adolescente de jaqueta azul-escura com bolsa a tiracolo, sorrindo diante de um estábulo de pedra com ovelhas</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-045-1200.webp</image:loc>
+      <image:title>Adolescente de jaqueta escura de braços cruzados junto à cerca de madeira, diante de um galpão de pedra com ovelhas</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-046-1200.webp</image:loc>
+      <image:title>Retrato de adolescente de jaqueta escura e cachecol claro sorrindo, com o mar ao fundo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-047-1200.webp</image:loc>
+      <image:title>Pessoa de roupa escura em pé no meio de um bosque nevado, ao longe</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-048-1200.webp</image:loc>
+      <image:title>Duas crianças pequenas de mãos dadas caminhando num gramado com margaridas</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-049-1200.webp</image:loc>
+      <image:title>Adolescente de jaqueta azul-escura e gola bege sorrindo numa esplanada calçada, com edifício de colunata ao fundo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-050-1200.webp</image:loc>
+      <image:title>Jovem de suéter azul-marinho e camisa branca posando ao lado da árvore de Natal com presentes</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-051-1200.webp</image:loc>
+      <image:title>Menino de camisa escura em pé numa escadaria de pedra com grades e restos de pintura nas paredes</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-052-1200.webp</image:loc>
+      <image:title>Pessoa de roupa escura num caminho de jardim coberto de neve, entre árvores nevadas</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-053-1200.webp</image:loc>
+      <image:title>Retrato de adolescente de jaqueta escura com alça de bolsa azul-clara, sorrindo num jardim coberto de neve</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-055-1200.webp</image:loc>
+      <image:title>Menino de camiseta escura e agasalho vermelho na cintura chutando uma bola de futebol num gramado</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-056-1200.webp</image:loc>
+      <image:title>Adolescente de casaco escuro em pé numa avenida larga ladeada de árvores sem folhas, com uma torre metálica ao fundo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-058-1200.webp</image:loc>
+      <image:title>Menino de blazer escuro com gravata, ao lado de um homem alto de terno claro, na frente de um edifício</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-059-1200.webp</image:loc>
+      <image:title>Menino de camisa polo azul-marinho e bermuda clara em pé ao lado de um carro antigo com placa 75217-FI</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-060-1200.webp</image:loc>
+      <image:title>Menino de blusa preta e mochila em pé junto a um painel de azulejos azuis e brancos, numa calçada de pedras</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-084-1200.webp</image:loc>
+      <image:title>Menino de jaqueta escura com mochila, numa estrada de terra com vales verdes e céu nublado ao fundo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-085-1200.webp</image:loc>
+      <image:title>Menino de camisa vermelha de gola escura, com mochila, em pé num morro gramado com bosque ao fundo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-086-1200.webp</image:loc>
+      <image:title>Menino de camisa vermelha e mochila, de perfil, andando num caminho de terra entre oliveiras, com o vale ao fundo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-087-1200.webp</image:loc>
+      <image:title>Menino de camisa vermelha de gola clara e mochila, olhando para a câmera, com o vale ao fundo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-088-1200.webp</image:loc>
+      <image:title>Menino de camisa azul-marinho de gola clara diante de uma marina com barcos, com uma vila na encosta ao fundo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-089-1200.webp</image:loc>
+      <image:title>Menino de camisa vermelha de gola azul-marinho, com os óculos pendurados na camisa e as mãos na cintura, num campo dourado com a colina e o bosque ao fundo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-090-1200.webp</image:loc>
+      <image:title>Menino de camisa verde abraçado a um cachorro preto e branco, agachado no capim seco, com a colina ao fundo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://spes.blog/assets/acervo/carlo-092-1200.webp</image:loc>
+      <image:title>Menino de suéter vermelho sobre camisa azul de colarinho, em ambiente interno com um abajur ao fundo</image:title>
+    </image:image>
   </url>
 </urlset>

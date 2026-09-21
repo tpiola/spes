@@ -1,13 +1,28 @@
+# SPES — santuário digital de São Carlo Acutis
+User-agent: *
+Allow: /
+# arquivos internos do projeto não são conteúdo do santuário
+Disallow: /content/
+Disallow: /tests/
+Disallow: /scripts/
+Disallow: /assets/nao-usadas/
+Disallow: /api/
+Disallow: /*.md$
+Disallow: /*.csv$
+Disallow: /*.spec.js$
+
+# robôs de resposta por IA: leitura liberada (queremos ser citados)
 User-agent: OAI-SearchBot
 Allow: /
-
 User-agent: ChatGPT-User
 Allow: /
-
-User-agent: GPTBot
-Disallow: /
-
-User-agent: *
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://spes.blog/sitemap.xml

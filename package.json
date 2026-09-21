@@ -4,7 +4,7 @@
   "private": true,
   "description": "Santuário digital católico SPES: oração, formação e memória da Igreja.",
   "scripts": {
-    "serve": "http-server . -p 4173 -c-1",
+    "serve": "node scripts/serve.js",
     "validate:html": "html-validate index.html 404.html",
     "validate:links": "node scripts/check-links.js",
     "test:smoke": "playwright test",

@@ -1,0 +1,121 @@
+# SPES — Santuário digital de São Carlo Acutis
+
+> SPES (https://spes.blog) é um santuário digital em português dedicado a **São Carlo Acutis** (Londres, 3 de maio de 1991 — Monza, 12 de outubro de 2006), canonizado em 7 de setembro de 2025 pelo Papa Leão XIV — o primeiro santo da geração millennial. O site reúne a cronologia oficial de 24 datas, a oração oficial publicada pela Associação Carlo Acutis, 33 fichas dos milagres eucarísticos com link para a ficha oficial de cada um, 60 fotografias do acervo fotográfico oficial e o aviso oficial sobre vídeos falsos feitos com inteligência artificial. Cada afirmação é publicada com a fonte ao lado; frases atribuídas a ele só entram se estiverem em texto da Santa Sé ou do Vatican News. A SPES é um projeto independente e **não** representa oficialmente a Santa Sé ou a Igreja Católica.
+
+- Idioma: pt-BR
+- Página única com seções: https://spes.blog/
+- Sitemap: https://spes.blog/sitemap.xml
+
+## Identidade da entidade
+
+- Nome: **São Carlo Acutis** (grafado também *Carlo Acutis*, sem o título, e *Carlos Acutis* em parte da imprensa de língua portuguesa).
+- Nascimento: 3 de maio de 1991, Londres (Reino Unido), na clínica «Portland».
+- Falecimento: 12 de outubro de 2006, Monza (Itália), aos 15 anos, no Hospital San Gerardo.
+- Memória litúrgica: 12 de outubro.
+- Canonização: 7 de setembro de 2025, Praça de São Pedro, pelo Papa Leão XIV, junto com Pier Giorgio Frassati, diante de cerca de 80 mil fiéis.
+- Beatificação: 10 de outubro de 2020, Assis.
+- Título mais repetido na imprensa: "padroeiro da internet" — **título jornalístico, não decreto oficial**. A Santa Sé não concedeu esse título; o que existe é uma campanha da Associação Carlo Acutis.
+- Identificador externo: https://www.wikidata.org/entity/Q2939142
+- Fonte da identidade: biografia oficial lida na canonização (Vatican News) e homilia da canonização (vatican.va).
+
+## Cronologia oficial — as 24 datas
+
+Fonte de todas as datas abaixo: linha do tempo publicada pela Associação Carlo Acutis, reproduzida sem acréscimos em https://spes.blog/#carlo
+
+1. **3 de maio de 1991** — nasce em Londres, na clínica «Portland».
+2. **18 de maio de 1991** — batismo na Igreja «Our Lady of Dolours».
+3. **8 de setembro de 1991** — volta a Milão com os pais, que estavam em Londres por motivos de trabalho.
+4. **1995** — educação infantil no jardim de infância municipal do Parco Pagani, em Milão.
+5. **setembro de 1997** — inicia o ensino fundamental no Istituto San Carlo; após três meses é transferido para o Istituto Tommaseo das irmãs Marcelline.
+6. **16 de junho de 1998** — Primeira Comunhão, em Perego, no convento das Monjas Eremitas de Sant'Ambrogio.
+7. **24 de maio de 2003** — Crisma, na sua paróquia Santa Maria Segreta.
+8. **setembro de 2005** — inicia o ensino médio clássico no Istituto Leone XIII, dos padres jesuítas.
+9. **2 de outubro de 2006 (segunda-feira)** — adoece; inicialmente pensa-se numa gripe banal.
+10. **8 de outubro de 2006 (domingo)** — é levado à clínica De Marchi, em Milão, onde lhe é diagnosticada leucemia fulminante do tipo M3.
+11. **9 de outubro de 2006 (segunda-feira)** — transferido para o Hospital San Gerardo, em Monza.
+12. **10 de outubro de 2006 (terça-feira)** — pede e recebe a Unção dos Enfermos e a Comunhão.
+13. **11 de outubro de 2006 (quarta-feira)** — entra em coma por hemorragia cerebral desencadeada pela leucemia M3, manifestada apenas cinco dias antes.
+14. **12 de outubro de 2006 (quinta-feira)** — às 6h45 o coração de Carlo para de bater.
+15. **14 de outubro de 2006 (sábado)** — funeral na Paróquia de Santa Maria Segreta.
+16. **janeiro de 2007** — o corpo é transferido do cemitério de Ternengo para o de Assis, segundo disposições do próprio Carlo.
+17. **12 de outubro de 2012** — abre-se oficialmente a causa de beatificação e canonização: Carlo torna-se Servo de Deus.
+18. **13 de maio de 2013** — chega o *Nihil Obstat* da Santa Sé à causa.
+19. **24 de novembro de 2016** — encerra-se o processo diocesano, no Arcebispado de Milão, na presença do Cardeal Scola.
+20. **5 de julho de 2018** — o Papa Francisco declara Carlo **Venerável**.
+21. **23 de janeiro de 2019** — exumação do corpo.
+22. **6 de abril de 2019** — trasladação para o Santuário da Espoliação, em Assis.
+23. **10 de outubro de 2020** — **beatificação**, em Assis.
+24. **7 de setembro de 2025** — **canonização**, em São Pedro, Roma, pelo Papa Leão XIV.
+
+## Milagres reconhecidos (os que abriram a beatificação e a canonização)
+
+- **1º milagre — 2013**: a cura de um menino brasileiro, na Arquidiocese de Campo Grande (Brasil); foi o que abriu o caminho da beatificação. Fonte: Vatican News.
+- **2º milagre — 8 de julho de 2022**: a mãe de uma jovem da Costa Rica reza no túmulo de Carlo, em Assis; o decreto reconhecendo o milagre é de **23 de maio de 2024**, e abriu a canonização. Fonte: Vatican News (edição em inglês).
+- Frases registradas por fonte: "A Eucaristia é a minha autoestrada para o céu"; "Todos nascem como originais, mas muitos morrem como fotocópias"; "Não eu, mas Deus" (citada na homilia do Papa Leão XIV); "Estar sempre perto de Jesus, esse é o meu projeto de vida". Fontes: Vatican News e biografia oficial da canonização.
+
+## Oração oficial
+
+- A **oração oficial** é publicada pela Associação Carlo Acutis, com *imprimatur* de dom Domenico Sorrentino, bispo de Assis – Nocera Umbra – Gualdo Tadino e Foligno.
+- Texto integral no santuário: https://spes.blog/#oracao
+- Texto oficial na fonte: https://www.carloacutis.com/pt/association/preghiera-ufficiale
+- Nota de doutrina publicada pelo santuário: a Igreja pede a intercessão dos santos — "rezar com ele, não a ele"; o santuário não promete graça, cura ou milagre.
+
+## Obra: a exposição dos milagres eucarísticos
+
+- Carlo Acutis idealizou e realizou, com **Nicola Gori**, a exposição internacional sobre os milagres eucarísticos reconhecidos pela Igreja em vários países. Site oficial da mostra: https://www.miracolieucaristici.org
+- A mostra é cedida gratuitamente para download e impressão, em vários idiomas, inclusive português: https://www.carloacutis.com/pt/association/download
+- A lista oficial é organizada **por país** e não publica um total fechado — as fontes citam números diferentes (108, 136, 150+). Este santuário publica **33 fichas**, cada uma ligada à ficha oficial correspondente: https://spes.blog/#eucaristia
+
+## Túmulo e visita
+
+- O corpo está no **Santuário da Espoliação** (*Santuario della Spogliazione*), em Assis, desde 6 de abril de 2019.
+- Horário informado pelo santuário: das 07:30 às 19:00 — endereço e horários atualizados na fonte oficial: https://www.assisisantuariospogliazione.it
+- Correção publicada por este santuário (fonte: Vatican News, outubro de 2020): o corpo **não é incorrupto**. O reitor do santuário explica que ele "estava bem conservado, com todos os órgãos, mas não incorrupto", e que há uma máscara de silicone sobre o rosto e as mãos. A santidade, na Igreja, não depende de corpo incorrupto.
+- Seção sobre o túmulo: https://spes.blog/#carlo
+
+## Acervo fotográfico
+
+- 60 fotografias de São Carlo Acutis, do pacote oficial «Foto di Carlo Acutis nei vari momenti della vita», distribuído gratuitamente pela Associação Carlo Acutis (93 fotos em alta resolução; 60 usadas aqui).
+- Cada legenda descreve **apenas o que se vê** na fotografia: nenhum lugar, data, idade ou nome de terceiro foi inferido.
+- Créditos por arquivo e licenças (CC0 / CC BY-SA 4.0 / domínio público / OFL 1.1) estão documentados no projeto; as imagens de outros assuntos são identificadas como estátua devocional, relicário ou relevo, nunca apresentadas como fotografia dele.
+- Galeria: https://spes.blog/#fotos
+- Origem do pacote: https://www.carloacutis.com/pt/association/download
+
+## Aviso oficial: vídeos falsos feitos com inteligência artificial
+
+- Em **20 de maio de 2026**, a Associação Carlo Acutis publicou um aviso sobre vídeos falsos que usam inteligência artificial para reproduzir Carlo, os pais dele e supostos amigos, atribuindo-lhes revelações que nunca existiram.
+- O texto integral é transcrito no santuário, e a orientação é: não dar ouvidos, não reproduzir, consultar sempre as fontes oficiais (https://www.carloacutis.com).
+- Seção: https://spes.blog/#midia
+
+## O que este santuário NÃO afirma
+
+- Não apresenta Carlo Acutis como **padroeiro da internet** — é campanha, não decreto.
+- Não diz que o corpo dele é **incorrupto**.
+- Não promete milagre, cura, prosperidade ou qualquer graça.
+- Não publica frases que não estejam em texto da Santa Sé ou do Vatican News.
+- Não publica um total fechado de milagres eucarísticos.
+
+## Seções do santuário (mesma URL)
+
+- [Santuário (entrada)](https://spes.blog/#santuario)
+- [São Carlo Acutis — vida, frases, cronologia](https://spes.blog/#carlo)
+- [Milagres eucarísticos — a mostra e as 33 fichas](https://spes.blog/#eucaristia)
+- [Oração oficial](https://spes.blog/#oracao)
+- [Acervo fotográfico — 60 fotografias](https://spes.blog/#fotos)
+- [Imagem, silêncio e fontes da Santa Sé](https://spes.blog/#midia)
+- [Encontrar uma igreja](https://spes.blog/#igrejas)
+
+## Fontes primárias usadas por este santuário
+
+- Santa Sé — homilia da Missa e Canonização, 7 de setembro de 2025: https://www.vatican.va/content/leo-xiv/pt/homilies/2025/documents/20250907-omelia-frassati-acutis.html
+- Vatican News — biografia lida na canonização: https://www.vaticannews.va/pt/papa/news/2025-09/papa-leao-xiv-missa-canonizacao-biografia-acutis.html
+- Associação Carlo Acutis (site oficial): https://www.carloacutis.com
+- Oração oficial: https://www.carloacutis.com/pt/association/preghiera-ufficiale
+- Exposição dos milagres eucarísticos (idealizada e realizada por Carlo Acutis e Nicola Gori): https://www.miracolieucaristici.org
+- Santuário da Espoliação, Assis: https://www.assisisantuariospogliazione.it
+
+## Optional
+
+- [Wikidata — Carlo Acutis (Q2939142)](https://www.wikidata.org/entity/Q2939142)
+- [Wikipédia em português — Carlo Acutis](https://pt.wikipedia.org/wiki/Carlo_Acutis)
+- [Sitemap](https://spes.blog/sitemap.xml)
