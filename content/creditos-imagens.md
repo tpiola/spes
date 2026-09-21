@@ -35,6 +35,19 @@ ficar de pé sozinho (cartões de texto, painel de Palavra, contemplação em te
   figura humana.
 - `assets/carlo-reliquia-rio.webp` — Exposição de relíquia de Carlo Acutis no Rio de Janeiro.jpg |
   CC0 | Sir Velpertex di Crantx | https://commons.wikimedia.org/wiki/File:Exposi%C3%A7%C3%A3o_de_rel%C3%ADquia_de_Carlo_Acutis_no_Rio_de_Janeiro.jpg
+### O acervo de 60 fotografias (`assets/acervo/`)
+
+- Origem: **pacote oficial «Foto di Carlo Acutis nei vari momenti della vita»**, distribuído gratuitamente
+  pela Associação Carlo Acutis em https://www.carloacutis.com/pt/association/download (o arquivo `foto.zip`,
+  155 MB, com 93 fotografias em alta resolução). Foram usadas 60.
+- Cada arquivo carrega a procedência no próprio nome: `carlo-089-480.webp` e `carlo-089-1200.webp` são a
+  `foto_089.jpg` do pacote (miniatura de 480 px para a grade e 1200 px para a luz grande).
+- Legenda e texto alternativo descrevem **apenas o que se vê** na fotografia. Nenhum lugar, data, idade ou
+  nome de terceiro foi inferido. Onde a leitura era incerta, a dúvida ficou registrada em
+  `/opt/data/qa-visual/content/fotos.js` em vez de virar afirmação na página.
+- Uso autorizado pelo responsável por este santuário (o dono do site). Para qualquer outro uso, a licença
+  deve ser tratada com a Associação: é ela que responde pelas imagens.
+
 - `assets/carlo-retrato.webp` — recorte de **Exposição de relíquia de Carlo Acutis no Rio de Janeiro.jpg** |
   CC0 | Sir Velpertex di Crantx | https://commons.wikimedia.org/wiki/File:Exposi%C3%A7%C3%A3o_de_rel%C3%ADquia_de_Carlo_Acutis_no_Rio_de_Janeiro.jpg
   Retrato devocional dele em vida (camisa vermelha, mochila), no enquadramento do herói no desktop:

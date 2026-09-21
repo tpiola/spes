@@ -120,7 +120,9 @@ estiverem em texto da Santa Sé ou do Vatican News.
 - ⚠️ **Fotografia dele: autorizada pelo dono em 20/09/2026.** A única com licença declarável é o
   retrato devocional exposto na veneração da relíquia no Rio de Janeiro (arquivo **CC0** do Wikimedia
   Commons, Sir Velpertex di Crantx) — que é, aliás, de onde o token `--red` #9e2c31 foi medido.
-  Está no herói: `assets/carlo-retrato.webp` (desktop) e `assets/carlo-retrato-mobile.webp`.
+  Acervo completo: **60 fotografias** em `assets/acervo/` (480 px + 1200 px), tiradas do pacote
+  oficial e legendadas só com o que se vê. No herói vai a `foto_089` (a camisa vermelha no campo),
+  em recortes próprios: `assets/carlo-heroi.webp` e `assets/carlo-heroi-mobile.webp`.
   **Ressalva registrada:** o CC0 cobre a fotografia da exposição; o retrato reproduzido dentro dela é
   material devocional da família e da diocese. O uso foi autorizado pelo dono e o crédito aparece na
   página e em `content/creditos-imagens.md`.

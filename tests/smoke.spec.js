@@ -1,6 +1,25 @@
 const { test, expect } = require("@playwright/test");
 
+/** Todas as views do santuário (o mesmo array está no JS do site). */
+const VIEWS = [
+  "santuario", "santos", "carlo", "fotos", "eucaristia", "oracao",
+  "historia", "papas", "catecismo", "sacramentos", "biblia", "acervo",
+  "maria", "midia", "igrejas",
+];
+
+async function percorrer(page) {
+  await page.evaluate(async () => {
+    const altura = document.body.scrollHeight;
+    for (let y = 0; y < altura; y += 500) {
+      window.scrollTo(0, y);
+      await new Promise(resolve => setTimeout(resolve, 40));
+    }
+    window.scrollTo(0, 0);
+  });
+}
+
 test("renders the digital sanctuary without browser errors", async ({ page }) => {
+  test.setTimeout(180_000); // percorre as 15 views checando as imagens de cada uma
   const errors = [];
   const externos = [];
   await page.route("**/api/santo-do-dia", route =>
@@ -10,13 +29,13 @@ test("renders the digital sanctuary without browser errors", async ({ page }) =>
     if (message.type() === "error") errors.push(message.text());
   });
   page.on("pageerror", error => errors.push(error.message));
-  // o santuário não exibe imagem de terceiros: nada pode ser pedido fora do domínio
+  // o santuário não pede nada a terceiros: tudo é servido pelo próprio domínio
   page.on("request", request => {
     if (!request.url().startsWith("http://127.0.0.1:4173")) externos.push(request.url());
   });
 
   await page.goto("/");
-  await expect(page).toHaveTitle(/SPES/);
+  await expect(page).toHaveTitle(/Carlo Acutis/);
   await expect(page.getByRole("heading", { level: 1 })).toContainText("autoestrada para o céu");
   await expect(page.locator("#daily-saint")).toBeVisible();
   await expect(page.getByRole("heading", { name: "Um passo de cada vez." })).toBeVisible();
@@ -26,37 +45,37 @@ test("renders the digital sanctuary without browser errors", async ({ page }) =>
     /^https:\/\/chat\.whatsapp\.com\//
   );
 
-  // Regra do santuário: só imagens de São Carlo Acutis, e todas carregando.
-  // O `.hero-media` é arte de fundo (a estátua) e não entra na lista de <img>.
+  // Regra do santuário: só imagens de São Carlo Acutis. O `.hero-media` é arte de
+  // fundo e não entra na lista de <img>; as imagens do acervo vêm do pacote oficial.
   const entrar = page.locator('.hero .primary[data-view="carlo"]');
   await expect(entrar).toBeVisible();
   await entrar.click();
-  // a frase dele aparece no h1 do herói e no h2 do santuário: escopo no #view-carlo
   await expect(page.locator("#view-carlo h2").first()).toContainText("autoestrada para o céu");
   const fontes = await page.locator("main img").evaluateAll(images =>
     images.map(image => image.getAttribute("src"))
   );
-  expect(fontes.length).toBeGreaterThanOrEqual(6);
+  expect(fontes.length).toBeGreaterThanOrEqual(60);
   expect(fontes.every(src => src.includes("/carlo-"))).toBe(true);
-  // as imagens são loading="lazy": é preciso percorrer a página para que carreguem
-  await page.evaluate(async () => {
-    const altura = document.body.scrollHeight;
-    for (let y = 0; y < altura; y += 400) {
-      window.scrollTo(0, y);
-      await new Promise(resolve => setTimeout(resolve, 60));
-    }
-  });
-  await expect
-    .poll(
-      () =>
-        page
-          .locator("main img")
-          .evaluateAll(images => images.every(image => image.complete && image.naturalWidth > 0)),
-      { timeout: 10_000 }
-    )
-    .toBe(true);
 
-  // A contemplação virou texto: não há mais lightbox nem imagem de terceiros.
+  // Cada view: percorre e confere que nenhuma imagem ficou quebrada.
+  // (As imagens são loading="lazy" e as views inativas não carregam nada —
+  // por isso a checagem é feita com a view aberta, e não no documento todo.)
+  for (const view of VIEWS) {
+    // o menu lateral funciona nos dois tamanhos; o menu do topo fica oculto no celular
+    await page.locator(`.rail button[data-view="${view}"]`).click();
+    await percorrer(page);
+    const quebradas = await page
+      .locator(`#view-${view} img:not(#lightbox-obra img)`)
+      .evaluateAll(images =>
+        images.filter(i => i.complete && i.naturalWidth === 0).map(i => i.getAttribute("src"))
+      );
+    expect(quebradas, `imagens quebradas em #view-${view}`).toEqual([]);
+  }
+  // o acervo tem as 60 fotografias e o dossiê dele tem a estátua, as relíquias e a faixa de retratos
+  expect(await page.locator("#view-fotos img:not(#lightbox-obra img)").count()).toBe(60);
+  expect(await page.locator("#view-carlo img").count()).toBeGreaterThanOrEqual(10);
+
+  // A contemplação virou texto: não há mais lightbox de terceiros nem imagem externa.
   await page.locator('.rail button[data-view="midia"]').click();
   await expect(page.getByRole("heading", { name: "Imagem, silêncio e esperança." })).toBeVisible();
   expect(await page.locator("#media-dialog").count()).toBe(0);
@@ -69,6 +88,38 @@ test("renders the digital sanctuary without browser errors", async ({ page }) =>
   );
   expect(externos).toEqual([]);
   expect(errors).toEqual([]);
+});
+
+test("o acervo abre a fotografia em tamanho grande, navega e volta o foco", async ({ page }) => {
+  test.setTimeout(90_000);
+  await page.goto("/");
+  await page.locator('.rail button[data-view="fotos"]').click();
+  const grade = page.locator("#fotos-grade");
+  await expect(grade).toBeVisible();
+  const fotos = await grade.locator(".foto").count();
+  expect(fotos).toBe(60);
+
+  // a busca filtra pelas legendas, sem esconder o resto do site
+  await page.fill("#fotos-busca", "neve");
+  await expect
+    .poll(() => page.locator("#fotos-grade .foto:not(.eu-escondido)").count(), { timeout: 5_000 })
+    .toBeLessThan(fotos);
+  const visiveis = await page.locator("#fotos-grade .foto:not(.eu-escondido)").count();
+  expect(visiveis).toBeGreaterThan(0);
+  await expect(page.locator("#fotos-contador")).toContainText(`${visiveis} de 60`);
+  await page.fill("#fotos-busca", "");
+
+  const primeira = page.locator("#fotos-grade .foto").first();
+  await primeira.click();
+  const luz = page.locator("#lightbox-obra");
+  await expect(luz).toBeVisible();
+  await expect(luz.locator(".obra-contador")).toHaveText(`1 de ${fotos}`);
+  await expect(luz.locator(".obra-legenda")).not.toBeEmpty();
+  await page.keyboard.press("ArrowRight");
+  await expect(luz.locator(".obra-contador")).toHaveText(`2 de ${fotos}`);
+  await page.keyboard.press("Escape");
+  await expect(luz).toBeHidden();
+  await expect(primeira).toBeFocused(); // o foco volta para a foto de onde se saiu
 });
 
 test("mobile navigation opens, closes and restores focus", async ({ page }, testInfo) => {
