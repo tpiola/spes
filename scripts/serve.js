@@ -19,6 +19,8 @@ const MIME = {
   '.png': 'image/png', '.xml': 'application/xml', '.txt': 'text/plain',
   '.webmanifest': 'application/manifest+json', '.ico': 'image/x-icon',
 };
+// CSP igual à de produção, MENOS upgrade-insecure-requests: este servidor é HTTP,
+// e essa diretiva faria o navegador pedir tudo em https — a página quebraria.
 // formats that are already compressed: do not re-compress
 const PRECOMPRESSED = new Set(['.webp', '.woff2', '.png', '.jpg', '.jpeg', '.gif', '.avif', '.zip', '.br', '.gz']);
 
@@ -39,7 +41,7 @@ const server = http.createServer((req, res) => {
     'cache-control': immutable ? 'public, max-age=31536000, immutable' : 'public, max-age=0, must-revalidate',
     'etag': '"' + require('crypto').createHash('md5').update(body).digest('hex') + '"',
     'x-content-type-options': 'nosniff',
-    'content-security-policy': "default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-src 'none'; base-ancestors 'none'; object-src 'none'",
+    'content-security-policy': "default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'",
   };
   const ae = String(req.headers['accept-encoding'] || '');
   if (PRECOMPRESSED.has(ext) || req.method === 'HEAD') {
