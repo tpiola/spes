@@ -1,15 +1,24 @@
 {
-  "name": "SPES — Santuário Digital Católico",
-  "short_name": "SPES",
-  "description": "Santuário digital católico de oração, Santos do Dia, sacramentos, Bíblia, Catecismo e história da Igreja.",
+  "name": "SPES — Santuário de São Carlo Acutis",
+  "short_name": "SPES · Carlo Acutis",
+  "description": "Santuário digital de São Carlo Acutis: 60 fotografias reais do acervo oficial, a oração oficial, a cronologia de 24 datas, a mostra dos milagres eucarísticos e o túmulo em Assis.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#F8FBFD",
-  "theme_color": "#041F37",
+  "background_color": "#fdfaf6",
+  "theme_color": "#2a0710",
   "lang": "pt-BR",
   "icons": [
-    {"src":"/assets/spes-icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
-    {"src":"/assets/spes-icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"},
-    {"src":"/assets/spes-mark.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}
+    {
+      "src": "/assets/spes-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/spes-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
   ]
 }

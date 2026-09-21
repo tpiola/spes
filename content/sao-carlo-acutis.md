@@ -122,10 +122,16 @@ estiverem em texto da Santa Sé ou do Vatican News.
   Commons, Sir Velpertex di Crantx) — que é, aliás, de onde o token `--red` #9e2c31 foi medido.
   Acervo completo: **60 fotografias** em `assets/acervo/` (480 px + 1200 px), tiradas do pacote
   oficial e legendadas só com o que se vê. No herói vai a `foto_089` (a camisa vermelha no campo),
-  em recortes próprios: `assets/carlo-heroi.webp` e `assets/carlo-heroi-mobile.webp`.
+  num recorte centrado no sujeito: `assets/carlo-heroi.webp` (1200×900) — o mesmo arquivo serve
+  desktop e celular, porque o recorte já é centrado.
   **Ressalva registrada:** o CC0 cobre a fotografia da exposição; o retrato reproduzido dentro dela é
   material devocional da família e da diocese. O uso foi autorizado pelo dono e o crédito aparece na
   página e em `content/creditos-imagens.md`.
+- ⚠️ **O símbolo do site é uma exceção declarada:** o emblema, o favicon e os ícones do app são um
+  recorte da «Madonna della Seggiola», de **Rafael** (1513–1514) — obra em **domínio público** no
+  Wikimedia Commons. É o único caso em que uma imagem que não é dele aparece no site: trata-se do
+  *emblema*, não de conteúdo devocional. A imagem mariana que o site usava antes
+  (`assets/nao-usadas/nossa-senhora.webp`) foi preterida por não ter procedência registrada.
   O que **continua** proibido: apresentar escultura como fotografia, prometer graça/milagre e inventar
   frase sem fonte.
 

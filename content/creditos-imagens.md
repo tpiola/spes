@@ -48,6 +48,21 @@ ficar de pé sozinho (cartões de texto, painel de Palavra, contemplação em te
 - Uso autorizado pelo responsável por este santuário (o dono do site). Para qualquer outro uso, a licença
   deve ser tratada com a Associação: é ela que responde pelas imagens.
 
+### O emblema do site (Nossa Senhora)
+
+- `assets/logo-nossa-senhora-256.webp`, `assets/favicon-32.png`, `assets/favicon-48.png`,
+  `assets/apple-touch-icon.png`, `assets/spes-icon-192.png`, `assets/spes-icon-512.png` — todos
+  recortados da **«Madonna della Seggiola»** (Madonna da Cadeira), de **Rafael** (1513–1514),
+  Galleria Palatina, Palácio Pitti, Florença.
+  Procedência: Wikimedia Commons, `File:Raphael Madonna della seggiola.jpg` (1600×1635),
+  licença **domínio público** — a obra é de 1514 e os direitos do autor expiraram. O recorte
+  aproxima os dois rostos para que o emblema continue legível a 32 px.
+- **Por que não a imagem antiga:** o arquivo `assets/nao-usadas/nossa-senhora.webp`, que o site
+  usava antes, **não tem procedência registrada em lugar nenhum** — não há autor, licença nem URL
+  em nenhum commit do repositório. Como o pedido era colocá-la no *símbolo* do site (uso permanente
+  e destacado, diferente de uma imagem de conteúdo), preferimos uma obra de domínio público com
+  procedência verificável. A imagem antiga continua guardada, não apagada.
+
 - `assets/carlo-retrato.webp` — recorte de **Exposição de relíquia de Carlo Acutis no Rio de Janeiro.jpg** |
   CC0 | Sir Velpertex di Crantx | https://commons.wikimedia.org/wiki/File:Exposi%C3%A7%C3%A3o_de_rel%C3%ADquia_de_Carlo_Acutis_no_Rio_de_Janeiro.jpg
   Retrato devocional dele em vida (camisa vermelha, mochila), no enquadramento do herói no desktop:

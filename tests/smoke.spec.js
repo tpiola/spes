@@ -1,11 +1,7 @@
 const { test, expect } = require("@playwright/test");
 
 /** Todas as views do santuário (o mesmo array está no JS do site). */
-const VIEWS = [
-  "santuario", "santos", "carlo", "fotos", "eucaristia", "oracao",
-  "historia", "papas", "catecismo", "sacramentos", "biblia", "acervo",
-  "maria", "midia", "igrejas",
-];
+const VIEWS = ["santuario", "carlo", "fotos", "eucaristia", "oracao", "midia"];
 
 async function percorrer(page) {
   await page.evaluate(async () => {
@@ -37,9 +33,11 @@ test("renders the digital sanctuary without browser errors", async ({ page }) =>
   await page.goto("/");
   await expect(page).toHaveTitle(/Carlo Acutis/);
   await expect(page.getByRole("heading", { level: 1 })).toContainText("autoestrada para o céu");
-  await expect(page.locator("#daily-saint")).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Um passo de cada vez." })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Cinco portas para chegar até ele." })).toBeVisible();
   expect(await page.locator('a[href*="chat.whatsapp.com"]').count()).toBeGreaterThanOrEqual(3);
+  // o emblema do santuário é a Madonna della Seggiola, de Rafael: o favicon mudou junto
+  await expect(page.locator('link[rel="icon"][href*="favicon-32"]')).toHaveCount(1);
+  await expect(page.locator('.brand-mark').first()).toHaveAttribute("src", /logo-nossa-senhora/);
   await expect(page.locator('a[href*="chat.whatsapp.com"]').first()).toHaveAttribute(
     "href",
     /^https:\/\/chat\.whatsapp\.com\//
@@ -55,7 +53,10 @@ test("renders the digital sanctuary without browser errors", async ({ page }) =>
     images.map(image => image.getAttribute("src"))
   );
   expect(fontes.length).toBeGreaterThanOrEqual(60);
-  expect(fontes.every(src => src.includes("/carlo-"))).toBe(true);
+  // As imagens de CONTEÚDO são só de São Carlo Acutis. A exceção declarada é o emblema do
+  // santuário — a «Madonna della Seggiola» de Rafael, domínio público — que aparece no
+  // medalhão do dossiê e nos ícones. Procedência em content/creditos-imagens.md.
+  expect(fontes.every(src => /\/carlo-|\/logo-nossa-senhora/.test(src))).toBe(true);
 
   // Cada view: percorre e confere que nenhuma imagem ficou quebrada.
   // (As imagens são loading="lazy" e as views inativas não carregam nada —
@@ -77,7 +78,7 @@ test("renders the digital sanctuary without browser errors", async ({ page }) =>
 
   // A contemplação virou texto: não há mais lightbox de terceiros nem imagem externa.
   await page.locator('.rail button[data-view="midia"]').click();
-  await expect(page.getByRole("heading", { name: "Imagem, silêncio e esperança." })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "De onde vem cada palavra deste site." })).toBeVisible();
   expect(await page.locator("#media-dialog").count()).toBe(0);
   expect(await page.locator(".media-stage img").count()).toBe(0);
 
